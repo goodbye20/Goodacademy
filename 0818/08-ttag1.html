@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            border-collapse: collapse;
+        }
+        td, th{
+            border: 1px solid black;
+            width: 100px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 표의 제목, 본문, 푸터를 구분해주는 태그
+        thead : 표 상에서 맨위에 위치해야 되는 내용들을 담은 태그, 표 상에서 어느
+                위치에 있더라도 반드시 표의 상단에 위치시키고자 하는 태그가 있을 시
+                thead 태그로 감싸 해당 태그들을 표 위쪽으로 위치 시킨다.
+                코드의 위치상 어디에 위치에 있을지 관계없이 위쪽에 배치 된다.
+        tbody : 표 내용에 해당하는 태그들을 위치시킬 때 쓰는 태그, 주로 중앙
+                위치 시 사용되는 태그
+        tfoot : 표의 맨 아래에 해당하는 태그들을 위치시킬 때 쓰는 태그, 표의 맨
+                아래쪽에 위치 시킬시에 사용된다. -->
+    <table>
+        <thead>
+        <tr>
+            <th>제목1</th>
+            <th>제목2</th>
+            <th>제목3</th>
+            <th>제목4</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+            <td>내용1</td>
+            <td>내용2</td>
+            <td>내용3</td>
+            <td>내용4</td>
+        </tr>
+        <tr>
+            <td>내용1</td>
+            <td>내용2</td>
+            <td>내용3</td>
+            <td>내용4</td>
+        </tr>
+        </tbody>
+        <tfoot>
+        <tr>
+            <td colspan="3">결과</td>
+            <td>내용</td>
+        </tr>
+    </tfoot>
+    </table>
+</body>
+</html>
