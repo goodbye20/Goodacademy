@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <form action="#" method="get">    
+    <!-- 무조건 값이 abc가 오게 해보시오. -->
+    <!-- <input type="text" pattern="abc" name="text" id="text"> -->
+    
+    <!-- 값이 a,b,c 이거나 d,e,f가 입력되야만 전송-->
+    <!-- required : pattern 속성에서 입력 값을 받아야하는데, 값이 아무것도 없을 경우 전송이 되게된다.
+                    이를 막고 null값이 전송이 안되도록 막고 경고를 띄우도록 설정할 때 사용. -->
+    <!-- title : 전송이 되지 않았을 때 input 타입에서 어떤 형식을 써야 하는지에 대한
+                 코멘트를 달기 위해서 title이란 속성을 사용할 수 있다. -->
+    <!-- pattern 속성을 사용할 때 보통 required, title이 항상 따라옴-->
+    <!-- <input type="text" pattern="abc|def" name="text" id="text" 
+    title="이 란에는 abc 혹은 def만 사용 가능합니다." required>
+    <button type="submit">전송</button> -->
+
+    <!-- 정규 표현식에서 자주 사용되는 패턴
+        - [쓸 값의 범위]{반복횟수}
+     -->
+     <!-- 시작을 알리는 특수문자 : ^
+           끝을 알리는 특수 문자 : $   -->
+    <!-- [abc] = a|b|c -->
+    <input type="text" pattern="^abc[[a-z]+" name="text1" id="text1" required>
+    <input type="text" pattern="[a-z]+[abc]$" name="text2" id="text2" required>
+    <button type="submit">전송</button>
+</form>
+</body>
+</html>
