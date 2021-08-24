@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: 300px;
+            height: 150px;
+            background-color: cornflowerblue;
+            border: 5px dotted black;
+            padding: 20px;
+        }
+        /* background-clip : 배경 이미지나 배경색을 어디까지 적용할 지 범위 지정 */
+        .intro1 {
+            background-clip: border-box;
+        }
+        .intro2 {
+            background-clip: padding-box;
+        }
+        .intro3 {
+            background-clip: content-box;
+        }
+    </style>
+</head>
+<body>
+    <div class="intro1">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium modi tempora adipisci architecto expedita excepturi magnam, perferendis impedit, iure at et quod minus commodi ipsam ratione deleniti doloremque quas sapiente.
+    </div>
+    <div class="intro2">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium modi tempora adipisci architecto expedita excepturi magnam, perferendis impedit, iure at et quod minus commodi ipsam ratione deleniti doloremque quas sapiente.    
+    </div>
+    <div class="intro3">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusantium modi tempora adipisci architecto expedita excepturi magnam, perferendis impedit, iure at et quod minus commodi ipsam ratione deleniti doloremque quas sapiente.
+    </div>
+</body>
+</html>
