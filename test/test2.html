@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #backimg {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 1000px;
+            height: 700px;
+            background-size: cover;
+            background-image: url(images/tumblr.jpg);
+        }
+        section {
+            box-sizing: border-box;
+            background-color: white;
+            border: none;
+            position: fixed;
+            padding: 30px;
+        }
+        #title {
+            width: 200px;
+            color: skyblue;
+            text-align: left;
+            font-size: 1.1em;
+            
+        }
+        input {
+            padding-left: 15px;
+            width: 250px;
+            height: 40px;
+            margin-top: 20px;
+            border: 0.8px solid #ccc;
+        }
+        button {
+            background-color: lightblue;
+            border: none;
+            width: 270px;
+            height: 40px;
+            margin-top: 10px;
+        }
+        button:hover {
+            background-color: lightsteelblue;
+        }
+    </style>
+</head>
+<body>
+    <div id="backimg">
+        <section>
+        <article id="title">Login To Your Account</article>
+          <form action="#">
+            <article>
+                <input type="POST" placeholder="Usename" required>
+            </article>
+            <article>
+                <input type="POST" placeholder="Passward" required>
+            </article>
+            <article id="log">
+                <button type="submit">Login</button>
+            </article>
+        </form>
+        </section>
+    </div>
+</body>
+</html>

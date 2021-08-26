@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            text-align: center;
+            max-width: 900px;
+            text-decoration: underline;
+            padding-top: 10px;
+            padding-bottom: 35px;
+            background: linear-gradient(to bottom, #06f, white 30%,#06f)
+        }
+        nav ul li {
+            list-style: none;
+            text-decoration: none;
+            float: right;
+            padding-bottom: 10px;
+            padding-right: 20px;
+            margin-right: 0px;
+        }
+        a {
+            text-decoration: none;
+            color: white;
+            font-size: 1rem;
+        }
+        a:hover {
+            background-color: black;
+            color: yellow;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+        main {
+            border: 4px solid #333; 
+            max-width: 892px;
+        }
+        .caff1{
+            border: 3px solid black;
+            background-image: url(images/es.png);
+            background-repeat: no-repeat;
+            background-position: right
+        }
+        .caff2{
+            border: 2px dotted blue;
+            background-image: url(images/am.png);
+            background-repeat: no-repeat;
+            background-position: right
+        }
+        .caff3{
+            border: 3px solid salmon;
+            background-image: url(images/cp.png);
+            background-repeat: no-repeat;
+            background-position: right;
+        }
+        .caff4{
+            border: 3px dashed green;
+            background-image: url(images/latte.png);
+            background-repeat: no-repeat;
+            background-position: right
+        }
+        .caff5{
+            border: 3px dashed teal;
+            background-image: url(images/mocha.png);
+            background-repeat: no-repeat;
+            background-position: right
+        }
+        section > article{
+            border-radius: 10px;
+            max-width: 830px;
+            margin: 15px;
+            padding: 10px;  
+            font-size: 10px;     
+        }
+        footer {
+            font-size: 1.2rem;
+            padding-top: 10px;
+            padding-bottom: 30px;
+            max-width: 900px;
+            height: 50px;
+            background-color: #333;
+            color: white;
+            text-align: center;
+        }
+        aside {
+            padding-left: 30px;
+            font-size: 12px;
+        }
+
+    </style>
+</head>
+
+<body>
+        <header>
+            <h2>커피 알아보기</h2>
+            <nav>
+                <ul>
+                    <li><a href="#">커피 종류</a></li>
+                    <li><a href="#">커피 품종</a></li>
+                    <li><a href="#">커피 역사</a></li>
+                    <li><a href="#">커피 가공</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main>
+            <section>
+                <article class="caff1">
+                    <h3>에스프레소[Espresso]</h3>
+                    <p>에스프레소의 이름은 영어로 '빠른'을 뜻하는 Express의 이탈리아어다. 빠르게 추출한다는 의미에서 온다는 뜻이다! 
+                        스페인, 이태리 여행시 최고다!
+                    </p>
+                </article>
+                <article class="caff2" >
+                    <h3>아메리카노[Americano]</h3>
+                    <p>대용량의 커피, 에스프레소보다 연하게 마시는 커피를 미국인들(American)이 즐겨 마신다고 하여 붙여진 이름.</p>
+                </article>
+                <article class="caff3">
+                    <h3>카푸치노[Cappuccino]</h3>
+                    <p>카푸치노라는 이름이 지어지게 된 배경에는 두 가지 설이있다. 이탈리아어로 Cappuccino는 Hood(외투에 달린 모자,두건)를
+                    </p><p>뜻하는 단어로 커피의 모양이 꼭 Hood와 같다고 
+                        하여 이름이 붙여졌다는 설 과 이탈리아 프란체스코회의 카푸친 수도회 머리모양과 비슷하다.
+                    </p>
+                </article>
+                <article class="caff4">
+                    <h3>카페라떼[Cafe latte]</h2>
+                    <p>라떼는 이탈리아어로 우유를 뜻한다. 에스프레소와 우유의 만남을 이름 그대로 표현한 메뉴다.</p>
+                </article>
+                <article class="caff5">
+                    <h3>카페모카[Cafe Mocha]</h3>
+                    <p>커피, 우유, 초콜릿이 함께한 메뉴로 최초 커피 경작지인 예멘지역의 커피 수출이 원활했던 항구 모카(Mocha)에서 이름이 유래되었다.</p>
+                </article>
+            </section>
+            <section>
+                <aside>
+                    <h3>더 건강하게 커피 마시는 방법</h3>
+                    <ul>
+                        <li>커피에 우유나 크림, 설탕을 넣치 않는다.</li>
+                        <li>아침 식사를 하지 않고, 아침을 대신해서 커피를 몇잔 마시는 것은 피하자.</li>
+                        <li>우리 신체는 매일 활동하기 위해 연료가 필요하다.</li>
+                        <li>물과 허브차를 많이 마시고 과일을 먹는다면 피곤함을 덜 느끼고, 스트레스도 덜 받게 된다.</li>
+                    </ul>
+                </aside>
+            </section>
+        </main>
+        <footer>
+            <p>Copyright 2020 coffee page</p>
+        </footer>
+</body>
+
+</html>
