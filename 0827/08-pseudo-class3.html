@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* :first-child => 부모요소의 첫번 째 자식 요소에 스타일 적용 */
+        li:first-child {
+            background-color: darkseagreen;
+        }
+        /* nth-child => 부모요소의 n번째 자식 요소에 스타일 적용 */
+        /* 짝수는 2n ,홀수는 2n+1 */
+        li:nth-child(2n) {
+            background-color: deepskyblue;
+        }
+        li:nth-child(5) {
+            background-color: gold;
+        }
+        li:nth-child(3), li:nth-child(9) {
+            background-color: indianred;
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>아이템1</li>
+        <li>아이템2</li>
+        <li>아이템3</li>
+        <li>아이템4</li>
+        <li>아이템5</li>
+        <li>아이템6</li>
+        <li>아이템7</li>
+        <li>아이템8</li>
+        <li>아이템9</li>
+        <li>아이템10</li>
+    </ul>
+</body>
+</html>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* :checked => 라디오 버튼과 체크박스 버튼에 주로 사용되는 가상 선택자로서
+                       체크가 되었을 때의 css 디자인을 적용할 때 쓴다. 주로 인접형제 선택자와
+                       페어로 많이 사용된다. */
+        input:checked {
+            height: 50px;
+            width: 50px;
+        }
+        [name="r2"]:checked + label{
+            background-color: darkkhaki;
+        }
+    </style>
+</head>
+<body>
+    <form action="#">
+        <input type="radio" name="r1" id="r1-1" checked>
+        <label for="r1-1">r1-1 체크</label>
+        <input type="radio" name="r1" id="r1-2">
+        <label for="r1-2">r1-2 체크</label>
+        <br><br>
+
+        <!-- 기본으로 제공되는 라디오 버튼 및 체크 박스 버튼이 예쁘지 않기 때문에
+             다른 시트로 대체하던가 
+             (https://codepen.io/ezos86/pen/xbOdyr 시트 대체 예시)
+             hidden으로 숨기고 인접 선택자로 라벨이나 다른 아이콘을 체크 활성화 많이한다.
+            (fontawesome.com 라벨폰트 제공 사이트) -->
+        <input type="radio" name="r2" id="r2-1" checked hidden>
+        <label for="r2-1">r2-1 체크</label>
+        <input type="radio" name="r2" id="r2-2" hidden>
+        <label for="r2-2">r2-2 체크</label>
+    </form>
+</body>
+</html>

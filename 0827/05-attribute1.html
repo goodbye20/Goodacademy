@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 속성 선택자 */
+        /* 속성을 대상으로 디자인을 적용 시킬 때 사용하는 선택자 */
+        /* 보통 class나 id같은 접근자 만으로 접근하기 힘들거나 접근자를 추가해서 사용이 어려울 경우 사용할 수 있다 */
+        /* 보통 class나 id 같은 접근자 만으로 접근하기 힘든 접근자를 추가해서 추가해서 사용하는 경우가 대부분이다. */
+        /* 속성 선택자는 반드시 []안에 속성과 그 안에 속성 값을 넣어 사용할 수 있으며 때에 따라서는 속성이름만 사용하여
+            선택자를 사용할 수 있다. */
+       
+            
+        /* [attr] : attr이라는 속성이 해당 태그에 선언되어 있으면 그 태그에 스타일이 적용된다. */
+            [alt] {
+            color: red;
+        }
+        /* [atrr="value"] : attr이라는 속성에 값이 value면 그 태그에 스타일이 적용된다. 무조건 같아야 하며 포함되던가
+                            앞에 위치하던 뒤에 위치하던 경우는 포함되지 않는다. */
+        [alt="c1"] {
+            color: blue;
+        }
+        /* [atrr~="value"] : attr이라는 속성에 여러개의 value 값 중 하나만 갖고 있어도 해당 속성에 스타일이 적용된다.
+                             여러개의 값이라는 의미는 attr 안에 value들이 스페이스 구분자로 나열된 경우를 뜻한다.
+                             ex ) attr = "value1 value2 value3"                    
+        */
+        [alt~="c3"] {
+            color: green;
+        }
+        /* [atrr^="value"] : attr이라는 속성에 해당 value의 값으로 시작하면 해당 속성에 스타일이 적용된다.
+                             앞에 속성 값 value의 시작이 지정한 "value"로 시작하면 해당 요소는 스타일 적용 대상으로 판단하고
+                             스타일이 적용된다. */
+        [class^="d"] {
+            color: #d2b48c;
+        }
+        /* [atrr$="value"] : attr이라는 속성에 해당 value의 값으로 끝나면 해당 속성에 스타일이 적용된다.
+                             무조건 value값의 끝이 지정한 "value"로 끝나야한다. */
+        [class$="5"] {
+            color: violet;
+        }
+        /* [atrr*="value"] : attr이라는 속성에 value 값이 지정한"value"이 공통되게 포함이 되있다면 
+                            해당 속성에 스타일이 적용된다.  */
+        [class*="e"] {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div alt="c1" class="c1">div1 입니다(속성값이 "c1" 입니다.)</div>
+    <div alt="c2">div2 입니다</div>
+    <div alt="c3 c4">div3 입니다(속성값에 c3가 포함되어 있다)</div>
+    <div alt="c3">div4 입니다(속성값에 c3가 포함되어 있다)</div>
+    
+    <div class="d1">div4 입니다(속성값이 d로 시작한다)</div>
+    <div class="d2">div5 입니다(속성값이 d로 시작한다)</div>
+    <div class="d3">div6 입니다(속성값이 d로 시작한다)</div>
+    <div class="d5">div7 입니다(속성값이 5로 끝난다)</div>
+    
+    <div class="h5">div8 입니다(속성값이 5로 끝난다)</div>
+    <div class="t5">div9 입니다(속성값이 5로 끝난다)</div>
+
+    <div class="abcdefg">div10 입니다(속성값에 공통되게 e가 들어가있다)</div>
+    <div class="kdefghi">div11 입니다(속성값에 공통되게 e가 들어가있다)</div>
+    <div class="bcdefg">div12 입니다(속성값에 공통되게 e가 들어가있다)</div>
+</body>
+</html>
