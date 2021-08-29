@@ -13,27 +13,28 @@
         }
         #d1 {
             background-color: burlywood;
-            /* top: 120px;
-            left: 50px; */
-            right: 50px;
-            bottom: 50px;
-            position: relative;
         }
         #d2 {
             background-color: cornflowerblue;
-            bottom: 100px;
-            left: 50px;
-            position: relative;
+            font-size: 4rem;
         }
         #d3 {
             background-color: lime;
-            position: relative;
+        }
+        #d4 {
+            background-color: tomato;
+            width: 150px;
+            height: 100px;
+            position: absolute;
+            top: 0;
         }
     </style>
 </head>
 <body>
     <div id="d1"></div>
-    <div id="d2"></div>
+    <div id="d2">부모 
+        <div id="d4">자식</div>
+    </div>
     <div id="d3"></div>
 </body>
 </html>
