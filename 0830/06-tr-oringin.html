@@ -6,6 +6,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        /* 
+            transform-origin : 요소에 대한 변형 시 변하는 위치의 기준을 정할 때 사용하는 옵션
+                               키워 
+                               방법도 존재하지만 퍼센트를 이용하여 기준을 변경할 수 있다
+        */
           .origin {
             width: 160px;
             height: 240px;
@@ -16,7 +21,20 @@
         .rose {
             transform: rotateZ(10deg);
         }
-    </style>
+        .ltop .rose {
+            transform-origin: left top;
+        }
+        .rtop .rose {
+            transform-origin: right top;
+        }
+        .lbottom .rose {
+            transform-origin: left bottom;
+        }
+        .rbottom .rose {
+            /* transform-origin: right bottom; */
+            transform-origin: 20% 30%;
+        }
+        </style>
 </head>
 <body>
     <div class="origin">
