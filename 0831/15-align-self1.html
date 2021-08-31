@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        /* 
+            align-self : 아이템 단위로 위 아래 정렬을 할 경우 쓰는 속성
+                         아이템 단위 위 아래 정렬을 하는 것이 유일하게 align-content와의
+                         차이점 이며 그 외의 속성에 대한 값은 동일하다.
+                         space-around, space-between, space-evenly는 전체 아이템을 대상으로 하기에
+                         속성 값으로 사용할 수 없다.
+        */
+        .flex-container {
+            display: flex;
+            height: 100vh;
+            align-items: center;
+        }
+        .flex-item:nth-child(2) {
+            /* align-self: stretch; */
+            /* align-self: flex-start; */
+            /* align-self: flex-end; */
+            /* align-self: center; */
+            align-self: baseline;
+            align-self: center;
+        }
+        .flex-item:nth-child(1) {
+            align-self: baseline;
+        }
+        .flex-item:nth-child(3) {
+            align-self: baseline;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item" style="font-size: 3em;">AAAAAAAAAAAAAAA</div>
+        <div class="flex-item" style="font-size: 1em;">BBBBBBBBBB</div>
+        <div class="flex-item" style="font-size: 2em;">CCCCCCCCCCCCCCCC</div>
+    </div>
+</body>
+</html>
