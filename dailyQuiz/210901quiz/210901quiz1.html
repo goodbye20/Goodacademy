@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        header {
+            width: 100%;
+            height: auto;
+        }
+
+        header nav {
+            background-color: black;
+        }
+
+        header ul.menu-item {
+            display: flex;
+            margin: 0;
+            list-style: none;
+        }
+
+        header ul li {
+            padding: 15px;
+            font-size: 0.8rem;
+        }
+
+        header a:link,
+        a:visited {
+            text-decoration: none;
+            color: white;
+        }
+
+        .header-bg {
+            background: url(images/header.jpg) fixed no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 70vh;
+        }
+
+        .wrapper {
+            border: 2px solid #ccc;
+            display: flex;
+            flex-direction: column;
+        }
+        article.contentBox {
+            display: flex;
+        }
+
+        aside#intro,
+        aside#local,
+        aside#recommend {
+            border: 1px dotted #ccc;
+            padding: 2em;
+            font-size: 2.2em;
+            line-height: 2em;
+        }
+
+        .intro-photo {
+            width: 40vw;
+            height: 30vh;
+            background: url(images/coffee.jpg) no-repeat;
+            background-size: contain;
+        }
+        .local-photo {
+            width: 40vw;
+            height: 30vh;
+            background: url(images/map.jpg) no-repeat;
+            background-size: contain;
+        }
+
+        .recommend-photo {
+            width: 30vw;
+            height: 30vh;
+            background: url(images/ice.jpg) no-repeat;
+            position: relative;
+            margin-top: 5em;
+            background-size: cover;
+            border-radius: 50%;
+        }
+        aside#local {
+            background-color: lightgrey;
+        }
+
+        footer {
+            background-color: black;
+            color: white;
+            text-align: center;
+            font-size: 1.8em;
+            padding: 30px;
+        }
+        @media (max-width: 1400px) {
+            .intro-photo, .local-photo, .recommend-photo {
+                background: none;
+            }
+            .tablet-box {
+                display: flex;
+                flex-direction: row;
+            }
+            .tablet-box> aside {
+                width: 40%;
+            }
+            article.contentBox {
+            display: block;
+            }
+        }
+        @media (max-width: 750px) {
+            .tablet-box {
+                display: flex;
+                flex-direction: column;
+            }
+            .tablet-box> aside {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="menu-item">
+                <li><a href="#intro">카페 소개</a></li>
+                <li><a href="#local">오시는 길</a></li>
+                <li><a href="#recommend">이 달의 추천</a></li>
+            </ul>
+        </nav>
+        <section class="header-bg"></section>
+    </header>
+    <div class="wrapper">
+        <main>
+            <section class="main-container">
+                <div class="tablet-box">
+                    <aside id="intro">
+                        <h2>카페 소개</h2>
+                        <article class="contentBox">
+                            <figure class="intro-photo"></figure>
+                            <p class="intro-desc">
+                                영업시간 : 오전 9시 ~ 밤 10시<br>
+                                휴무 : 매주 수요일(수요일이 공휴일일 경우 수요일 영업, 다음날 휴무)
+                            </p>
+                        </article>
+                    </aside>
+                    <aside id="local">
+                        <h2>오시는 길</h2>
+                        <article class="contentBox">
+                            <figure class="local-photo"></figure>
+                            <p class="local-desc">
+                                서귀포시 안덕면 사계리 oooo-ooo<br>
+                                제주 올레 10코스 산방산 근처
+                            </p>
+                        </article>
+                    </aside>
+                </div>
+                <aside id="recommend">
+                    <h2>이 달의 추천</h2>
+                    <article class="contentBox">
+                        <div class="ice-box">
+                            <h3>핸드드립 아이스커피</h3>
+                            <ol class="recommend-desc">
+                                <li>1인분 기준으로 서버에 각얼음 5조각(한조각의 20cc) 넣고 추출을 시작한다.</li>
+                                <li>평상시 보다 원두의 양은 2배 정도 (20g)와 추출액은 얼음 포함해서 200cc까지 내린다.</li>
+                                <li>아이스 잔에 얼음 6~7개 섞어서 시원하게 마신다</li>
+                            </ol>
+                        </div>
+                        <figure class="recommend-photo"></figure>
+                    </article>
+                </aside>
+            </section>
+        </main>
+        <footer>
+            <h3>my times with coffee</h3>
+        </footer>
+    </div>
+</body>
+
+</html>

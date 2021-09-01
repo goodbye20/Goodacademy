@@ -33,6 +33,47 @@
     text-align: center;
 }
 
+.modal {
+    display: none;
+    top: 80px;
+}
+
+#modal-switch:checked~.modal {
+    display: flex;
+}
+
+label[for="modal-switch"]{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 1.3rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+label[for="modal-switch"]::before {
+    content: "⚑";
+    font-size:2rem;
+    cursor: pointer;
+}
+
+#modal-switch, label[for="modal-switch"] span {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 1px;
+    height: 1px;
+    opacity: 0;
+}
+
+#modal-switch:checked ~ label[for="modal-switch"]::before {
+    color: dodgerblue;
+}
+
+
 @media (min-width : 1024px) {
     .page {
         display: flex;
