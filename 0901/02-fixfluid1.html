@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="default.css">
+    <style>
+        .flex-container {
+            display: flex;
+        }
+        .flex-item:nth-child(1){
+            width: 150px;
+        }
+        /* 중간에만 플렉스 글로우를 줌으로써 
+           양끝 여백이 없게 꽉차게 해주며 중간만 줄었다 늘었다 가능 */
+        .flex-item:nth-child(2){
+            flex-grow: 1;
+        }
+        .flex-item:nth-child(3){
+            width: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="flex-container">
+        <div class="flex-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        </div>
+        <div class="flex-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. At porro culpa ducimus sint optio? Consectetur amet, deleniti optio nostrum rerum eos fugiat error officiis ipsum nihil. Expedita soluta et consectetur.
+        </div>
+        <div class="flex-item">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+        </div>
+    </div>
+</body>
+</html>
