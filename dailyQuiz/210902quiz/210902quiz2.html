@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="format.css">
+    <style>
+        input:checked + label {
+            color: white;
+            background: black;
+        }
+        label {
+            display: inline-block;
+            width: 300px;
+            padding: 1em;
+            cursor: pointer;
+            margin-left: 10px;
+        }
+        .container {
+            background-color: #D3D3D3;
+            width: 80%;
+            border: 1px solid black;
+        }
+        .title {
+            color: #555555;
+            font-size: 4em;
+        }
+        .main-cards {
+            background-color: white;
+        }
+        .music h5 {
+            background-color: crimson;
+            padding: 1em;
+            color: white;
+        }
+        .food h5 {
+            background-color: salmon;
+            padding: 1em;
+            color: white;
+        }
+        .game h5 {
+            background-color:  limegreen;
+            padding: 1em;
+            color: white;
+        }
+        .tech h5 {
+            background-color: steelblue;
+            padding: 1em;
+            color: white;
+        }
+        .content {
+            padding: 1em;
+        }
+        input[type='radio'] {
+            display: none;
+        }
+        
+        .menu {
+            display: grid;
+            grid-template-areas:
+                ' default    category     .....      ..... '
+                ' title       title       title       title ';
+        }
+
+        .def {
+            grid-area: default;
+        }
+
+        .cate {
+            grid-area: category;
+        }
+
+        .title {
+            grid-area: title;
+        }
+
+        .main {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 1.5em;
+            margin: 1em;
+            grid-template-areas:
+                ' music1     food1       game1     tech1   '
+                ' music2     game2       food2     music3  '
+                ' tech2      food3       music4     game4  '
+                ' tech3      game3       food4      tech4  '
+                ' footer     footer       footer     footer ';
+        }
+
+        .music1 {
+            grid-area: music1;
+        }
+
+        .music2 {
+            grid-area: music2;
+        }
+
+        .music3 {
+            grid-area: music3;
+        }
+
+        .music4 {
+            grid-area: music4;
+        }
+
+        .food1 {
+            grid-area: food1;
+        }
+
+        .food2 {
+            grid-area: food2;
+        }
+
+        .food3 {
+            grid-area: food3;
+        }
+
+        .food4 {
+            grid-area: food4;
+        }
+
+        .game1 {
+            grid-area: game1;
+        }
+
+        .game2 {
+            grid-area: game2;
+        }
+
+        .game3 {
+            grid-area: game3;
+        }
+
+        .game4 {
+            grid-area: game4;
+        }
+
+        .tech1 {
+            grid-area: tech1;
+        }
+
+        .tech2 {
+            grid-area: tech2;
+        }
+
+        .tech3 {
+            grid-area: tech3;
+        }
+
+        .tech4 {
+            grid-area: tech4;
+        }
+
+        .footer {
+            grid-area: footer;
+        }
+
+        /* Pseudo */
+        #category:checked~.main {
+            grid-template-areas:
+                ' music1      music2      music3     music4 '
+                ' food1       food2       food3      food4  '
+                ' tech1       tech2       tech3      tech4  '
+                ' game1       game2       game3      game4  '
+                ' footer     footer       footer     footer ';
+        }
+         /* footer */
+         .footer {
+            padding: 1em;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <input type="radio" id="default" name="nav-tab" checked>
+        <label for="default">Default</label>
+        <input type="radio" id="category" name="nav-tab">
+        <label for="category">Category</label>
+        <div class="menu title">
+            <h1>CSS Grid Layout!</h1>
+        </div>
+        <section class="main">
+            <div class="music music1">
+                <h5>Music</h5>
+                <div class="main-cards content">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur aut explicabo dolores error
+                        voluptatem itaque corrupti voluptates perferendis expedita. Id earum repellendus incidunt ipsa
+                        quidem, ad dolorem maxime praesentium aut?</p>
+                </div>
+            </div>
+            <div class="music music2">
+                <h5>Music</h5>
+                <div class="main-cards content">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur aut explicabo dolores error
+                        voluptatem itaque corrupti voluptates perferendis expedita. Id earum repellendus incidunt ipsa
+                        quidem, ad dolorem maxime praesentium aut?</p>
+                </div>
+            </div>
+            <div class="music music3">
+                <h5>Music</h5>
+                <div class="main-cards content">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur aut explicabo dolores error
+                        voluptatem itaque corrupti voluptates perferendis expedita. Id earum repellendus incidunt ipsa
+                        quidem, ad dolorem maxime praesentium aut?</p>
+                </div>
+            </div>
+            <div class="music music4">
+                <h5>Music</h5>
+                <div class="main-cards content">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur aut explicabo dolores error
+                        voluptatem itaque corrupti voluptates perferendis expedita. Id earum repellendus incidunt ipsa
+                        quidem, ad dolorem maxime praesentium aut?</p>
+                </div>
+            </div>
+            <div class="food food1">
+                <h5>Food</h5>
+                <div class="main-cards content">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur aut explicabo dolores error
+                        voluptatem itaque corrupti voluptates perferendis expedita. Id earum repellendus incidunt ipsa
+                        quidem, ad dolorem maxime praesentium aut?</p>
+                </div>
+            </div>
+            <div class="food food2">
+                <h5>Food</h5>
+                <div class="main-cards content">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur aut explicabo dolores error
+                        voluptatem itaque corrupti voluptates perferendis expedita. Id earum repellendus incidunt ipsa
+                        quidem, ad dolorem maxime praesentium aut?</p>
+                </div>
+            </div>
+            <div class="food food3">
+                <h5>Food</h5>
+                <div class="main-cards content">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur aut explicabo dolores error
+                        voluptatem itaque corrupti voluptates perferendis expedita. Id earum repellendus incidunt ipsa
+                        quidem, ad dolorem maxime praesentium aut?</p>
+                </div>
+            </div>
+            <div class="food food4">
+                <h5>Food</h5>
+                <div class="main-cards content">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur aut explicabo dolores error
+                        voluptatem itaque corrupti voluptates perferendis expedita. Id earum repellendus incidunt ipsa
+                        quidem, ad dolorem maxime praesentium aut?</p>
+                </div>
+            </div>
+            <div class="game game1">
+                <h5>Game</h5>
+                <div class="main-cards content">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur aut explicabo dolores error
+                        voluptatem itaque corrupti voluptates perferendis expedita. Id earum repellendus incidunt ipsa
+                        quidem, ad dolorem maxime praesentium aut?</p>
+                </div>
+            </div>
+            <div class="game game2">
+                <h5>Game</h5>
+                <div class="main-cards content">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur aut explicabo dolores error
+                        voluptatem itaque corrupti voluptates perferendis expedita. Id earum repellendus incidunt ipsa
+                        quidem, ad dolorem maxime praesentium aut?</p>
+                </div>
+            </div>
+            <div class="game game3">
+                <h5>Game</h5>
+                <div class="main-cards content">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur aut explicabo dolores error
+                        voluptatem itaque corrupti voluptates perferendis expedita. Id earum repellendus incidunt ipsa
+                        quidem, ad dolorem maxime praesentium aut?</p>
+                </div>
+            </div>
+            <div class="game game4">
+                <h5>Game</h5>
+                <div class="main-cards content">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur aut explicabo dolores error
+                        voluptatem itaque corrupti voluptates perferendis expedita. Id earum repellendus incidunt ipsa
+                        quidem, ad dolorem maxime praesentium aut?</p>
+                </div>
+            </div>
+            <div class="tech tech1">
+                <h5>Tech</h5>
+                <div class="main-cards content">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur aut explicabo dolores error
+                        voluptatem itaque corrupti voluptates perferendis expedita. Id earum repellendus incidunt ipsa
+                        quidem, ad dolorem maxime praesentium aut?</p>
+                </div>
+            </div>
+            <div class="tech tech2">
+                <h5>Tech</h5>
+                <div class="main-cards content">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur aut explicabo dolores error
+                        voluptatem itaque corrupti voluptates perferendis expedita. Id earum repellendus incidunt ipsa
+                        quidem, ad dolorem maxime praesentium aut?</p>
+                </div>
+            </div>
+            <div class="tech tech3">
+                <h5>Tech</h5>
+                <div class="main-cards content">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur aut explicabo dolores error
+                        voluptatem itaque corrupti voluptates perferendis expedita. Id earum repellendus incidunt ipsa
+                        quidem, ad dolorem maxime praesentium aut?</p>
+                </div>
+            </div>
+            <div class="tech tech4">
+                <h5>Tech</h5>
+                <div class="main-cards content">
+                    <h2>Lorem, ipsum.</h2>
+                    <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Consectetur aut explicabo dolores error
+                        voluptatem itaque corrupti voluptates perferendis expedita. Id earum repellendus incidunt ipsa
+                        quidem, ad dolorem maxime praesentium aut?</p>
+                </div>
+            </div>
+        </section>
+        <footer class="footer">
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Aperiam iure</p>
+        </footer>
+    </div>
+</body>
+
+</html>
