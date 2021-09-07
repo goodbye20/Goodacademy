@@ -34,6 +34,24 @@
             color: black;
             text-decoration: none;
         }
+        .hr-sect {
+        display: flex;
+        flex-basis: 100%;
+        align-items: center;
+        color: rgba(0, 0, 0, 0.35);
+        font-size: 12px;
+        margin: 8px 0px;
+      }
+      .hr-sect::before,
+      .hr-sect::after {
+        content: "";
+        flex-grow: 1;
+        background: rgba(0, 0, 0, 0.35);
+        height: 1px;
+        font-size: 0px;
+        line-height: 0px;
+        margin: 0px 16px;
+      }
     </style>
 </head>
 <header>
@@ -71,16 +89,33 @@
     </section>
     <section class="main">
         <article class="main recently slide">
-
+            <h1>Recently added</h1>
         </article>
         <article class="main m-content1">
             <h1>Low-carb breakfast favorites</h1>
-            <p>Kick-off your morning in the best possible way with our tasty breakfasts that will keep you satisfied for hours.
-            </p>
+            <p>Kick-off your morning in the best possible way with our tasty breakfasts that will keep you satisfied for hours.</p>
             <div class="main m-photoBox1">
                 
             </div>
             <button type="submit">More breakfast ideas</button>
+        </article>
+        <div class="hr-sect">DD+ MEMBERSHIP</div>
+        <fieldset>
+            <legend>No time to cook? No problem!</legend>
+            <p>We understand how precious your time is. With our quick and easy low-carb meal plans, you can make healthy, delicious meals in minutes. Try them out with a free Diet Doctor Plus trial.</p>
+                <button type="submit">Sign me up!</button>
+                <button type="submit">Learn more</button>
+        </fieldset>
+        <article class="main topRated slide">
+            <h1>Top rated recipes</h1>
+        </article>
+        <article class="main m-content2">
+            <h1>Low-carb dinner favorites</h1>
+            <p>Who said that eating healthy is boring? Keep it fun and simple with these weeknight low-carb meals that the whole family will love.</p>
+            <div class="main m-photoBox2">
+                
+            </div>
+            <button type="submit">More dinner ideas</button>
         </article>
     </section>
 </header>
