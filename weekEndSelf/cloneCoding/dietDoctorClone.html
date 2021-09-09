@@ -7,52 +7,270 @@
         <title>Document</title>
         <link rel="stylesheet" href="format.css">
         <style>
-            header {
+            /* header */
+
+             header {
+                width: 100vw;
+                border: 1px solid #ccc ;
+                display: flex;
+                flex-direction: column;
+               }
+        .h-icon {
                 width: 100vw;
                 height: 55px;
-                border: 1px solid #ccc ;
-            }
-            .h-menu {
-                width: 100vw;
-            height: 174px;
-            border: 1px solid #ccc;
-        }
-        .header.searchbar {
-            
-        }
+                position: fixed;
+                border: 1px solid #ccc;
+                background-color: white;
+                }
         section#menuPost {
-            height: 240px;
-            background: url('https://i0.wp.com/post.healthline.com/wp-content/uploads/2020/04/low-carb-diet-meal-plan-and-menu-1296x728-feature.jpg?h=1528') no-repeat;
-            background-size: contain;
+            width: 100%;
+            height: 38vh;
+            background: url("https:\/\/www.dietdoctor.com\/wp-content\/uploads\/2021\/09\/low-carb-recipe-hub-16-9.jpg") no-repeat;
+            background-size: cover;
             color: #444444;
-            font-size: 4.5rem;
+            font-size: 3rem;
             font-weight: bold;
+            margin-top: 55px;
             padding-left: 353px;
             padding-top: 58px;
+        }
+        .h-searchbar {
+            width: 40%;
+            height: 2%;
+            position: absolute;
+            border: none;
+            padding: 20px;
+            border-radius: 30px;
+        }
+        button {
+            background-color: #4FAD64;
+            color: white;
+            font-size: 1.1rem;
+            font-weight: bold;
+            padding: 15px;
+            border-radius: 30px;
+        }
+        .h-searchbutton {
+            position: absolute;
+            margin-left: 33%;
+            width: 120px;
         }
         section a, a:visited {
             font-size: 0.2em;
             color: black;
             text-decoration: none;
         }
+        .header.aside-left ul{
+            display: flex;
+        }
+        .header.aside-left a {
+            color: #4FAD64;
+        }
+        .h-content {
+            margin: 10px 13%;
+            display: flex;
+        }
+        .header.aside-left {
+            width: 65%;
+        }
+        .header.aside-right {
+            width: 35%;
+            height: 300px;
+            border-bottom: 1px solid #ccc;
+        }
+        .aside-right-box ul {
+            display: flex;
+        }
         .hr-sect {
             display: flex;
             flex-basis: 100%;
             align-items: center;
             color: rgba(0, 0, 0, 0.35);
-            font-size: 12px;
-            margin: 8px 0px;
+        font-size: 12px;
+        margin: 8px 0px;
+    }
+    .hr-sect::before,
+    .hr-sect::after {
+        content: "";
+        flex-grow: 1;
+        background: rgba(0, 0, 0, 0.35);
+        height: 1px;
+        font-size: 0px;
+        line-height: 0px;
+        margin: 0px 16px;
+    }
+    .aside-right-box {
+            text-align: center;
+            padding: 30px;
+            line-height: 40px;
+            background-color: #F2F2F2;
+            border-radius: 10px;
+            height: 250px;
         }
-        .hr-sect::before,
-        .hr-sect::after {
-            content: "";
-            flex-grow: 1;
-            background: rgba(0, 0, 0, 0.35);
-            height: 1px;
-            font-size: 0px;
-            line-height: 0px;
-            margin: 0px 16px;
+
+        /* main */
+        .slide {
+            background-color: #F3F2EF;
         }
+        .main.m-photoBox1 {
+            display: grid;
+            gap: 1em;
+            max-width: 650px;
+            margin : 0 auto;
+            grid-template-columns: repeat(3, 200px);
+        }
+        .m-photoBox1 .pBox1-photo1 {
+            width: 100%;
+            height: 100%;
+            background: url('image/6slot.png') no-repeat center;
+            background-size: contain;
+        }
+        .m-photoBox1 .pBox1-photo2 {
+            width: 100%;
+            height: 300px;
+            background: url('image/6slot.png') no-repeat center;
+            background-size: contain;
+        }
+        .m-photoBox1 .pBox1-photo3 {
+            width: 100%;
+            height: 300px;
+            background: url('image/6slot.png') no-repeat center;
+            background-size: contain;
+        }
+        .m-photoBox1 .pBox1-photo4 {
+            width: 100%;
+            height: 300px;
+            background: url('image/6slot.png') no-repeat center;
+            background-size: contain;
+        }
+        .m-photoBox1 .pBox1-photo5 {
+            width: 100%;
+            height: 300px;
+            background: url('image/6slot.png') no-repeat center;
+            background-size: contain;
+        }
+        .m-photoBox1 .pBox1-photo6 {
+            width: 100%;
+            height: 300px;
+            background: url('image/6slot.png') no-repeat center;
+            background-size: contain;
+        }
+
+
+
+
+
+        .main.m-photoBox2 {
+            display: grid;
+            gap: 1em;
+            max-width: 650px;
+            margin : 0 auto;
+            grid-template-columns: repeat(3, 200px);
+        }
+        .m-photoBox2 .pBox2-photo1 {
+            width: 100%;
+            height: 100%;
+            background: url('image/6slot.png') no-repeat center;
+            background-size: contain;
+        }
+        .m-photoBox2 .pBox2-photo2 {
+            width: 100%;
+            height: 300px;
+            background: url('image/6slot.png') no-repeat center;
+            background-size: contain;
+        }
+        .m-photoBox2 .pBox2-photo3 {
+            width: 100%;
+            height: 300px;
+            background: url('image/6slot.png') no-repeat center;
+            background-size: contain;
+        }
+        .m-photoBox2 .pBox2-photo4 {
+            width: 100%;
+            height: 300px;
+            background: url('image/6slot.png') no-repeat center;
+            background-size: contain;
+        }
+        .m-photoBox2 .pBox2-photo5 {
+            width: 100%;
+            height: 300px;
+            background: url('image/6slot.png') no-repeat center;
+            background-size: contain;
+        }
+        .m-photoBox2 .pBox2-photo6 {
+            width: 100%;
+            height: 300px;
+            background: url('image/6slot.png') no-repeat center;
+            background-size: contain;
+        }
+
+
+
+
+
+
+        .main.m-photoBox3 {
+            display: grid;
+            gap: 1em;
+            max-width: 650px;
+            margin : 0 auto;
+            grid-template-columns: repeat(3, 200px);
+        }
+        .m-photoBox3 .pBox3-photo1 {
+            width: 100%;
+            height: 100%;
+            background: url('image/6slot.png') no-repeat center;
+            background-size: contain;
+        }
+        .m-photoBox3 .pBox3-photo2 {
+            width: 100%;
+            height: 300px;
+            background: url('image/6slot.png') no-repeat center;
+            background-size: contain;
+        }
+        .m-photoBox3 .pBox3-photo3 {
+            width: 100%;
+            height: 300px;
+            background: url('image/6slot.png') no-repeat center;
+            background-size: contain;
+        }
+        .m-photoBox3 .pBox3-photo4 {
+            width: 100%;
+            height: 300px;
+            background: url('image/6slot.png') no-repeat center;
+            background-size: contain;
+        }
+        .m-photoBox3 .pBox3-photo5 {
+            width: 100%;
+            height: 300px;
+            background: url('image/6slot.png') no-repeat center;
+            background-size: contain;
+        }
+        .m-photoBox3 .pBox3-photo6 {
+            width: 100%;
+            height: 300px;
+            background: url('image/6slot.png') no-repeat center;
+            background-size: contain;
+        }
+        #recipe-people {
+            background: url("https://i.dietdoctor.com/wp-content/uploads/2021/08/recipe-team-aug-2021.jpg?auto=compress%2Cformat&w=1200&h=713&fit=crop") no-repeat;
+            background-size: contain;
+            width: 80%;
+            height: 500px;
+            margin : 0 auto;
+        }
+        .collabo-container {
+            display: grid;
+            gap: 1em;
+            max-width: 650px;
+            margin : 0 auto;
+            grid-template-columns: repeat(3, 200px);
+        }
+        .collabo-item {
+            background-color: #F2F2F2;
+        }
+
+        /* footer */
         #footer {
             background-color: #193374;
         }
@@ -60,50 +278,70 @@
 </head>
 <body>
 <header>
-    <nav class="header h-menu">
+    <nav class="header h-icon">
         
     </nav>
     <section id="menuPost">
         <h1>Low-carb recipes</h1>
-        <article class="header SearchBar">
-            <input type="text" id="header-searchbar" class="header h-searchbar">
-            <button type="submit" >Search</button>
+        <article class="header searchBar">
+            <input type="text" placeholder="What are you looking for?" id="header-searchbar" class="header h-searchbar">
+            <button type="submit" class="button h-searchbutton" >Search</button>
         </article>
         <a href="#">Advanced search ›</a>
     </section>
     <section class="header h-content">
-        <p>By <a href="#">Jill wallentin</a>, nutritional review by <a href="#">Frankziska Spitzler, RD, CDE</a> -Updated September 3.2021</p>
-        <a href="#">New</a>
-        <a href="#">Breakfasts</a>
-        <a href="#">Top recipes</a>
-        <a href="#">Dinners</a>
-        <a href="#">Collections</a>
-        <a href="#">Desserts</a>
-        <a href="#">FAQ</a>
-        <a href="#">Food policy</a>
-        <a href="#">Which low-carb diet is best?</a>
-        <a href="#">the team</a>
+        <aside class="header aside-left">
+            <p>By <a href="#">Jill wallentin</a>, nutritional review by <a href="#">Frankziska Spitzler, RD, CDE</a> -Updated September 3.2021</p>
+            <table>
+                <ul class="header h-menu">
+                <li><a href="#">New</a></li>
+                <li><a href="#">Breakfasts</a></li>
+                <li><a href="#">Top recipes</a></li>
+                <li><a href="#">Dinners</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Desserts</a></li>
+                <li><a href="#">FAQ</a></li>
+                <li><a href="#">Food policy</a></li>
+                <li><a href="#">Which low-carb diet is best?</a></li>
+                <li><a href="#">the team</a></li>
+            </ul>
+        </table>
         <p>Discover our impressive collection of healthy food and drink ideas for every occasion, used by more than 3 million home cooks every month(!)<a href="#">1</a>.</p>
         <p>Whether you're looking for high-protein, strict keto, moderate, or liberal low-carb recipes, or if you're just looking for a healthier dessert option - we've got you covered!</p>
         <p>We offer 1,157 nutritionally approved and tested <a href="#">low-carb</a> recipes that are easy to follow, created by some of the most loved low-carb cookbook authors, chefs, and dietitians from around the world.</p>
         <p>The Diet Doctor recipe team’s mission is to provide you with the most delicious recipes and meal plans that will empower you to improve your health.</p>
         <p>Happy browsing!</p>
-        <article class="gender-box">
-            <p>Get your personalized meal plan with a FREE 30-day trial!</p>
-            <h2>What's your gender?</h2>
-            <a href="#">Female</a><a href="#">Male</a><a href="#">Other</a>
-        </article>
+        </aside>
+        <aside class="header aside-right">
+            <div class="hr-sect">DD+ MEMBERSHIP</div>
+            <div class="aside-right-box">
+                <p>Get your personalized meal plan with a FREE 30-day trial!</p>
+                <h2>What's your gender?</h2>
+                <table>
+                    <ul>
+                        <li><a href="#">Female</a></li>
+                        <li><a href="#">Male</a></li>
+                        <li><a href="#">Other</a></li>
+                    </ul>
+                </table>
+            </div>
+        </aside>
     </section>
 </header>
     <section class="main">
         <article class="main recently slide">
-            <h1>Recently added</h1>
+            <h1><a href="#">Recently added</a></h1>
         </article>
         <article class="main m-content1">
             <h1>Low-carb breakfast favorites</h1>
             <p>Kick-off your morning in the best possible way with our tasty breakfasts that will keep you satisfied for hours.</p>
             <div class="main m-photoBox1">
-                
+                <div class="pBox1-photo1"></div>
+                <div class="pBox1-photo2"></div>
+                <div class="pBox1-photo3"></div>
+                <div class="pBox1-photo4"></div>
+                <div class="pBox1-photo5"></div>
+                <div class="pBox1-photo6"></div>
             </div>
             <button type="submit">More breakfast ideas</button>
         </article>
@@ -121,7 +359,12 @@
             <h1>Low-carb dinner favorites</h1>
             <p>Who said that eating healthy is boring? Keep it fun and simple with these weeknight low-carb meals that the whole family will love.</p>
             <div class="main m-photoBox2">
-                
+                <div class="pBox2-photo1"></div>
+                <div class="pBox2-photo2"></div>
+                <div class="pBox2-photo3"></div>
+                <div class="pBox2-photo4"></div>
+                <div class="pBox2-photo5"></div>
+                <div class="pBox2-photo6"></div>
             </div>
             <button type="submit">More dinner ideas</button>
         </article>
@@ -135,7 +378,12 @@
             <h1>Low-carb dessert favorites</h1>
             <p>Dessert can be part of a healthy lifestyle and we will show you how! These goodies will make even the carbivours ask for more.</p>
             <div class="main m-photoBox3">
-                
+                <div class="pBox3-photo1"></div>
+                <div class="pBox3-photo2"></div>
+                <div class="pBox3-photo3"></div>
+                <div class="pBox3-photo4"></div>
+                <div class="pBox3-photo5"></div>
+                <div class="pBox3-photo6"></div>
             </div>
             <button type="submit">More dessert ideas</button>
         </article>
@@ -176,64 +424,75 @@
                    <button type="submit">Recipes</button>
               </article>
         </article>
-        <fieldset class="main SignUpBar">
+        <fieldset class="main signUpBar">
             <legend>Sign up for our newsletter</legend>
             <p>Update copy: The Diet Doctor newsletter arrives weekly with the biggest news of the week. It’s free, and you can cancel your subscription at any time. Your e-mail is kept private.</p>
                 <input type="text">
                 <button type="submit">Sign me up!</button>
         </fieldset>
         <section>
-            <div>큰 사진</div>
+            <div id="recipe-people"></div>
             <article>
                 <h1>The people behind the recipes</h1>
                 <p>Diet Doctor’s small but passionate recipe team consists of hardcore foodies, content managers, cookbook authors, and nutritional advisors. We work relentlessly to make every single recipe and meal plan that hits the site (and app) as flawless as possible.</p>
                 <p>We work together with a talented team of recipe testers, freelancing food photographers, and our very own registered dietitian, diabetes educator, and author Franziska Spritzler to make sure you get the best results.</p>
             </article>
-            <article>
+            </section>
+            <section class="main collabo">
                 <h1>Recipe collaborators</h1>
                 <p>We partner with top low-carb and keto personalities, YouTubers, and bestselling cookbook authors from around the world. Click to read more about each person and to check out their recipes.</p>
                 <p>Are you interested in contributing your favorite low-carb recipes, or would you love to collaborate with us in the future? Don’t hesitate to reach out recipes@dietdoctor.com!</p>
-                <div>사진1
-                    <h1>Megha & Matt</h1>
-                    <p>Megha Barot and Matt Gaedke are business partners living in Atlanta, Georgia. KetoConnect.net, their food blog, started as a weekend side hustle, but has become their full-time passion project. Their mission is to make your keto diet easy and approachable.</p>
-                </div>
-                <div>사진2
+                <div class="collabo-container">
+                    <article class="collabo-item cBox1">
+                        <div>사진1</div>
+                        <h1>Megha & Matt</h1>
+                        <p>Megha Barot and Matt Gaedke are business partners living in Atlanta, Georgia. KetoConnect.net, their food blog, started as a weekend side hustle, but has become their full-time passion project. Their mission is to make your keto diet easy and approachable.</p>
+                </article>
+                <article class="collabo-item cBox2">
+                    <div>사진2</div>
                     <h1>Suzanne Ryan</h1>
-                    <p>Suzanne Ryan discovered the keto diet in January 2015, and it completely changed her life. She’s passionate about helping others find the same success. She also has a popular blog, Keto Karma, where she posts helpful information and keto recipes.</p>
-                </div>
-                <div>사진3
-                    <h1>Kristie Sullivan, PhD</h1>
-                    <p>Because of her personal success, Kristie began helping others learn how to make a low-carb diet sustainable and delicious! She focuses on a clean-eating approach to keto and has authored five cookbooks to teach others</p>
-                </div>
-                <div>사진4
+                            <p>Suzanne Ryan discovered the keto diet in January 2015, and it completely changed her life. She’s passionate about helping others find the same success. She also has a popular blog, Keto Karma, where she posts helpful information and keto recipes.</p>    
+                        </article>
+                    <article class="collabo-item cBox3">
+                        <div>사진3</div>
+                        <h1>Kristie Sullivan, PhD</h1>
+                        <p>Because of her personal success, Kristie began helping others learn how to make a low-carb diet sustainable and delicious! She focuses on a clean-eating approach to keto and has authored five cookbooks to teach others</p>
+                </article>
+                <article class="collabo-item cBox4">
+                    <div>사진4</div>
                     <h1>Lisa MarcAurele</h1>
                     <p>Lisa is the blogger behind Low Carb Yum, a popular keto friendly recipe site that receives millions of views per month and has well over a million Facebook fans. As a busy working mom, her motto has been to "keep it simple" so she favors recipes that are easy to prepare.</p>
-                </div>
-                <div>사진5
+                </article>
+                <article class="collabo-item cBox5">
+                    <div>사진5</div>
                     <h1>Maria Emmerich</h1>
                     <p>Wellness expert in nutrition and exercise physiology, offering innovative recipes and easy-to-understand instructions. Author of several cookbooks and nutritional guidebooks. Maria’s success stems from her passion for helping others.</p>
-                </div>
-                <div>사진6
-                    <h1>Cristina Curp</h1>
-                    <p>Cristina Curp is a seasoned chef and ancestral health enthusiast. A Miami native with Cuban roots, she now lives in Virginia with her family. Author of the bestselling cookbook ‘Made Whole’ and the creative mind behind The Castaway Kitchen, a blog dedicated to real food recipes and healthy living.</p>
-                </div>
-                <div>사진7
+                </article>
+                <article class="collabo-item cBox6">
+                    <div>사진6</div>
+                        <h1>Cristina Curp</h1>
+                        <p>Cristina Curp is a seasoned chef and ancestral health enthusiast. A Miami native with Cuban roots, she now lives in Virginia with her family. Author of the bestselling cookbook ‘Made Whole’ and the creative mind behind The Castaway Kitchen, a blog dedicated to real food recipes and healthy living.</p>
+                </article>
+                <article class="collabo-item cBox7">
+                    <div>사진7</div>
                     <h1>Kyndra Holley</h1>
-                    <p>Kyndra Holley is the face behind the keyboard at Peace, Love, and Low Carb. What started as a hobby blog back in 2011 now gets 3 million page views per month, and is one of the most well-established low carb, ketogenic resources out there. She is also the author of several international best-selling cookbooks.</p>
-                </div>
-                <div>사진8
-                    <h1>Carolyn Ketchum</h1>
-                    <p>Carolyn Ketchum is the writer, photographer and evil mastermind behind All Day I Dream About Food, a low carb, gluten-free food blog. Her mission is to prove that special diets need not be boring or restrictive. It’s astonishing what you can do with a bag of almond flour, a stick of butter, and a willingness to experiment.</p>
-                </div>
-                <div>사진9
-                    <h1>Sahil Makhija</h1>
-                    <p>Sahil 'Demonstealer' Makhija is the master chef and heavy metal genius behind Headbanger's Kitchen, bringing you all the irresistible flavors of the Indian cuisine. Sahil is the man behind Headbanger's Kitchen, a YouTube cooking channel that's keto all the way.</p>
+                        <p>Kyndra Holley is the face behind the keyboard at Peace, Love, and Low Carb. What started as a hobby blog back in 2011 now gets 3 million page views per month, and is one of the most well-established low carb, ketogenic resources out there. She is also the author of several international best-selling cookbooks.</p>
+                    </article>
+                <article class="collabo-item cBox8">
+                    <div>사진8</div>
+                        <h1>Carolyn Ketchum</h1>
+                        <p>Carolyn Ketchum is the writer, photographer and evil mastermind behind All Day I Dream About Food, a low carb, gluten-free food blog. Her mission is to prove that special diets need not be boring or restrictive. It’s astonishing what you can do with a bag of almond flour, a stick of butter, and a willingness to experiment.</p>
+                </article>
+                <article class="collabo-item cBox9">
+                    <div>사진9</div>
+                        <h1>Sahil Makhija</h1>
+                        <p>Sahil 'Demonstealer' Makhija is the master chef and heavy metal genius behind Headbanger's Kitchen, bringing you all the irresistible flavors of the Indian cuisine. Sahil is the man behind Headbanger's Kitchen, a YouTube cooking channel that's keto all the way.</p>
+                    </article>
                 </div>
                 <button type="submit">All collaborators</button>
-            </article>
+            </section>
         </section>
-    </section>
-    <footer id="footer">
+        <footer id="footer">
         <section class="footer">
             <nav>
                 <ul class="footer-nav">
