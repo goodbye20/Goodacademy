@@ -36,6 +36,7 @@
         #container {
             width : 100%;
             margin : 0 auto;
+            font-family: Arial, Helvetica, sans-serif;
         }
         
         /* header */
@@ -88,13 +89,13 @@
         }
         section#menuPost {
             width: 100%;
-            height: 64vh;
-            background: url("https:\/\/www.dietdoctor.com\/wp-content\/uploads\/2021\/09\/low-carb-recipe-hub-16-9.jpg") no-repeat;
+            height: 50vh;
+            background: url(image/head-post.png) center no-repeat;
             background-size: cover;
             color: #444444;
             font-size: 3rem;
             font-weight: bold;
-            margin-top: 70px;
+            margin-top: 50px;
             padding-left: 353px;
             padding-top: 58px;
         }
@@ -121,23 +122,54 @@
             color: black;
             text-decoration: none;
         }
-        .header.aside-left ul{
-            display: flex;
+        .header.aside-left li {
+            white-space: nowrap;
+            text-align: center;
+            display: inline-block;
+            padding: 0 0.8em;
+            border-right: 1px solid #9999;
         }
-        .header.aside-left a {
-            color: #4FAD64;
+        .header.aside-left li:last-child {
+            border: none;
         }
         .h-content {
-            margin: 10px 13%;
+            max-width: 1280px;
+            height: 50vh;
+            margin : 0 auto;    
             display: flex;
         }
+        .header.aside-left p a {
+            color: #728FD2;
+        }
+        .header.aside-left li a {
+            color: #4FAD64;
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        .hearder-contentBox p{
+            padding: 1em 0.8em;
+        }
+        .asideleft-content {
+            margin-bottom: 2em;
+            font-size: 0.8em;
+            color: #979797;
+        }
+        .asideleft-content a {
+            font-size: 1em;
+        }
         .header.aside-left {
-            width: 65%;
+            width: 70%;
+            font-size: 1.2em;
+            color: #444444;
         }
         .header.aside-right {
-            width: 35%;
+            width: 34%;
             height: 300px;
             border-bottom: 1px solid #ccc;
+        }
+        .header.aside-right h1{
+            font-size: 2em;
+            color: #404040;
         }
         .aside-right-box ul {
             display: flex;
@@ -147,19 +179,19 @@
             flex-basis: 100%;
             align-items: center;
             color: rgba(0, 0, 0, 0.35);
-        font-size: 12px;
-        margin: 8px 0px;
-    }
-    .hr-sect::before,
-    .hr-sect::after {
-        content: "";
-        flex-grow: 1;
-        background: rgba(0, 0, 0, 0.35);
-        height: 1px;
-        font-size: 0px;
-        line-height: 0px;
-        margin: 0px 16px;
-    }
+            font-size: 12px;
+            margin: 8px 0px;
+        }
+        .hr-sect::before,
+        .hr-sect::after {
+            content: "";
+            flex-grow: 1;
+            background: rgba(0, 0, 0, 0.35);
+            height: 1px;
+            font-size: 0px;
+            line-height: 0px;
+            margin: 0px 16px;
+        }
     .aside-right-box {
             text-align: center;
             padding: 30px;
@@ -168,16 +200,34 @@
             border-radius: 10px;
             height: 250px;
         }
+        .aside-right-box a {
+            color: #4FAD64;
+            border: 1px solid #4FAD64;
+            border-radius: 50%;
+            background-color: white;
+            width: 30em;
+            padding: 10px;
+            margin-top: 5em;
+            margin-left: 5em;
+        }
+        .aside-right-box a:hover {
+            color: white;
+            background-color: #4FAD64;
+        }
 
         /* main */
         .slide {
             background-color: #F3F2EF;
         }
+        .centerBoxing {
+            text-align: center;
+        }
         .main.m-photoBox1 {
             display: grid;
             gap: 1em;
-            max-width: 650px;
             margin : 0 auto;
+            max-width: 1280px;
+            place-content: center;
             grid-template-columns: repeat(3, 200px);
         }
         .m-photoBox1 .pBox1-photo1 {
@@ -224,7 +274,8 @@
         .main.m-photoBox2 {
             display: grid;
             gap: 1em;
-            max-width: 650px;
+            max-width: 1280px;
+            place-content: center;
             margin : 0 auto;
             grid-template-columns: repeat(3, 200px);
         }
@@ -272,7 +323,7 @@
             background-color: #F2F5ED;
             width: 60%;
             border-radius: 10px;
-            max-width: 650px;
+            max-width: 1280px;
             margin : 0 auto;
             margin-bottom: 20px;
             display: flex;
@@ -286,7 +337,8 @@
         
         .popular-itembox {
             display: grid;
-            max-width: 650px;
+            max-width: 1280px;
+            place-content: center;
             margin : 0 auto;
             grid-template-columns: repeat(4, 200px);
         }
@@ -325,7 +377,8 @@
         .main.m-photoBox3 {
             display: grid;
             gap: 1em;
-            max-width: 650px;
+            max-width: 1280px;
+            place-content: center;
             margin : 0 auto;
             grid-template-columns: repeat(3, 200px);
         }
@@ -369,7 +422,8 @@
         .faq-container {
             display: grid;
             gap: 1em;
-            max-width: 550px;
+            max-width: 1280px;
+            place-content: center;
             margin : 0 auto;
             grid-template-columns: repeat(2, 200px);
         }
@@ -388,13 +442,15 @@
         .m-content4 {
             display: grid;
             grid-template-columns: repeat(2, 200px);
-            max-width: 550px;
+            max-width: 1280px;
+            place-content: center;
             margin : 0 auto;
         }
         .best-itemcontainer {
             display: grid;
             grid-template-columns: repeat(3, 200px);
-            max-width: 550px;
+            max-width: 1280px;
+            place-content: center;
             margin : 0 auto;
         }
         .best-photo1 {
@@ -415,23 +471,51 @@
             width: 200px;
             height: 100px;
         }
-
-        .main .signUpBar {
+        .signUpContainer {
+            display: grid;
+            max-width: 1280px;
+            place-content: center;
+            margin : 0 auto;
+            margin-left: 8em;
+            padding: 2em;
+        }
+        .signUpContainer h1 {
+            font-size: 3.4em;
+        }
+        .signUpContainer p {
+            font-size: 1.2em;
+            width: 70%;
+            margin: 10px 0 30px;
+        }
+        .signUpBar {
             background-color: #193374;
             color: white;
-            height: 35vh;
+            height: 30vh;
         }
+        
         .su-inputBar {
-            width: 40%;
-            height: 2%;
+            width: 70%;
+            height: 60px;
             border: none;
-            padding: 25px;
-            border-radius: 30px;
+            border-radius: 40px;
             font-size: .3666em;
         }
+        .sup-inputBar {
+            border: none;
+            height: 50px;
+            font-size: 3em;
+            border-radius: 40px;
+            color: #979797;
+            opacity: 0.6;
+            padding-top: 0.3em;
+            padding-left: 2em;
+        }
+        
         .su-signupbutton {
             background-color: #7485AC;
-            width: 120px;
+            font-size: 3em;
+            width: 10em;
+            border-radius: 50px;
             margin: 3px;
             margin-left: auto;
         }
@@ -444,18 +528,31 @@
             width: 300px;
             height: 200px;
         }
-
+        .recipe-content {
+            max-width: 1280px;
+            place-content: center;
+            margin : 0 auto;
+        }
+        .collabo-content {
+            max-width: 1280px;
+            place-content: center;
+            margin : 0 auto;
+        }
         #recipe-people {
             background: url("https://i.dietdoctor.com/wp-content/uploads/2021/08/recipe-team-aug-2021.jpg?auto=compress%2Cformat&w=1200&h=713&fit=crop") no-repeat;
-            background-size: contain;
-            width: 80%;
-            height: 500px;
+            background-size: cover;
+            width: 100%;
+            border-radius: 20px;
+            height: 80vh;
+            max-width: 1280px;
+            place-content: center;
             margin : 0 auto;
         }
         .collabo-container {
             display: grid;
             gap: 1em;
-            max-width: 650px;
+            max-width: 1280px;
+            place-content: center;
             margin : 0 auto;
             grid-template-columns: repeat(3, 200px);
         }
@@ -526,39 +623,41 @@
             <article class="searchbar-container h-searchBar">
             <input type="text" placeholder="What are you looking for?" id="header-searchbar" class="header h-searchbar">
             <button type="submit" class="button h-searchbutton" >Search</button>
-        </article>
+            </article>
         <article class="h-searchcontent">
             <a href="#">Advanced search ›</a>
         </article>
     </section>
     <section class="header h-content">
         <aside class="header aside-left">
-            <p>By <a href="#">Jill wallentin <img src="image/jill wallentin.png" alt=""> </a>, nutritional review by <a href="#">Frankziska Spitzler, RD, CDE<img src="image/Franziska Sprizler.png" alt=""></a> -Updated September 3.2021</p>
-            <table>
+            <div class="asideleft-content">
+                <p>By <a href="#">Jill wallentin <img src="image/jill wallentin.png" alt=""> </a>, nutritional review by <a href="#">Frankziska Spitzler, RD, CDE<img src="image/Franziska Sprizler.png" alt=""></a> -Updated September 3.2021</p>
+            </div>
                 <ul class="header h-menu">
-                    <li><a href="#">New</a></li>
-                    <li><a href="#">Breakfasts</a></li>
-                    <li><a href="#">Top recipes</a></li>
-                    <li><a href="#">Dinners</a></li>
-                    <li><a href="#">Collections</a></li>
-                    <li><a href="#">Desserts</a></li>
+                <li><a href="#">New</a></li>
+                <li><a href="#">Breakfasts</a></li>
+                <li><a href="#">Top recipes</a></li>
+                <li><a href="#">Dinners</a></li>
+                <li><a href="#">Collections</a></li>
+                <li><a href="#">Desserts</a></li>
                 <li><a href="#">FAQ</a></li>
                 <li><a href="#">Food policy</a></li>
                 <li><a href="#">Which low-carb diet is best?</a></li>
-                <li><a href="#">the team</a></li>
+                <li><a href="#">The Team</a></li>
             </ul>
-        </table>
-        <p>Discover our impressive collection of healthy food and drink ideas for every occasion, used by more than 3 million home cooks every month(!)<a href="#">1</a>.</p>
-        <p>Whether you're looking for high-protein, strict keto, moderate, or liberal low-carb recipes, or if you're just looking for a healthier dessert option - we've got you covered!</p>
-        <p>We offer 1,157 nutritionally approved and tested <a href="#">low-carb</a> recipes that are easy to follow, created by some of the most loved low-carb cookbook authors, chefs, and dietitians from around the world.</p>
-        <p>The Diet Doctor recipe team’s mission is to provide you with the most delicious recipes and meal plans that will empower you to improve your health.</p>
-        <p>Happy browsing!</p>
+        <div class="hearder-contentBox">
+            <p>Discover our impressive collection of healthy food and drink ideas for every occasion, used by more than 3 million home cooks every month(!)<a href="#">1</a>.</p>
+            <p>Whether you're looking for high-protein, strict keto, moderate, or liberal low-carb recipes, or if you're just looking for a healthier dessert option - we've got you covered!</p>
+            <p>We offer 1,157 nutritionally approved and tested <a href="#">low-carb</a> recipes that are easy to follow, created by some of the most loved low-carb cookbook authors, chefs, and dietitians from around the world.</p>
+            <p>The Diet Doctor recipe team’s mission is to provide you with the most delicious recipes and meal plans that will empower you to improve your health.</p>
+            <p>Happy browsing!</p>
+        </div>
         </aside>
         <aside class="header aside-right">
             <div class="hr-sect">DD+ MEMBERSHIP</div>
             <div class="aside-right-box">
                 <p>Get your personalized meal plan with a FREE 30-day trial!</p>
-                <h2>What's your gender?</h2>
+                <h1>What's your gender?</h1>
                 <table>
                     <ul>
                         <li><a href="#">Female</a></li>
@@ -575,9 +674,10 @@
         <h1><a href="#">Recently added</a></h1>
     </article>
     <article class="main m-content1">
-        <h1>Low-carb breakfast favorites</h1>
-        <p>Kick-off your morning in the best possible way with our tasty breakfasts that will keep you satisfied for hours.</p>
-        <div class="main m-photoBox1">
+        <div class="centerBoxing">
+            <h1>Low-carb breakfast favorites</h1>
+            <p>Kick-off your morning in the best possible way with our tasty breakfasts that will keep you satisfied for hours.</p>
+            <div class="main m-photoBox1">
                 <div class="pBox1-photo1"></div>
                 <div class="pBox1-photo2"></div>
                 <div class="pBox1-photo3"></div>
@@ -586,6 +686,7 @@
                 <div class="pBox1-photo6"></div>
             </div>
             <button type="submit">More breakfast ideas</button>
+        </div>
         </article>
         <div class="hr-sect">DD+ MEMBERSHIP</div>
         <section class="membership-container">
@@ -593,8 +694,8 @@
                 <div class="membership-item1">
                     <h1>No time to cook? No problem!</h1>
                     <p>We understand how precious your time is. With our quick and easy low-carb meal plans, you can make healthy, delicious meals in minutes. Try them out with a free Diet Doctor Plus trial.</p>
-                    <button type="submit">Sign me up!</button>
-                    <button type="submit">Learn more</button>
+                        <button type="submit">Sign me up!</button>
+                        <button type="submit">Learn more</button>
                 </div>
                 <div class="membership-item2"></div>
             </div>
@@ -603,9 +704,10 @@
             <h1>Top rated recipes</h1>
         </article>
         <article class="main m-content2">
-            <h1>Low-carb dinner favorites</h1>
-            <p>Who said that eating healthy is boring? Keep it fun and simple with these weeknight low-carb meals that the whole family will love.</p>
-            <div class="main m-photoBox2">
+            <div class="centerBoxing">
+                <h1>Low-carb dinner favorites</h1>
+                <p>Who said that eating healthy is boring? Keep it fun and simple with these weeknight low-carb meals that the whole family will love.</p>
+                <div class="main m-photoBox2">
                 <div class="pBox2-photo1"></div>
                 <div class="pBox2-photo2"></div>
                 <div class="pBox2-photo3"></div>
@@ -614,32 +716,37 @@
                 <div class="pBox2-photo6"></div>
             </div>
             <button type="submit">More dinner ideas</button>
+        </div>
         </article>
         <article class="main slide popular-slide">
-            <h1>Popular recipe collections</h1>
-            <div class="popular-itembox">
-                <div class="popular-item1"><a href="">Bread</a></div>
-                <div class="popular-item2"><a href="">Fast-food favorites</a></div>
-                <div class="popular-item3"><a href="">Eggs</a></div>
-                <div class="popular-item4"><a href="">Cookies</a></div>
+            <div class="centerBoxing">
+                <h1>Popular recipe collections</h1>
+                <div class="popular-itembox">
+                    <div class="popular-item1"><a href="">Bread</a></div>
+                    <div class="popular-item2"><a href="">Fast-food favorites</a></div>
+                    <div class="popular-item3"><a href="">Eggs</a></div>
+                    <div class="popular-item4"><a href="">Cookies</a></div>
+                </div>
+                <p>Looking for quick keto chicken meals, or need inspiration for healthy, mouthwatering dishes for the Holidays? Whatever your heart desires, we’re sure you’ll find it here.</p>
+                <button type="submit">All collections</button>
             </div>
-            <p>Looking for quick keto chicken meals, or need inspiration for healthy, mouthwatering dishes for the Holidays? Whatever your heart desires, we’re sure you’ll find it here.</p>
-            <button type="submit">All collections</button>
         </article>
         <article class="main m-content3">
-            <h1>Low-carb dessert favorites</h1>
-            <p>Dessert can be part of a healthy lifestyle and we will show you how! These goodies will make even the carbivours ask for more.</p>
-            <div class="main m-photoBox3">
-                <div class="pBox3-photo1"></div>
-                <div class="pBox3-photo2"></div>
-                <div class="pBox3-photo3"></div>
-                <div class="pBox3-photo4"></div>
-                <div class="pBox3-photo5"></div>
-                <div class="pBox3-photo6"></div>
+            <div class="centerBoxing">
+                <h1>Low-carb dessert favorites</h1>
+                <p>Dessert can be part of a healthy lifestyle and we will show you how! These goodies will make even the carbivours ask for more.</p>
+                <div class="main m-photoBox3">
+                    <div class="pBox3-photo1"></div>
+                    <div class="pBox3-photo2"></div>
+                    <div class="pBox3-photo3"></div>
+                    <div class="pBox3-photo4"></div>
+                    <div class="pBox3-photo5"></div>
+                    <div class="pBox3-photo6"></div>
+                </div>
+                <button type="submit">More dessert ideas</button>
             </div>
-            <button type="submit">More dessert ideas</button>
-        </article>
-        <article class="main faq slide">
+            </article>
+            <article class="main faq slide">
             <div class="faq-container">
                 <div class="faq-item1">
                     <div class="faq-photo1"></div>
@@ -654,7 +761,7 @@
         </div>
     </article>
     <article class="main m-content4">
-            <div class="m-contentbox4">
+            <div class="centerBoxing">
                 <h1>Which is the best low-carb diet?</h1>
                 <p>We’re all different. That’s why we offer recipes with a spectrum of carb, fat, and protein levels to suit everyone’s needs. On top of that, we also provide dairy-free, vegetarian, and vegan dietary options. We suggest that you try our different kinds of recipes to see what works for you.</p>
                 <p>All of our recipes are nutritious and much lower in carbs than “traditional” recipes, so most people can mix and match the recipes they love the most and still reach their health goals. At the end of the day, the best diet is the one you can turn into a lifestyle.</p>
@@ -663,19 +770,19 @@
             <div class="main m-photoBox4"></div>
         </article>
         <div class="best-itemcontainer">
-            <article class="main best-item1">
+            <article class="main best-item1 centerBoxing">
                 <div class="best-photo1"></div>
                 <h1>Low carb</h1>
                      <p>Our family-friendly moderate and liberal low-carb recipes (5-20 E% net carbs) restrict your carb intake while being flexible. In addition to weight loss, a low-carb diet is beneficial for maintaining a healthy lifestyle.</p>
                      <button type="submit">Recipes</button>
                     </article>
-                    <article class="main best-item2">
+                    <article class="main best-item2 centerBoxing">
                         <div class="best-photo2"></div>
                         <h1>Keto</h1>
                         <p>Our top-rated ketogenic recipes (5 E% or 7 g of net carbs or less if it’s a meal) are a bit more restrictive. Still, they are usually more effective for weight loss without hunger and to reverse type 2 diabetes or metabolic syndrome.</p>
                         <button type="submit">Recipes</button>
                     </article>
-                    <article class="main best-item3">
+                    <article class="main best-item3 centerBoxing">
                         <div class="best-photo3"></div>
                         <h1>High protein</h1>
                         <p>Our protein-rich recipes (25 E% +) provide the maximum amount of nutrients per calorie, often resulting in fat loss while sustaining muscle mass. A good option if your weight loss stalled or if you prefer less fatty foods.</p>
@@ -684,25 +791,29 @@
                 </div>
             </article>
             <fieldset class="main signUpBar">
-                <legend><h1>Sign up for our newsletter</h1></legend>
-                <p>Update copy: The Diet Doctor newsletter arrives weekly with the biggest news of the week. It’s free, and you can cancel your subscription at any time. Your e-mail is kept private.</p>
-                <article class="searchbar-container su-inputBar" >
-                    <input class="su-inputBar" type="text" placeholder="Enter email address">
-                    <button type="submit" class="su-signupbutton">Sign me up!</button>
-                </article>
+                <div class="signUpContainer">
+                    <legend><h1>Sign up for our newsletter</h1></legend>
+                    <p>Update copy: The Diet Doctor newsletter arrives weekly with the biggest news of the week. It’s free, and you can cancel your subscription at any time. Your e-mail is kept private.</p>
+                    <article class="searchbar-container su-inputBar" >
+                        <input class="sup-inputBar" type="text" placeholder="Enter email address">
+                        <button type="submit" class="su-signupbutton">Sign me up!</button>
+                    </article>
+                </div>
             </fieldset>
             <section>
             <div id="recipe-people"></div>
-            <article>
+            <article class="recipe-content">
                 <h1>The people behind the recipes</h1>
                 <p>Diet Doctor’s small but passionate recipe team consists of hardcore foodies, content managers, cookbook authors, and nutritional advisors. We work relentlessly to make every single recipe and meal plan that hits the site (and app) as flawless as possible.</p>
                 <p>We work together with a talented team of recipe testers, freelancing food photographers, and our very own registered dietitian, diabetes educator, and author Franziska Spritzler to make sure you get the best results.</p>
             </article>
         </section>
         <section class="main collabo">
+            <article class="collabo-content">
                 <h1>Recipe collaborators</h1>
                 <p>We partner with top low-carb and keto personalities, YouTubers, and bestselling cookbook authors from around the world. Click to read more about each person and to check out their recipes.</p>
                 <p>Are you interested in contributing your favorite low-carb recipes, or would you love to collaborate with us in the future? Don’t hesitate to reach out recipes@dietdoctor.com!</p>
+            </article>
                 <div class="collabo-container">
                     <article class="collabo-item cBox1">
                         <div>사진1</div>
@@ -750,7 +861,9 @@
                     <p>Sahil 'Demonstealer' Makhija is the master chef and heavy metal genius behind Headbanger's Kitchen, bringing you all the irresistible flavors of the Indian cuisine. Sahil is the man behind Headbanger's Kitchen, a YouTube cooking channel that's keto all the way.</p>
                 </article>
             </div>
-            <button type="submit">All collaborators</button>
+            <div class="centerBoxing">
+                <button type="submit">All collaborators</button>
+            </div>
             </section>
         </section>
         <footer>
