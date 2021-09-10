@@ -29,7 +29,7 @@
             background-color: white;
             display: flex;
             width: 50%;
-            height: 60px;
+            height: 70px;
             border: none;
             border-radius: 30px;
         }
@@ -56,6 +56,7 @@
                 background-color: white;
                 min-width: 550px;
                 margin: 0 auto;
+                z-index: 100;
                 }
         .btm_image {
             background-color: white;
@@ -100,13 +101,13 @@
             padding-top: 58px;
         }
         .h-searchbar {
-            width: 40%;
+            width: 70%;
+            height: 5px;
             border: none;
             padding: 25px;
             border-radius: 30px;
             font-size: .3666em;
         }
-        
         .h-searchbutton {
             width: 120px;
             margin: 3px;
@@ -134,7 +135,7 @@
         }
         .h-content {
             max-width: 1280px;
-            height: 50vh;
+            height: 700px;
             margin : 0 auto;    
             display: flex;
         }
@@ -144,18 +145,44 @@
         .header.aside-left li a {
             color: #4FAD64;
             font-weight: bold;
-            font-size: 1.2em;
+            font-size: 1.1em;
         }
         .hearder-contentBox p{
             padding: 1em 0.8em;
+
+        }
+        .hearder-contentBox button {
+            background-color: #ccc;
+            text-align: center;
+            width: 20px;
+            margin: 5px 10px;
+            font-size: .8rem;
+            font-weight: bold;
+            padding: 5px;
+            border-radius: 50%;
+        }
+        .hearder-contentBox a {
+            font-size: 1em;
         }
         .asideleft-content {
             margin-bottom: 2em;
             font-size: 0.8em;
             color: #979797;
         }
+        .asideleft-content p {
+            padding-left: 15px;
+        }
+        .asideleft-content img {
+            width: 10%;
+            min-width: 25px;
+            min-height: 20px;
+        }
         .asideleft-content a {
             font-size: 1em;
+            width: 8em;
+        }
+        .asideleft-content a:nth-child(2) {
+            width: 15em;
         }
         .header.aside-left {
             width: 70%;
@@ -164,7 +191,7 @@
         }
         .header.aside-right {
             width: 34%;
-            height: 300px;
+            height: 350px;
             border-bottom: 1px solid #ccc;
         }
         .header.aside-right h1{
@@ -198,7 +225,7 @@
             line-height: 40px;
             background-color: #F2F2F2;
             border-radius: 10px;
-            height: 250px;
+            height: 300px;
         }
         .aside-right-box a {
             color: #4FAD64;
@@ -206,9 +233,13 @@
             border-radius: 50%;
             background-color: white;
             width: 30em;
-            padding: 10px;
+            height: 30em;
+            padding: 28px;
             margin-top: 5em;
             margin-left: 5em;
+        }
+        .aside-right-box p {
+            color: #444444;
         }
         .aside-right-box a:hover {
             color: white;
@@ -222,48 +253,124 @@
         .centerBoxing {
             text-align: center;
         }
+        .slide1-container {
+            display: flex;
+            max-width: 1280px;
+            margin: 0 auto;
+            cursor: pointer;
+        }
+        .recently-slide h1{
+            font-size: 3.2em;
+            max-width: 1280px;
+            color: #404040;
+            margin: 0 auto;
+            padding: 0;
+        }
+        .arrow {
+            color: white;
+            text-align: center;
+            padding: 2em;
+            font-size: 1.5em;
+            position: absolute;
+            font-weight: bold;
+            opacity: 0.8;
+            border-radius: 50%;
+            background-color: #4B404B;
+            z-index: 10;
+            margin-top: 4em;
+        }
+        .left-arrow {
+            margin-right: 3em;
+        }
+        .right-arrow {
+            margin-left: 85%;
+        }
+        .slide-pho {
+            width: 90%;
+            height: 300px;
+            margin: 1em;
+            float: left;
+            transition-property: width;
+            transition-duration: 2s;
+        }
+        .slide-pho:hover {
+            width: 100%;
+        }
+        .slide1-photo1 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2021/08/PicoDeGallo-h.jpg?auto=compress%2Cformat&w=500&h=282&fit=crop) no-repeat center;
+            background-size: contain;
+            width: 9
+        }
+        .slide1-photo2 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2021/08/PicoDeGallo-h.jpg?auto=compress%2Cformat&w=500&h=282&fit=crop) no-repeat center;
+            background-size: contain;
+        }
+        .slide1-photo3 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2021/08/PicoDeGallo-h.jpg?auto=compress%2Cformat&w=500&h=282&fit=crop) no-repeat center;
+            background-size: contain;
+        }
+        .slide1-photo4 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2021/08/PicoDeGallo-h.jpg?auto=compress%2Cformat&w=500&h=282&fit=crop) no-repeat center;
+            background-size: contain;
+        }
+        .slide1-photo5 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2021/08/PicoDeGallo-h.jpg?auto=compress%2Cformat&w=500&h=282&fit=crop) no-repeat center;
+            background-size: contain;
+        }
+
+        @keyframes slider {
+            0% {
+                left: 0;
+            }
+            20% {
+                left: 0;
+            }
+            25% {
+                left: -100%;
+            }
+        }
         .main.m-photoBox1 {
             display: grid;
             gap: 1em;
             margin : 0 auto;
             max-width: 1280px;
             place-content: center;
-            grid-template-columns: repeat(3, 200px);
+            grid-template-columns: repeat(3, 1fr);
         }
         .m-photoBox1 .pBox1-photo1 {
             width: 100%;
-            height: 100%;
-            background: url('image/6slot.png') no-repeat center;
+            height: 600px;
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2020/03/keto-pickle-sandwhich-v.jpg?auto=compress%2Cformat&w=800&h=1200&fit=crop) no-repeat center;
             background-size: contain;
         }
         .m-photoBox1 .pBox1-photo2 {
             width: 100%;
-            height: 300px;
-            background: url('image/6slot.png') no-repeat center;
+            height: 600px;
+            background: url('https://i.dietdoctor.com/wp-content/uploads/2021/07/the-high-protein-bread-v.jpg?auto=compress%2Cformat&w=800&h=1200&fit=crop') no-repeat center;
             background-size: contain;
         }
         .m-photoBox1 .pBox1-photo3 {
             width: 100%;
-            height: 300px;
-            background: url('image/6slot.png') no-repeat center;
+            height: 600px;
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2018/03/JillsCheeseCrustedOmelette_JillWallentin_V_sRGB.jpg?auto=compress%2Cformat&w=800&h=1200&fit=crop) no-repeat center;
             background-size: contain;
         }
         .m-photoBox1 .pBox1-photo4 {
             width: 100%;
-            height: 300px;
-            background: url('image/6slot.png') no-repeat center;
+            height: 600px;
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2019/10/low-carb-granola-v-2.jpg?auto=compress%2Cformat&w=800&h=1200&fit=crop) no-repeat center;
             background-size: contain;
         }
         .m-photoBox1 .pBox1-photo5 {
             width: 100%;
-            height: 300px;
-            background: url('image/6slot.png') no-repeat center;
+            height: 600px;
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2020/01/Breakfast-Chaffles_v.jpg?auto=compress%2Cformat&w=800&h=1200&fit=crop) no-repeat center;
             background-size: contain;
         }
         .m-photoBox1 .pBox1-photo6 {
             width: 100%;
-            height: 300px;
-            background: url('image/6slot.png') no-repeat center;
+            height: 600px;
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2020/08/Low-carb-Banana-Blueberry-Pancakes-v.jpg?auto=compress%2Cformat&w=800&h=1200&fit=crop) no-repeat center;
             background-size: contain;
         }
 
@@ -277,42 +384,37 @@
             max-width: 1280px;
             place-content: center;
             margin : 0 auto;
-            grid-template-columns: repeat(3, 200px);
+            grid-template-columns: repeat(3, 1fr);
         }
         .m-photoBox2 .pBox2-photo1 {
             width: 100%;
-            height: 100%;
-            background: url('image/6slot.png') no-repeat center;
+            height: 600px;
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2020/12/Easy-Keto-Chili-Bowl-v1-.jpg?auto=compress%2Cformat&w=800&h=1200&fit=crop) no-repeat center;
             background-size: contain;
         }
         .m-photoBox2 .pBox2-photo2 {
             width: 100%;
-            height: 300px;
-            background: url('image/6slot.png') no-repeat center;
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2017/06/DD-443-baconburger2.jpg?auto=compress%2Cformat&w=800&h=1200&fit=crop) no-repeat center;
             background-size: contain;
         }
         .m-photoBox2 .pBox2-photo3 {
             width: 100%;
-            height: 300px;
-            background: url('image/6slot.png') no-repeat center;
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2021/07/Sesame-crusted-tuna-steaks-v.jpg?auto=compress%2Cformat&w=800&h=1200&fit=crop) no-repeat center;
             background-size: contain;
         }
         .m-photoBox2 .pBox2-photo4 {
             width: 100%;
-            height: 300px;
-            background: url('image/6slot.png') no-repeat center;
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2020/09/low-carb-zucchini-pizza-v.jpg?auto=compress%2Cformat&w=800&h=1200&fit=crop) no-repeat center;
             background-size: contain;
         }
         .m-photoBox2 .pBox2-photo5 {
             width: 100%;
-            height: 300px;
-            background: url('image/6slot.png') no-repeat center;
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2018/05/DD-615-ketotabboulehwithhalloumi-1.jpg?auto=compress%2Cformat&w=800&h=1200&fit=crop) no-repeat center;
             background-size: contain;
         }
         .m-photoBox2 .pBox2-photo6 {
             width: 100%;
-            height: 300px;
-            background: url('image/6slot.png') no-repeat center;
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2017/07/DD-471-chickentomato2.jpg?auto=compress%2Cformat&w=800&h=1200&fit=crop) no-repeat center;
             background-size: contain;
         }
 
@@ -321,57 +423,116 @@
         }
         .membership-box {
             background-color: #F2F5ED;
-            width: 60%;
+            width: 80%;
             border-radius: 10px;
             max-width: 1280px;
             margin : 0 auto;
             margin-bottom: 20px;
             display: flex;
         }
+        .membership-item1{
+            padding: 50px;
+        }
+        .membership-item1 h1 {
+            color: #193374;
+            width: 80%;
+            font-size: 3.5em;
+        }
+        .membership-item1 p {
+            font-size: 1.2em;
+            color: #404040;
+            width: 75%;
+            line-height: 1.6em;
+        }
+        .membership-item1 button {
+            margin: 20px 5px;
+            width: 25%;
+        }
+        .membership-item1 button:last-child {
+            background-color: white;
+            border: 1px solid #68AB6B;
+            color: #68AB6B;
+        }
         .membership-item2 {
             background: url("https://www.dietdoctor.com/wp-content/themes/ckdc/images/quick-cta.png") no-repeat;
             background-size: contain;
-            width: 300px;
-            height: 300px;
+            width: 100%;
         }
         
+        .popular-slide h1 {
+            color: #404040;
+            font-size: 3.1em;
+            font-weight: bold;
+            padding: 2em;
+
+        } 
         .popular-itembox {
             display: grid;
+            gap: 4em;
             max-width: 1280px;
             place-content: center;
             margin : 0 auto;
-            grid-template-columns: repeat(4, 200px);
+            grid-template-columns: repeat(4, 1fr);
         }
         .popular-itembox a {
             margin-top: 100%;
+            color: #728FD2;
+            font-size: 1.2em;
         }
+        .popular-slide p {
+            font-size: 1.2em;
+            color: #4B404B;
+            max-width: 1280px;
+            margin: 0 auto;
+            width: 50%;
+            padding: 2em;
+        }
+        .popular-slide button {
+            width: 11%;
+            padding: 1em;
+            margin-bottom: 3em;
+        }
+        
         .popular-item1{
             background: url("https://i.dietdoctor.com/wp-content/uploads/2018/05/DD_round_bread.png?auto=compress%2Cformat&w=300&h=300&fit=crop") no-repeat;
             background-size: contain;
-            width: 100px;
-            height: 100px;
+            width: 100%;
             text-align: center;
         }
         .popular-item2{
             background: url("https://i.dietdoctor.com/wp-content/uploads/2018/09/DD_round_around-the-world.png?auto=compress%2Cformat&w=300&h=300&fit=crop") no-repeat;
             background-size: contain;
-            width: 100px;
-            height: 100px;
+            width: 100%;
             text-align: center;
         }
         .popular-item3{
             background: url("https://www.dietdoctor.com/wp-content/uploads/2018/09/DD_round_budget-keto.png") no-repeat;
             background-size: contain;
-            width: 100px;
-            height: 100px;
+            width: 100%;
             text-align: center;
         }
         .popular-item4{
             background: url("https://www.dietdoctor.com/wp-content/uploads/2020/09/Round-keto-cookies.png") no-repeat;
             background-size: contain;
-            width: 100px;
-            height: 100px;
+            width: 100%;
             text-align: center;
+        }
+
+        .main-content h1 {
+            color: #404040;
+            font-size: 3em;
+            font-weight: bold;
+            padding: 2em 0 .5em 0;
+        }
+        .main-content p {
+            font-size: 1.05em;
+            color: #4B404B;
+            margin-bottom: 5em;
+            text-align: center;
+        }
+        .main-content button {
+            width: 15%;
+            margin: 2em 0 5em 0;
         }
 
         .main.m-photoBox3 {
@@ -380,96 +541,141 @@
             max-width: 1280px;
             place-content: center;
             margin : 0 auto;
-            grid-template-columns: repeat(3, 200px);
+            grid-template-columns: repeat(3, 1fr);
         }
         .m-photoBox3 .pBox3-photo1 {
             width: 100%;
-            height: 100%;
-            background: url('image/6slot.png') no-repeat center;
+            height: 600px;
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2020/09/keto-ice-cream-sandwich-v.jpg?auto=compress%2Cformat&w=800&h=1200&fit=crop) no-repeat center;
             background-size: contain;
         }
         .m-photoBox3 .pBox3-photo2 {
             width: 100%;
-            height: 300px;
-            background: url('image/6slot.png') no-repeat center;
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2018/03/Mini_cheesecakes_V.jpg?auto=compress%2Cformat&w=800&h=1200&fit=crop) no-repeat center;
             background-size: contain;
         }
         .m-photoBox3 .pBox3-photo3 {
             width: 100%;
-            height: 300px;
-            background: url('image/6slot.png') no-repeat center;
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2020/10/keto-no-bake-cheesecake-v.jpg?auto=compress%2Cformat&w=800&h=1200&fit=crop) no-repeat center;
             background-size: contain;
         }
         .m-photoBox3 .pBox3-photo4 {
             width: 100%;
-            height: 300px;
-            background: url('image/6slot.png') no-repeat center;
+            height: 600px;
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2021/02/low-carb-blue-berry-muffins-v.jpg?auto=compress%2Cformat&w=800&h=1200&fit=crop) no-repeat center;
             background-size: contain;
         }
         .m-photoBox3 .pBox3-photo5 {
             width: 100%;
-            height: 300px;
-            background: url('image/6slot.png') no-repeat center;
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2019/10/Photo-EmmaShevtzoff-Chocolate-cake-v2.jpg?auto=compress%2Cformat&w=800&h=1200&fit=crop) no-repeat center;
             background-size: contain;
         }
         .m-photoBox3 .pBox3-photo6 {
             width: 100%;
-            height: 300px;
-            background: url('image/6slot.png') no-repeat center;
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2021/07/Quick-low-carb-strawberry-ice-cream-v2.jpg?auto=compress%2Cformat&w=800&h=1200&fit=crop) no-repeat center;
             background-size: contain;
         }
-
-        .faq-container {
-            display: grid;
-            gap: 1em;
-            max-width: 1280px;
-            place-content: center;
-            margin : 0 auto;
-            grid-template-columns: repeat(2, 200px);
-        }
+        
+                .faq-container {
+                    padding: 4em 0;
+                }
+                .faq-itembox {
+                    display: grid;
+                    gap: 1em;
+                    max-width: 1280px;
+                    place-content: center;
+                    margin : 0 auto;
+                    grid-template-columns: repeat(2, 1fr);
+                }
+                .faq-container h1{
+                    font-size: 2.3em;
+                    color: #444444;
+                }
+                .faq-container p {
+                    font-size: 1.2em;
+                    line-height: 1.5em;
+                    color: #444444;
+                }
         .faq-photo1 {
             background: url("https://i.dietdoctor.com/wp-content/uploads/2021/02/got-questions.jpg?auto=compress%2Cformat&w=600&h=338&fit=crop")no-repeat;
             background-size: contain;
-            width: 200px;
-            height: 100px;
+            width: 100%;
+            height: 400px;
         }
         .faq-photo2 {
             background: url("https://i.dietdoctor.com/wp-content/uploads/2019/11/Foto_Frida-Strom_Jill-in-the-kitchen-green4.jpg?auto=compress%2Cformat&w=600&h=338&fit=crop")no-repeat;
             background-size: contain;
-            width: 200px;
-            height: 100px;
+            width: 100%;
+            height: 400px;
         }
-        .m-content4 {
+        
+        .m-content4-itembox {
             display: grid;
-            grid-template-columns: repeat(2, 200px);
+            grid-template-columns: repeat(3, 1fr);
             max-width: 1280px;
             place-content: center;
             margin : 0 auto;
+        }
+        .m-content4 {
+            grid-column: span 2;
+        } 
+        .m-content4 h1 {
+            font-size: 2.8em;
+            width: 100%;
+            font-weight: bold;
+            color: #444444;
+            margin-top: 2em;
+        }
+        .m-content4 p {
+            line-height: 1.5em;
+            color: #444444;
+            padding: 1em;
         }
         .best-itemcontainer {
             display: grid;
-            grid-template-columns: repeat(3, 200px);
+            grid-template-columns: repeat(3, 1fr);
             max-width: 1280px;
+            gap: 1.5em;
             place-content: center;
             margin : 0 auto;
+            margin-top: 2em;
+            margin-bottom: 9em;
+        }
+        .best-itemcontainer h1 {
+            font-size: 2em;
+            width: 100%;
+            font-weight: bold;
+            color: #444444;
+            margin: .5em 0;
+        }
+        .best-itemcontainer p {
+            line-height: 1.5em;
+            color: #444444;
+            padding: 1em;
+        }
+        .best-itemcontainer button {
+            width: 30%;
         }
         .best-photo1 {
-            background: url("https://i.dietdoctor.com/wp-content/uploads/2021/08/LC-recipe-1.jpg?auto=compress%2Cformat&w=400&h=225&fit=crop") no-repeat;
+            background: url("https://i.dietdoctor.com/wp-content/uploads/2021/08/LC-recipe-1.jpg?auto=compress%2Cformat&w=400&h=225&fit=crop") center no-repeat;
             background-size: contain;
-            width: 200px;
-            height: 100px;
+            border-radius: 20%;
+            width: 100%;
+            height: 250px;
         }
         .best-photo2 {
-            background: url("https://i.dietdoctor.com/wp-content/uploads/2021/08/Keto-recipe-1.jpg?auto=compress%2Cformat&w=400&h=225&fit=crop") no-repeat;
+            background: url("https://i.dietdoctor.com/wp-content/uploads/2021/08/Keto-recipe-1.jpg?auto=compress%2Cformat&w=400&h=225&fit=crop") center no-repeat;
             background-size: contain;
-            width: 200px;
-            height: 100px;
+            border-radius: 20%;
+            width: 100%;
+            height: 250px;
         }
         .best-photo3 {
-            background: url("https://i.dietdoctor.com/wp-content/uploads/2021/08/HP-recipe-5.jpg?auto=compress%2Cformat&w=400&h=225&fit=crop") no-repeat;
+            background: url("https://i.dietdoctor.com/wp-content/uploads/2021/08/HP-recipe-5.jpg?auto=compress%2Cformat&w=400&h=225&fit=crop") center no-repeat;
             background-size: contain;
-            width: 200px;
-            height: 100px;
+            border-radius: 20%;
+            width: 100%;
+            height: 250px;
         }
         .signUpContainer {
             display: grid;
@@ -487,10 +693,11 @@
             width: 70%;
             margin: 10px 0 30px;
         }
-        .signUpBar {
+        fieldset.main.signUpBar {
             background-color: #193374;
             color: white;
-            height: 30vh;
+            height: 800px;
+            height: 350px;
         }
         
         .su-inputBar {
@@ -506,7 +713,6 @@
             font-size: 3em;
             border-radius: 40px;
             color: #979797;
-            opacity: 0.6;
             padding-top: 0.3em;
             padding-left: 2em;
         }
@@ -523,20 +729,46 @@
             width: 50vw;
         }
         .m-photoBox4 {
-            background: url("https://i.dietdoctor.com/wp-content/uploads/2021/08/which-diet-3.jpg?auto=compress%2Cformat&w=400&h=406&fit=crop") no-repeat;
+            background: url("https://i.dietdoctor.com/wp-content/uploads/2021/08/which-diet-3.jpg?auto=compress%2Cformat&w=400&h=406&fit=crop")center  no-repeat;
             background-size: contain;
-            width: 300px;
-            height: 200px;
         }
         .recipe-content {
             max-width: 1280px;
             place-content: center;
             margin : 0 auto;
+            margin-bottom: 4em;
+        }
+        .recipe-content h1 {
+            font-size: 3em;
+            margin-top: 2em;
+            color: #444444;
+        }
+        .recipe-content p {
+            font-size: 1.2em;
+            color: #444444;
+            line-height: 1.4em;
+            padding: 0.5em 0;
         }
         .collabo-content {
             max-width: 1280px;
             place-content: center;
             margin : 0 auto;
+        }
+        .collabo-content h1 {
+            font-size: 2.3em;
+            margin-top: 2em;
+            color: #444444;
+        }
+        .collabo-content p {
+            width: 60%;
+            font-size: 1.1em;
+            line-height: 1.4em;
+            color: #444444;
+            padding: 1em 0;
+        }
+        .collabo-content a {
+            color: #728FD2;
+            font-size: 1em;
         }
         #recipe-people {
             background: url("https://i.dietdoctor.com/wp-content/uploads/2021/08/recipe-team-aug-2021.jpg?auto=compress%2Cformat&w=1200&h=713&fit=crop") no-repeat;
@@ -547,23 +779,190 @@
             max-width: 1280px;
             place-content: center;
             margin : 0 auto;
+            margin-top: 4em;
         }
         .collabo-container {
             display: grid;
-            gap: 1em;
+            gap: 1.5em;
             max-width: 1280px;
             place-content: center;
             margin : 0 auto;
-            grid-template-columns: repeat(3, 200px);
+            grid-template-columns: repeat(3, 1fr);
         }
         .collabo-item {
             background-color: #F2F2F2;
+            padding-bottom: 10em;
+        }
+        .collabo-item h1, .collabo-item p {
+            padding: 0 1em;
+        }
+        .collabo-item h1 {
+            font-size: 2.3em;
+            color: #444444;
+            padding: 0.5em 1em;
+        }
+        .collabo-item p {
+            font-size: 1.1em;
+            line-height: 1.5em;
+            color: #444444;
+            margin: 0 1em;
+        }
+        .collabo-photo1 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2019/03/Butter-burgers-Jill_Wallentin_2-H.jpg?auto=compress%2Cformat&w=600&h=338&fit=crop) center no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 200px;
+        }
+        .collabo-humanimg1 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2019/03/ketoconnect_round.png?auto=compress%2Cformat&w=300&h=300&fit=crop) center no-repeat;
+            background-size: contain;
+            display: block;
+            margin-top: -20%;
+            margin-left: 65%;
+            width: 30%;
+            height: 30%;
+        }
+        .collabo-photo2 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2018/08/quick_and_easy_capicola_cups_h.png?auto=compress%2Cformat&w=600&h=338&fit=crop) center no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 200px;background-size: cover;
+            width: 100%;
+            height: 200px;
+        }
+        .collabo-humanimg2 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2018/08/suzanne_round.png?auto=compress%2Cformat&w=300&h=300&fit=crop) center no-repeat;
+            background-size: contain;
+            display: block;
+            margin-top: -20%;
+            margin-left: 65%;
+            width: 30%;
+            height: 30%;
+        }
+        .collabo-photo3 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2018/05/Kristie_BlueCheese_16-9.jpg?auto=compress%2Cformat&w=600&h=338&fit=crop) center no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 200px;
+        }
+        .collabo-humanimg3 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2019/02/KristieSullivan-2.png?auto=compress%2Cformat&w=300&h=300&fit=crop) center no-repeat;
+            background-size: contain;
+            display: block;
+            margin-top: -20%;
+            margin-left: 65%;
+            width: 30%;
+            height: 30%;
+        }
+        .collabo-photo4 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2019/08/low_carb_fish_stew_h.jpg?auto=compress%2Cformat&w=600&h=338&fit=crop) center no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 200px;
+        }
+        .collabo-humanimg4 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2019/08/Lisa-low-carb-yum-round.png?auto=compress%2Cformat&w=300&h=300&fit=crop) center no-repeat;
+            background-size: contain;
+            display: block;
+            margin-top: -20%;
+            margin-left: 65%;
+            width: 30%;
+            height: 30%;
+        }
+        .collabo-photo5 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2017/05/DD-419-zerocarbpancakes.jpg?auto=compress%2Cformat&w=600&h=338&fit=crop) center no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 200px;
+        }
+        .collabo-humanimg5 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2017/05/Maria_Emmerich_1x1.jpg?auto=compress%2Cformat&w=300&h=300&fit=crop) center no-repeat;
+            background-size: contain;
+            display: block;
+            margin-top: -20%;
+            margin-left: 65%;
+            width: 30%;
+            height: 30%;
+            border-radius: 50%;
+        }
+        .collabo-photo6 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2018/09/carne_asada_cristina_curp_1.jpg?auto=compress%2Cformat&w=600&h=338&fit=crop) center no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 200px;
+        }
+        .collabo-humanimg6 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2018/09/cristina_round.png?auto=compress%2Cformat&w=300&h=300&fit=crop) center no-repeat;
+            background-size: contain;
+            display: block;
+            margin-top: -20%;
+            margin-left: 65%;
+            width: 30%;
+            height: 30%;
+        }
+        .collabo-photo7 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2019/05/caprese-chicken-H.jpg?auto=compress%2Cformat&w=600&h=338&fit=crop) center no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 200px;
+        }
+        .collabo-humanimg7 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2019/04/kyndra_round.png?auto=compress%2Cformat&w=300&h=300&fit=crop) center no-repeat;
+            background-size: contain;
+            display: block;
+            margin-top: -20%;
+            margin-left: 65%;
+            width: 30%;
+            height: 30%;
+        }
+        .collabo-photo8 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2019/05/Low-carb-vanilla-panna-cotta-with-strawberry-rhubarb-sauce_h.jpg?auto=compress%2Cformat&w=600&h=338&fit=crop) center no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 200px;
+        }
+        .collabo-humanimg8 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2018/11/carolyn_round.png?auto=compress%2Cformat&w=300&h=300&fit=crop) center no-repeat;
+            background-size: contain;
+            display: block;
+            margin-top: -20%;
+            margin-left: 65%;
+            width: 30%;
+            height: 30%;
+        }
+        .collabo-photo9 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2019/01/Chicken_Saagwala_h.jpg?auto=compress%2Cformat&w=600&h=338&fit=crop) center no-repeat;
+            background-size: cover;
+            width: 100%;
+            height: 200px;
+        }
+        .collabo-humanimg9 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2018/10/sahil_round.png?auto=compress%2Cformat&w=300&h=300&fit=crop) center no-repeat;
+            background-size: contain;
+            display: block;
+            margin-top: -20%;
+            margin-left: 65%;
+            width: 30%;
+            height: 30%;
         }
 
         /* footer */
-        #footer {
+        footer {
             background-color: #193374;
+            padding: 5em 0;
+        }
+        #footer {
             color: white;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            max-width: 1280px;
+            margin: 0 auto;
+        }
+        #footer div:nth-child(2) {
+            grid-column: span 2;
+        }
+        #footer div:nth-child(8) {
+            grid-column: span 2;
         }
         #footer .dd-logo {
             background: url("image/footerLogo.png") no-repeat;
@@ -573,21 +972,89 @@
         #footer a {
             color: white;
         }
+        #footer a:hover {
+            opacity: 0.7;
+        }
         #footer .footer-Box1{
             display: flex;
         }
-        #footer .footer-box2{
-            display: flex;
+        #footer .footer-Box1 a {
+            padding: 0.2em;
+            font-weight: bold;
+            font-size: 1.6em;
+        }
+        #footer .footer-Box2 {
+            margin-left: 6em;
+        }
+        #footer .footer-Box2 legend {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        #footer .footer-Box2 p {
+            padding: 1.5em 0;
+        }
+        #footer .footer-Box2 .searchBar {
+            width: 80vw;
+        }
+        #footer .footer-Box4 button {
+            margin: 2em 2em 2em 6em;
+            background-color: #D54669;
+            width: 40%;
+        }
+        #footer .footer-Box5 {
+            margin: 2em;
         }
         #footer .hc-img {
-            background: url("https://i.dietdoctor.com/wp-content/uploads/2021/03/HONConduct739458_hr1.gif?auto=compress%2Cformat&w=98&h=144&fit=crop") no-repeat;
-            width: 120px;
-            height: 150px;
+            background: url("https://i.dietdoctor.com/wp-content/uploads/2021/03/HONConduct739458_hr1.gif?auto=compress%2Cformat&w=98&h=144&fit=crop")center no-repeat;
+            background-size: contain;
+            width: 90px;
+            height: 80px;
+        }
+        #footer .hc p {
+            width: 70%;
+            opacity: 0.4;
+            line-height: 1.5em;
         }
         #footer article.hc {
             display: flex;
         }
-        .footer-navContainer {
+        #footer .footer-Box7 {
+            display: flex;
+        }
+        #footer .footer-Box7 a {
+            margin-left: 3em;
+        }
+        #footer .footer-Box8 ul {
+            display: flex;
+            justify-content: flex-end;
+            text-align: center;
+            padding: 2em;
+        }
+        #footer .footer-Box8 li {
+            font-size: 1em;
+            padding: 1em;
+            
+        }
+        #footer .footer-Box8 li:last-child {
+            font-size: 0.3em;
+            opacity: 0.3;
+            margin-top: 3em;
+        }
+        #footer .footer-Box8 a {
+            font-size: 1em;
+        }
+        #footer .footer-Box9 article {
+            display: flex;
+            margin-top: 2em;
+        }
+        #footer .footer-Box9 p {
+            padding: 1em;
+            font-weight: bold;
+        }
+        #footer .footer-Box9 img {
+            width: 5%;
+        }
+         .footer-navContainer {
             display: flex;
         }
         .f-searchbar {
@@ -605,6 +1072,135 @@
             margin: 3px;
             margin-left: auto;
         }
+
+        @media (max-width : 880px) {
+            
+            /* header */
+
+            .topMenu-btn1 {
+            margin: 1em 0 1em 3%;
+            }
+            section#menuPost{
+                height: 400px;
+                padding-left: 1em;
+                margin-bottom: 3em;
+            }
+            section#menuPost h1 {
+                font-size: 0.8em;
+            }
+            section#menuPost button {
+                width: 90%;
+            }
+            section#menuPost input {
+                width: 85%;
+            }
+            section#menuPost a {
+                margin-left: 55em;
+                width: 30%;
+            }
+            article.searchbar-container {
+                display: inline;
+                width: 90%;
+                background: none;
+            }
+            .h-content {
+                display: flex;
+                height: 1000px;
+                padding-left: 4em;
+                flex-direction: column-reverse;
+            }
+            aside.header.aside-right {
+                width: 760px;
+                margin: 0 auto;
+            }
+            div.aside-right-box {
+                width: 98%;
+            }
+            div.aside-right-box ul {
+                margin-left: 23%;
+            }
+
+            /* main */
+
+
+            div.membership-box {
+                flex-direction: column;
+                width: 90%;
+            }
+            div.membership-item2 {
+                width: 90%;
+                height: 600px;
+                background-size: cover;
+            }
+            .centerBoxing button {
+                width: 95%;
+                height: 80px;
+            }
+            article.collabo-content {
+                width: 90%;
+            }
+            section.recipe-container {
+                margin-left: 3em;
+            }
+            div.collabo-container {
+            display: grid;
+            width: 90%;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            }
+            article.collabo-item {
+                height: 800px;
+                padding: 0;
+            }
+            div.best-itemcontainer {
+            display: grid;
+            width: 90%;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            }
+            div.popular-itembox {
+            display: grid;
+            width: 90%;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+            }
+            div.faq-itembox {
+            width: 90%;
+            padding-left: 3em;
+            grid-template-columns: repeat(1, 1fr);
+            grid-template-rows: repeat(1, 1fr);
+            }
+            article.main.m-content4 {
+                margin-left: 3em;
+            }
+            fieldset.main.signUpBar {
+                height: 500px;
+            }
+            article.searchbar-container.su-inputBar {
+                display: inline-block;
+            }
+            article.searchbar-container.su-inputBar input {
+                width: 90%;
+            }
+            article.searchbar-container.su-inputBar button {
+                width: 98%;
+                margin-top: 1em;
+            }
+
+            /* footer */
+
+            #footer {
+                display: grid;
+                width: 90%;
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(1, 1fr);
+            }
+            div.footer-Box1 li a {
+                font-size: 3em;
+            }
+            
+
+        } 
         </style>
 </head>
 <body>
@@ -620,7 +1216,7 @@
         </nav>
         <section id="menuPost">
             <h1>Low-carb recipes</h1>
-            <article class="searchbar-container h-searchBar">
+            <article class="searchbar-container">
             <input type="text" placeholder="What are you looking for?" id="header-searchbar" class="header h-searchbar">
             <button type="submit" class="button h-searchbutton" >Search</button>
             </article>
@@ -646,7 +1242,7 @@
                 <li><a href="#">The Team</a></li>
             </ul>
         <div class="hearder-contentBox">
-            <p>Discover our impressive collection of healthy food and drink ideas for every occasion, used by more than 3 million home cooks every month(!)<a href="#">1</a>.</p>
+            <p>Discover our impressive collection of healthy food and drink ideas for every occasion, used by more than 3 million home cooks every month(!)<button type="submit">1</button>.</p>
             <p>Whether you're looking for high-protein, strict keto, moderate, or liberal low-carb recipes, or if you're just looking for a healthier dessert option - we've got you covered!</p>
             <p>We offer 1,157 nutritionally approved and tested <a href="#">low-carb</a> recipes that are easy to follow, created by some of the most loved low-carb cookbook authors, chefs, and dietitians from around the world.</p>
             <p>The Diet Doctor recipe team’s mission is to provide you with the most delicious recipes and meal plans that will empower you to improve your health.</p>
@@ -669,11 +1265,20 @@
         </aside>
     </section>
 </header>
-<section class="main">
-    <article class="main recently slide">
-        <h1><a href="#">Recently added</a></h1>
+<section id="main">
+    <article class="main recently-slide slide">
+        <h1><a href="#"><h1>Recently added</h1></a></h1>
+        <figure class="slide1-container">
+                <article class="left-arrow arrow"><</article>
+                <article class="slide1-photo1 slide-pho"></article>
+                <article class="slide1-photo2 slide-pho"></article>
+                <article class="slide1-photo3 slide-pho"></article>
+                <article class="slide1-photo4 slide-pho"></article>
+                <article class="slide1-photo5 slide-pho"></article>
+                <article class="right-arrow arrow">></article>
+        </figure>
     </article>
-    <article class="main m-content1">
+    <article class="main-content m-content1">
         <div class="centerBoxing">
             <h1>Low-carb breakfast favorites</h1>
             <p>Kick-off your morning in the best possible way with our tasty breakfasts that will keep you satisfied for hours.</p>
@@ -703,7 +1308,7 @@
         <article class="main topRated slide">
             <h1>Top rated recipes</h1>
         </article>
-        <article class="main m-content2">
+        <article class="main-content m-content2">
             <div class="centerBoxing">
                 <h1>Low-carb dinner favorites</h1>
                 <p>Who said that eating healthy is boring? Keep it fun and simple with these weeknight low-carb meals that the whole family will love.</p>
@@ -731,7 +1336,7 @@
                 <button type="submit">All collections</button>
             </div>
         </article>
-        <article class="main m-content3">
+        <article class="main-content m-content3">
             <div class="centerBoxing">
                 <h1>Low-carb dessert favorites</h1>
                 <p>Dessert can be part of a healthy lifestyle and we will show you how! These goodies will make even the carbivours ask for more.</p>
@@ -748,27 +1353,31 @@
             </article>
             <article class="main faq slide">
             <div class="faq-container">
-                <div class="faq-item1">
-                    <div class="faq-photo1"></div>
-                    <h1>Recipe FAQ</h1>
-                    <p>On this page, we have collected the most frequently asked questions regarding our recipes. For example, the difference between net and total carbs, and why most of our side dishes are classified as either moderate or liberal low carb.</p>
+                <div class="faq-itembox">
+                    <div class="faq-item1">
+                        <div class="faq-photo1"></div>
+                        <h1>Recipe FAQ</h1>
+                        <p>On this page, we have collected the most frequently asked questions regarding our recipes. For example, the difference between net and total carbs, and why most of our side dishes are classified as either moderate or liberal low carb.</p>
+                    </div>
+                    <div class="faq-item2">
+                        <div class="faq-photo2"></div>
+                        <h1>Food policy</h1>
+                        <p>What do we mean by healthy food, and how do we define our different levels of low carb? Learn more about what you can expect from our recipes. And, of course, the evidence and reasons behind where we stand.</p>
+                    </div>
                 </div>
-                <div class="faq-item2">
-                    <div class="faq-photo2"></div>
-                <h1>Food policy</h1>
-                <p>What do we mean by healthy food, and how do we define our different levels of low carb? Learn more about what you can expect from our recipes. And, of course, the evidence and reasons behind where we stand.</p>
+                </div>
+            </article>
+        <div class="m-content4-container">
+            <div class="m-content4-itembox">
+                <article class="main m-content4">
+                    <h1>Which is the best low-carb diet?</h1>
+                    <p>We’re all different. That’s why we offer recipes with a spectrum of carb, fat, and protein levels to suit everyone’s needs. On top of that, we also provide dairy-free, vegetarian, and vegan dietary options. We suggest that you try our different kinds of recipes to see what works for you.</p>
+                    <p>All of our recipes are nutritious and much lower in carbs than “traditional” recipes, so most people can mix and match the recipes they love the most and still reach their health goals. At the end of the day, the best diet is the one you can turn into a lifestyle.</p>
+                    <p>Each recipe has a colored circle, indicating the strictness (yellow = moderate low carb, orange = liberal low carb, green = keto), carb count, and protein level (the blue outline). Hover or click the circle on the recipe images to see full nutrition information.</p>
+                </article>
+                <article class="main m-photoBox4"></article>
             </div>
         </div>
-    </article>
-    <article class="main m-content4">
-            <div class="centerBoxing">
-                <h1>Which is the best low-carb diet?</h1>
-                <p>We’re all different. That’s why we offer recipes with a spectrum of carb, fat, and protein levels to suit everyone’s needs. On top of that, we also provide dairy-free, vegetarian, and vegan dietary options. We suggest that you try our different kinds of recipes to see what works for you.</p>
-                <p>All of our recipes are nutritious and much lower in carbs than “traditional” recipes, so most people can mix and match the recipes they love the most and still reach their health goals. At the end of the day, the best diet is the one you can turn into a lifestyle.</p>
-                <p>Each recipe has a colored circle, indicating the strictness (yellow = moderate low carb, orange = liberal low carb, green = keto), carb count, and protein level (the blue outline). Hover or click the circle on the recipe images to see full nutrition information.</p>
-            </div>
-            <div class="main m-photoBox4"></div>
-        </article>
         <div class="best-itemcontainer">
             <article class="main best-item1 centerBoxing">
                 <div class="best-photo1"></div>
@@ -800,7 +1409,7 @@
                     </article>
                 </div>
             </fieldset>
-            <section>
+            <section class="recipe-container">
             <div id="recipe-people"></div>
             <article class="recipe-content">
                 <h1>The people behind the recipes</h1>
@@ -812,56 +1421,65 @@
             <article class="collabo-content">
                 <h1>Recipe collaborators</h1>
                 <p>We partner with top low-carb and keto personalities, YouTubers, and bestselling cookbook authors from around the world. Click to read more about each person and to check out their recipes.</p>
-                <p>Are you interested in contributing your favorite low-carb recipes, or would you love to collaborate with us in the future? Don’t hesitate to reach out recipes@dietdoctor.com!</p>
+                <p>Are you interested in contributing your favorite low-carb recipes, or would you love to collaborate with us in the future? Don’t hesitate to reach out <a href="#">recipes@dietdoctor.com!</a></p>
             </article>
                 <div class="collabo-container">
                     <article class="collabo-item cBox1">
-                        <div>사진1</div>
+                        <div class="collabo-photo1"></div>
+                        <div class="collabo-humanimg1"></div>
                         <h1>Megha & Matt</h1>
                         <p>Megha Barot and Matt Gaedke are business partners living in Atlanta, Georgia. KetoConnect.net, their food blog, started as a weekend side hustle, but has become their full-time passion project. Their mission is to make your keto diet easy and approachable.</p>
                     </article>
                     <article class="collabo-item cBox2">
-                        <div>사진2</div>
+                        <div class="collabo-photo2"></div>
+                        <div class="collabo-humanimg2"></div>
                         <h1>Suzanne Ryan</h1>
                         <p>Suzanne Ryan discovered the keto diet in January 2015, and it completely changed her life. She’s passionate about helping others find the same success. She also has a popular blog, Keto Karma, where she posts helpful information and keto recipes.</p>    
                     </article>
                     <article class="collabo-item cBox3">
-                        <div>사진3</div>
+                        <div class="collabo-photo3"></div>
+                        <div class="collabo-humanimg3"></div>
                         <h1>Kristie Sullivan, PhD</h1>
                         <p>Because of her personal success, Kristie began helping others learn how to make a low-carb diet sustainable and delicious! She focuses on a clean-eating approach to keto and has authored five cookbooks to teach others</p>
                     </article>
                     <article class="collabo-item cBox4">
-                        <div>사진4</div>
+                        <div class="collabo-photo4"></div>
+                        <div class="collabo-humanimg4"></div>
                         <h1>Lisa MarcAurele</h1>
                         <p>Lisa is the blogger behind Low Carb Yum, a popular keto friendly recipe site that receives millions of views per month and has well over a million Facebook fans. As a busy working mom, her motto has been to "keep it simple" so she favors recipes that are easy to prepare.</p>
                     </article>
                     <article class="collabo-item cBox5">
-                        <div>사진5</div>
+                        <div class="collabo-photo5"></div>
+                        <div class="collabo-humanimg5"></div>
                         <h1>Maria Emmerich</h1>
                         <p>Wellness expert in nutrition and exercise physiology, offering innovative recipes and easy-to-understand instructions. Author of several cookbooks and nutritional guidebooks. Maria’s success stems from her passion for helping others.</p>
                     </article>
                     <article class="collabo-item cBox6">
-                        <div>사진6</div>
+                        <div class="collabo-photo6"></div>
+                        <div class="collabo-humanimg6"></div>
                         <h1>Cristina Curp</h1>
                         <p>Cristina Curp is a seasoned chef and ancestral health enthusiast. A Miami native with Cuban roots, she now lives in Virginia with her family. Author of the bestselling cookbook ‘Made Whole’ and the creative mind behind The Castaway Kitchen, a blog dedicated to real food recipes and healthy living.</p>
                     </article>
                     <article class="collabo-item cBox7">
-                    <div>사진7</div>
+                    <div class="collabo-photo7"></div>
+                    <div class="collabo-humanimg7"></div>
                     <h1>Kyndra Holley</h1>
                     <p>Kyndra Holley is the face behind the keyboard at Peace, Love, and Low Carb. What started as a hobby blog back in 2011 now gets 3 million page views per month, and is one of the most well-established low carb, ketogenic resources out there. She is also the author of several international best-selling cookbooks.</p>
                 </article>
                 <article class="collabo-item cBox8">
-                    <div>사진8</div>
+                    <div class="collabo-photo8"></div>
+                    <div class="collabo-humanimg8"></div>
                     <h1>Carolyn Ketchum</h1>
                     <p>Carolyn Ketchum is the writer, photographer and evil mastermind behind All Day I Dream About Food, a low carb, gluten-free food blog. Her mission is to prove that special diets need not be boring or restrictive. It’s astonishing what you can do with a bag of almond flour, a stick of butter, and a willingness to experiment.</p>
                 </article>
                 <article class="collabo-item cBox9">
-                    <div>사진9</div>
+                    <div class="collabo-photo9"></div>
+                    <div class="collabo-humanimg9"></div>
                     <h1>Sahil Makhija</h1>
                     <p>Sahil 'Demonstealer' Makhija is the master chef and heavy metal genius behind Headbanger's Kitchen, bringing you all the irresistible flavors of the Indian cuisine. Sahil is the man behind Headbanger's Kitchen, a YouTube cooking channel that's keto all the way.</p>
                 </article>
             </div>
-            <div class="centerBoxing">
+            <div class="main-content centerBoxing">
                 <button type="submit">All collaborators</button>
             </div>
             </section>
@@ -870,49 +1488,63 @@
             <section id="footer">
             <div class="footer-Box1">
                 <nav class="footer-navContainer">
-                    <div class="dd-logo"></div>
-                    <table>
-                        <ul class="footer-nav">
-                            <li><a href="#">About us</a></li>
-                            <li><a href="#">Contact</a></li>
-                            <li><a href="#">Careers</a></li>
-                            <li><a href="#">Team</a></li>
-                        </ul>
-                    </table>
-                </nav>
-                <fieldset class="searchBar">
-                    <legend>Don’t miss out!</legend>
-                    <p>Stay updated like 500,000+ subscribers with our weekly Diet Doctor newsletter.</p>
+                                    <div class="dd-logo"></div>
+                                    <table>
+                                        <ul class="footer-nav">
+                                            <li><a href="#">About us</a></li>
+                                            <li><a href="#">Contact</a></li>
+                                            <li><a href="#">Careers</a></li>
+                                            <li><a href="#">Team</a></li>
+                                        </ul>
+                                    </table>
+                                </nav>
+            </div>
+            <div class="footer-Box2">
+            <fieldset class="searchBar">
+                <legend>Don’t miss out!</legend>
+                <p>Stay updated like 500,000+ subscribers with our weekly Diet Doctor newsletter.</p>
                     <article class="searchbar-container f-searchBar">
                         <input class="f-searchbar" type="email" placeholder="Enter email address">
                         <button class="f-searchbutton" type="submit">Subscribe</button>
                     </article>
-                </fieldset>
+            </fieldset>
             </div>
-            <div class="footer-box2">
+            <div class="footer-Box3">
+            </div>
+            <div class="footer-Box4">
                 <article class="hiring-button">
                     <button type="submit">We’re hiring!</button>
                 </article>
+            </div>
+            <div class="footer-Box5">
                 <article class="hc">
                     <div class="hc-img"></div>
                     <p>We comply with the HONcode standard for trustworthy health information.</p>
                 </article>
             </div>
-            <article>페이스북</article>
-            <article>인스타</article>
-            <article>트위치</article>
-            <article>핀터레스트</article>
-            <article>유튜브</article>
-            <article>
-                <ul>
-                    <li><a href="#">Copyright</a></li>
-                    <li><a href="#">Privacy</a></li>
-                    <li><a href="#">Disclaimer</a></li>
-                    <li><a href="#">Comments</a></li>
-                    <li>Diet Doctor © 2021</li>
-                </ul>
-            </article>
-            <article>언어 스크롤 English</article>
+            <div class="footer-Box6">
+            </div>
+            <div class="footer-Box7">
+                <article><a href="https://www.facebook.com/thedietdoctor"><img src="image/facebook.png" alt="페이스북"></a></article>
+                <article><a href="https://www.instagram.com/diet_doctor"><img src="image/instagram.png" alt="인스타그램"></a></article>
+                <article><a href="https://twitter.com/DietDoctor"><img src="image/twitter.png" alt="트위치"></a></article>
+                <article><a href="https://www.pinterest.com/thedietdoctor"><img src="image/pinterest.png" alt="핀터레스트"></a></article>
+                <article><a href="https://www.youtube.com/c/DietDoctorVideo"><img src="image/youtube.png" alt="유튜브"></a></article>
+            </div>
+            <div class="footer-Box8">
+                <article>
+                    <ul><a href="">
+                        <li><a href="#">Copyright</a></li>
+                        <li><a href="#">Privacy</a></li>
+                        <li><a href="#">Disclaimer</a></li>
+                        <li><a href="#">Comments</a></li>
+                        <li>Diet Doctor © 2021</li>
+                    </ul>
+                </article>
+            </div>
+            <div class="footer-Box9">
+                <article><img src="https://www.dietdoctor.com/wp-content/themes/ckdc/images/us.svg" alt="#"><p>English ∨</p></article>
+            </div>
         </section>
     </footer>
 </div>
