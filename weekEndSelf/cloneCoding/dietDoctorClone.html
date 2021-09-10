@@ -283,7 +283,7 @@
             margin-right: 3em;
         }
         .right-arrow {
-            margin-left: 85%;
+            margin-left: 70%;
         }
         .slide-pho {
             width: 90%;
@@ -299,7 +299,6 @@
         .slide1-photo1 {
             background: url(https://i.dietdoctor.com/wp-content/uploads/2021/08/PicoDeGallo-h.jpg?auto=compress%2Cformat&w=500&h=282&fit=crop) no-repeat center;
             background-size: contain;
-            width: 9
         }
         .slide1-photo2 {
             background: url(https://i.dietdoctor.com/wp-content/uploads/2021/08/PicoDeGallo-h.jpg?auto=compress%2Cformat&w=500&h=282&fit=crop) no-repeat center;
@@ -317,18 +316,53 @@
             background: url(https://i.dietdoctor.com/wp-content/uploads/2021/08/PicoDeGallo-h.jpg?auto=compress%2Cformat&w=500&h=282&fit=crop) no-repeat center;
             background-size: contain;
         }
-
-        @keyframes slider {
-            0% {
-                left: 0;
-            }
-            20% {
-                left: 0;
-            }
-            25% {
-                left: -100%;
-            }
+        .slide2-container {
+            display: flex;
+            max-width: 1280px;
+            margin: 0 auto;
+            cursor: pointer;
+            animation: 3s slider infinite;
         }
+        @keyframes slide {
+    0% {margin-left:0;} 
+    10% {margin-left:0;} 
+    25% {margin-left:-100%;} 
+    35% {margin-left:-100%;} 
+    50% {margin-left:-200%;}
+    60% {margin-left:-200%;}
+    75% {margin-left:-300%;}
+    85% {margin-left:-300%;}
+    100% {margin-left:0;}
+}
+        .topRated-slide h1{
+            font-size: 3.2em;
+            max-width: 1280px;
+            color: #404040;
+            margin: 0 auto;
+            padding: 0;
+        }
+        .slide2-photo1 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2021/08/PicoDeGallo-h.jpg?auto=compress%2Cformat&w=500&h=282&fit=crop) no-repeat center;
+            background-size: contain;
+        }
+        .slide2-photo2 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2021/08/PicoDeGallo-h.jpg?auto=compress%2Cformat&w=500&h=282&fit=crop) no-repeat center;
+            background-size: contain;
+        }
+        .slide2-photo3 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2021/08/PicoDeGallo-h.jpg?auto=compress%2Cformat&w=500&h=282&fit=crop) no-repeat center;
+            background-size: contain;
+        }
+        .slide2-photo4 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2021/08/PicoDeGallo-h.jpg?auto=compress%2Cformat&w=500&h=282&fit=crop) no-repeat center;
+            background-size: contain;
+        }
+        .slide2-photo5 {
+            background: url(https://i.dietdoctor.com/wp-content/uploads/2021/08/PicoDeGallo-h.jpg?auto=compress%2Cformat&w=500&h=282&fit=crop) no-repeat center;
+            background-size: contain;
+        }
+      
+
         .main.m-photoBox1 {
             display: grid;
             gap: 1em;
@@ -580,6 +614,7 @@
                     padding: 4em 0;
                 }
                 .faq-itembox {
+                    cursor: pointer;
                     display: grid;
                     gap: 1em;
                     max-width: 1280px;
@@ -607,6 +642,9 @@
             background-size: contain;
             width: 100%;
             height: 400px;
+        }
+        div.faq-itembox h1:hover, div.faq-itembox p:hover  {
+            color: #728FD2;
         }
         
         .m-content4-itembox {
@@ -996,6 +1034,10 @@
         #footer .footer-Box2 .searchBar {
             width: 80vw;
         }
+        article.hiring-button-container {
+            margin: 0;
+            width: 100%;
+        }
         #footer .footer-Box4 button {
             margin: 2em 2em 2em 6em;
             background-color: #D54669;
@@ -1106,7 +1148,7 @@
             .h-content {
                 display: flex;
                 height: 1000px;
-                padding-left: 4em;
+                padding-left: 2em;
                 flex-direction: column-reverse;
             }
             aside.header.aside-right {
@@ -1195,12 +1237,68 @@
                 grid-template-columns: repeat(1, 1fr);
                 grid-template-rows: repeat(1, 1fr);
             }
-            div.footer-Box1 li a {
-                font-size: 3em;
+            #footer .footer-Box1 a {
+                font-size: 1em;
             }
-            
-
+            #footer input.f-searchbar {
+                width: 90%;
+            }
+            #footer button.f-searchbutton {
+                width: 97%;
+                margin-top: 1em;
+            }
+            #footer div:nth-child(3) {
+                grid-column: span 2;
+            }    
+            #footer div:nth-child(4) {
+                grid-column: span 2;
+            }    
+            button.hiring-button{
+                width: 200%;
+            }
+            #footer article.hc {
+                width: 900px;
+            }
+            div.footer-Box7 {
+                margin: 0 auto
+            }
+            div.footer-Box8 {
+                margin: 0 auto
+            }
+            div.footer-Box8 li {
+                margin-right: 3em;
+            }
+            div.footer-Box9 {
+                margin: 0 auto                
+            }
+            #footer div:nth-child(9) {
+                align-content: center;
+            }
+            div.footer-Box9 article {
+                padding-left: 15em;
+            }
         } 
+
+        @media (max-width : 680px) {
+            #footer input.f-searchbar {
+                width: 70%;
+            }
+            #footer button.f-searchbutton {
+                width: 80%;
+            }
+            div.footer-Box7 {
+                margin-left: 8em;
+            }
+            div.footer-Box8 {
+                margin-right: 50em;
+            }
+            div.footer-Box8 li {
+                margin-right: 0;
+            }
+            div.footer-Box9 {
+                margin-right: 50em;
+            }
+        }
         </style>
 </head>
 <body>
@@ -1275,6 +1373,8 @@
                 <article class="slide1-photo3 slide-pho"></article>
                 <article class="slide1-photo4 slide-pho"></article>
                 <article class="slide1-photo5 slide-pho"></article>
+                <article class="slide1-photo6 slide-pho"></article>
+                <article class="slide1-photo7 slide-pho"></article>
                 <article class="right-arrow arrow">></article>
         </figure>
     </article>
@@ -1305,8 +1405,19 @@
                 <div class="membership-item2"></div>
             </div>
         </section >
-        <article class="main topRated slide">
-            <h1>Top rated recipes</h1>
+        <article class="main topRated-slide slide">
+            <h1><a href="#"><h1>Top rate recipes</h1></a></h1>
+            <figure class="slide2-container">
+                    <article class="left-arrow arrow"><</article>
+                    <article class="slide2-photo1 slide-pho"></article>
+                    <article class="slide2-photo2 slide-pho"></article>
+                    <article class="slide2-photo3 slide-pho"></article>
+                    <article class="slide2-photo4 slide-pho"></article>
+                    <article class="slide2-photo5 slide-pho"></article>
+                    <article class="slide2-photo6 slide-pho"></article>
+                    <article class="slide2-photo7 slide-pho"></article>
+                    <article class="right-arrow arrow">></article>
+            </figure>
         </article>
         <article class="main-content m-content2">
             <div class="centerBoxing">
@@ -1512,8 +1623,8 @@
             <div class="footer-Box3">
             </div>
             <div class="footer-Box4">
-                <article class="hiring-button">
-                    <button type="submit">We’re hiring!</button>
+                <article class="hiring-button-container">
+                    <button class="hiring-button" type="submit">We’re hiring!</button>
                 </article>
             </div>
             <div class="footer-Box5">
