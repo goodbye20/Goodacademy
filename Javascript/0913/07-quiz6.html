@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 업 앤 다운 게임 -->
+    <input type="text" name="" id="text1">
+    <button id="btn">버튼</button>
+    <div id="content">
+
+    </div>
+
+    <div id="count">
+
+    </div>
+    <script>
+        const div = document.getElementById("content");
+        let count = document.getElementById("count");
+        
+        document.getElementById("btn").addEventListener("click", function(){
+            let user = Number(document.getElementById("text1").value);
+            let com = Math.floor(Math.random() * 100) + 1;
+            count = 0;
+            user = 0;
+            while (user != com) {
+                if(user === com){
+                    div.innerHTML = `<h1>정답입니다.</h1>`;
+                    break;
+                }  else if(user < com){
+                    div.innerHTML = `<h1>UP.</h1>`;
+                }   else if(user > com){
+                    div.innerHTML = `<h1>DOWN.</h1>`;
+                }
+                if(count == 10){
+                    div.innerHTML = `<h1>제한횟수가 다됬습니다.</h1>`;
+                    break;
+                }
+                count++
+            }
+        });    
+    </script>
+</body>
+</html>
