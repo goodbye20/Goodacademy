@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const obj1 = new Object();
+        obj1.name = "이영주";
+        obj1.age = 31;
+        obj1.gender = "male";
+
+        obj1.teach = function(){
+            console.log("학생들을 가르칩니다.")
+        }
+        
+        const obj2 = {};
+        obj2.name = "홍길동";
+        obj2.age = 29;
+        obj2.gender = "male";
+
+        obj2.steal = function(){
+            console.log("도둑질을 합니다.");
+        }
+
+        console.dir(obj1);
+        console.dir(obj2);
+        obj2["steal"]();
+        // 꺾쇠괄호는 직접 접근할때 주로 사용 주로 primitive타입 key값, 배열에서의 index값 등에 접근 할때 사용
+
+    </script>
+</body>
+</html>

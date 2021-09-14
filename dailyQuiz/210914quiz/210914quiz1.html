@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background-color: grey;
+            
+        }
+    </style>
+</head>
+<body>
+    <div id="box1">
+
+    </div>
+    <button id="btn1">버튼1</button>
+    <button id="btn2">버튼2</button>
+    <button id="btn3">버튼3</button>
+
+    <script>
+        const box1 = document.getElementById("box1");
+        const button1 = document.getElementById("btn1");
+        const button2 = document.getElementById("btn2");
+        const button3 = document.getElementById("btn3");
+        
+        
+        
+        document.getElementById("btn1").addEventListener("click", function(){
+            btn1.btn1bg = {
+                back: "red"
+            }
+        
+            box1.style.backgroundColor =  btn1.btn1bg.back;
+        });
+      
+        
+        document.getElementById("btn2").addEventListener("click", function(){
+            btn2.btn2bg = {
+                back: "blue"
+            }
+        
+            box1.style.backgroundColor =  btn2.btn2bg.back;
+        });
+      
+        
+        document.getElementById("btn3").addEventListener("click", function(){
+            btn3.btn3bg = {
+                back: "green"
+            }
+        
+            box1.style.backgroundColor =  btn3.btn3bg.back;
+        });
+      
+
+        
+    </script>
+</body>
+</html>

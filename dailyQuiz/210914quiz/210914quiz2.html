@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box1 {
+            width: 200px;
+            height: 200px;
+            background-image: url("images/coffee.jpg");
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div id="box1"></div>
+    <button id="btn1">버튼1</button>
+    <button id="btn2">버튼2</button>
+    <button id="btn3">버튼3</button>
+
+    <script>
+        const box1 = document.getElementById("box1");
+        box1.photo = {
+            pho1 : "URL(\"images/ice.jpg\")",
+            
+        }
+        console.log(box1.photo.pho1);
+        document.getElementById("btn1").addEventListener("click", function(){
+            box1.style.backgroundImage = box1.photo.pho1
+        });
+    </script>
+</body>
+</html>

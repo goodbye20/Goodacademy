@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1"></div>
+
+    <div class="aaa"></div>
+    <div class="aaa"></div>
+    <div class="aaa"></div>
+    <script>
+        const div1 = document.getElementById("div1");
+        console.dir(div1);
+
+        div1.style.width = "350px";
+        div1.style.height = "200px";
+        div1.style.backgroundColor = "red";
+        div1.style.border = "5px solid blue"
+
+        
+        const div2 = document.getElementsByClassName("aaa");
+        console.dir(div2);
+        // 그냥 접근하면 collection으로 배열형태로 묶여서 접근된다
+        console.dir(div2[0]);
+        // 그렇기 때문에 그 배열의 index값으로 접근하는데, 그 때 필요한게 ' [] ' 꺾쇠괄호다.
+
+        div1.a = "abcd";
+        // div1의 a라는 속성에 abcd라는 값을 부여
+        delete div1.a;
+        // div1에 부여한 a라는 속성의 값을 삭제
+
+        delete div1.border;
+    // ******  원래는 style로 부여한 값들도 삭제가 됬으나, 최근에는 안되게 변경되었다. ******
+   </script>
+</body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 일반 파라미터와 rest 파라미터의 혼용 예시
+        function funcA(a, b, ...rest) {
+            console.log(a);
+            console.log(b);
+            console.log(rest);
+        }
+
+        funcA("one", "two", "three", "four");
+    </script>
+</body>
+</html>
