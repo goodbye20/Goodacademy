@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function func1(){}
+        function func2(a){ return a;}
+        function func3(a, b){ return a+b; }
+        function func4(a, b, c){ return a+b+c;}
+
+        // length : 함수가 정상적으로 실행될 때 기대하는 인자의 개수를 표시
+            /*
+                문자에선 문자수
+                수에서는 자릿수
+                함수에선 인자수
+            */
+        console.log(func1.length);
+        console.log(func2.length);
+        console.log(func3.length);
+        console.log(func4.length);
+    </script>
+</body>
+</html>
