@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text1"><br>
+    <input type="text" id="text2">
+    <button id="btn" type="button">입력</button>
+    <script>
+        document.getElementById("btn").addEventListener("click", function(){
+            let num1 = Number(document.getElementById("text1").value);
+            let num2 = Number(document.getElementById("text2").value);
+            if(num1 == num2){
+                alert("같다.")
+            } else if(num1 < num2){
+                alert("작다.")
+            } else {
+                alert("크다.")
+            }
+        });
+        //     alert((num1 == num2)?" 같다.":(num1 < num2)?"작다":"크다");
+        // });
+    </script>
+</body>
+</html>
