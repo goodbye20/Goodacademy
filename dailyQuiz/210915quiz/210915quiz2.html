@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+        }
+        div {
+           width: 100px; 
+           height: 100px;
+           background-color: #ccc; 
+           text-align: center;
+           margin: 1em;
+           font-weight: bold;
+           font-size: 2em;
+        }
+        .clickBox {
+            cursor: pointer;
+        }
+        p {
+            vertical-align: middle;
+        }
+
+        
+        
+        </style>
+</head>
+<body>
+    <section id="container">
+        <div id="div1" class="clickBox"><p>1</p></div>
+        <div id="div2" class="clickBox"><p>2</p></div>
+        <div id="div3" class="clickBox"><p>3</p></div>
+        <div id="div4" class="clickBox"><p>4</p></div>
+        <div id="div5" class="clickBox"><p>5</p></div>
+    </section>
+
+    <script>
+        const clickBox = document.getElementsByClassName("clickBox");
+
+        function upTabs(num){
+
+             document.getElementById(`div${num}`).style.backgroundColor = "#444444";
+             document.getElementById(`div${num}`).style.color = "white";
+        }
+        
+        // function clearTabs(){
+
+        //     document.getElementsByClassName("clickBox").style.backgroundColor ="#ccc";
+        //     document.getElementsByClassName("clickBox").style.color ="black";
+        // }
+
+        function clearTabs() {
+            for(let index = 0; index < clickBox.length; index++){
+                clickBox[index].style.color = "black";
+                clickBox[index].style.backgroundColor = "#ccc";
+            }
+            
+        }
+
+        function clickTabs(num){
+            document.getElementById(`div${num}`).addEventListener("click", function(){
+            
+            clearTabs()
+            upTabs(num)
+        });
+        }
+        upTabs(1);
+
+        // document.getElementById("div1").addEventListener("click", function(){
+            
+        //     clearTabs()
+        //     upTabs(1)
+        // });
+        clickTabs(1);
+        clickTabs(2);
+        clickTabs(3);
+        clickTabs(4);
+        clickTabs(5);
+        
+    </script>
+</body>
+</html>

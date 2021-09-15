@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <a id="link" class="link1" href="http://www.naver.com">네이버</a>
+
+    <script>
+        const a = document.getElementById("link")
+
+        // console.dir(document.getElementById("link").attributes);
+        // document.getElementById("link").setAttributes("href", "http://www.daum.net")
+        a.setAttribute("href", "https://www.daum.net")
+        // 속성 값 설정 및 재설정
+        let href_text = a.setAttribute("href");
+        console.log(href_text);
+
+        a.setAttribute("data-link", "yes");
+
+        a.removeAttribute("data-link");
+        // 속성 값 제거
+    </script>
+</body>
+</html>

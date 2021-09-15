@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .divMenu {
+            background-color: #ccc;
+            padding: 20px 20px;
+        }
+
+        .divMenu:hover {
+            background-color: #444444;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="div1" class="divMenu">section1</div>
+    <div id="div2" class="divContent">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.istinctio reprehenderit molestias aliquid vitae dicta tempora. Dolorum, pariatur!</p>
+    </div>
+    <div id="div3" class="divMenu">section2</div>
+    <div id="div4" class="divContent">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.istinctio reprehenderit molestias aliquid vitae dicta tempora. Dolorum, pariatur!</p>
+    </div>
+    <div id="div5" class="divMenu">section3</div>
+    <div id="div6" class="divContent">
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.istinctio reprehenderit molestias aliquid vitae dicta tempora. Dolorum, pariatur!</p>
+    </div>
+
+    <script>
+        const divContent = document.getElementsByClassName("divContent");
+        const divMenu = document.getElementsByClassName("divMenu");
+
+         function clearContent() {
+            for(let index = 0; index < divContent.length; index++){
+                divContent[index].style.display = "none";
+            }    
+        }
+        function clearMenu() {
+            for(let index = 0; index < divMenu.length; index++){
+                divMenu[index].style.backgroundColor = "#ccc";
+            }    
+        }
+
+        function upContent(num){
+            document.getElementById(`div${num+1}`).style.display = "block";
+            document.getElementById(`div${num}`).style.backgroundColor = "#444444";
+            
+        }
+
+        function clickMenu(num){
+            document.getElementById(`div${num}`).addEventListener("click", function(){
+                clearMenu();
+                clearContent();
+                upContent(num);
+            });
+        }
+
+        clearContent();
+        clickMenu(1);
+        clickMenu(3);
+        clickMenu(5);
+
+
+        
+
+
+    </script>
+</body>
+</html>

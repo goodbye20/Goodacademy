@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .mystyle{
+            width: 100%;
+            padding: 25px;
+            background-color: coral;
+            color: white;
+            font-size: 25px;
+            box-sizing: border-box;
+        }
+    </style>
+</head>
+<body>
+    <button id="btn1">디자인 삽입</button>
+    <button id="btn2">다자인 삭제</button>
+    <div id="myDIV">
+        This is a DIV elemnt
+    </div>
+
+    <script>
+        const cList = document.getElementById("myDIV").classList
+
+        document.getElementById("btn1").addEventListener("click", function(){
+            cList.add("mystyle");
+        });
+        document.getElementById("btn2").addEventListener("click", function(){
+            cList.remove("mystyle");
+        });
+    </script>
+</body>
+</html>
