@@ -25,14 +25,15 @@
     <script>
         const box1 = document.getElementById("box1");
         box1.photo = {
-            pho1 : "url(\"images/ice.jpg\")",
-            pho2 : "url(\"images/map.jpg\")",
-            pho3 : "url(\"images/sample.jpg\")",
+            pho1 : `url("images/ice.jpg")`,
+            pho2 : `url("images/map.jpg")`,
+            pho3 : `url("images/sample.jpg")`,
             
         }
         console.log(box1.photo.pho1);
         document.getElementById("btn1").addEventListener("click", function(){
-            box1.style.backgroundImage = box1.photo.pho1
+            // box1.style.backgroundImage = box1.photo.pho1
+            document.getElementById("box1").style.backgroundImage = `url("images.ice.jpg")`
         });
         document.getElementById("btn2").addEventListener("click", function(){
             box1.style.backgroundImage = box1.photo.pho2
