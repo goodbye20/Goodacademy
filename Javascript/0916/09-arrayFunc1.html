@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 배열 함수
+
+        //------ Push ------
+        const arr1 = ['a','b','c']
+        arr1.push('d');
+        // arr1 이라는 배열에 d라는 값을 뒤에 삽입
+
+        console.dir(arr1);
+
+        //------- Pop ---------
+
+        // arr1.pop();
+        let str = arr1.pop();
+        // pop을 이용해 제일 마지막 값을 반환(제거하는게 아니라 반환하는 것)
+
+        console.dir(arr1);
+        console.log(str);
+
+        //------ shift -----
+        const arr2 = [9,8,7,6,5];
+        let num = arr2.shift();
+
+        console.log(num);
+
+        // Concat
+        const arr3 = [4,5,6];
+        const arr4 = [7,8,9];
+
+        const arr5 = arr3.concat(arr4);
+        // 배열을 이어서 값만 복사한 후 새로운 arr5라는 배열하나 더 편성(독립적)
+        console.dir(arr5);
+
+
+        console.dir(arr3);
+        console.dir(arr4);
+        // 이어주어도 이어주지 전 코드들은 그대로(브라우저에 따라 변화할 수 있으니 주의)
+
+    </script>
+</body>
+</html>
