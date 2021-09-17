@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 무자위 데이터를 순서대로 정렬
+
+        const data = [3, 2, 1, 5, 4];
+
+        for (let index1 = 0; index1 < data.length - 1; index1++) {
+            // 마지막 번째는 반복할 필요없기에 -1
+            for (let index2 = 0; index1 + 1 < data.length; index2++) {
+                if(data[index1] > data[index2]){
+                    // 기준데이터(바꿔야하는 대상)가 비교대상보다 클 경우
+                    // let temp = data[index1];
+                    // data[index1] = data[index2];
+                    // data[index2] = temp;
+                    // 앞 배열값과 스위칭
+
+                    [data[index1], data[index2]] = [data[index2], data[index1]]
+
+                }
+            }
+        }
+
+        console.log(data);
+    </script>
+</body>
+</html>

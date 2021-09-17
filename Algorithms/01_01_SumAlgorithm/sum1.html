@@ -11,12 +11,20 @@
       //[?] n명의 점수 중에서 80점 이상인 점수의 합계를 구하라
 
 //[1] Input(입력): n명의 점수
- const scores = prompt();
+ const scores = [];
+ let up80Sum = 0;
+
+ const num = prompt("몇 명의 점수의 합계를 구할까요?");
+    for (let index = 1; index <= num; index++) {;
+         scores[index] = Number(prompt(`${index}번째 학생의 점수`));
+        if(scores[index] >= 80){
+            up80Sum += scores[index]
+        }
+    }
+    alert(`80점 이상 합계는 ${up80Sum}입니다.`)
+   
 
 
-    for (let index = 0; index < scores.length; index++) {
-        console.log(scores[index])
-    }  
     </script>
 </body>
 </html>

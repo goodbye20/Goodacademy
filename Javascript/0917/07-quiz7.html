@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 주이진 데이터의 순위를 구하는 로직
+
+        const scores = [90, 87, 100, 95, 80];
+        const ranking = new Array(scores.length).fill(1);
+        // 새로운 배열 ranking을 생성후 모든값을 1로 채움
+
+        for (let index = 0; index < scores.length; index++) {
+
+           for (let index2 = 0; index2 < scores.length; index2++) {
+                if(scores[index] < scores[index2]){
+                    // 하나씩 돌려나가다 값이 높으면 순위값을 
+                    ranking[index]++;
+                    // 낮으면 이제 랭킹값이 올라가 순위로는 내려가는 결과
+                }
+             
+               
+           }
+           for (let index = 0; index < scores.length; index++) {
+               console.log(`${index-1} 번째 점수 : ${scores[index]}, 순위 : ${ranking[index]}` );
+               
+           }
+            
+        }
+    </script>
+</body>
+</html>

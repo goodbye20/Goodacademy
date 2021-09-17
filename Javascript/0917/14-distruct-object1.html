@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // let {one, two} = {one : 1, two : 2}; // 1  2 ;
+        let {one, two} = {one: 1, nine : 9};
+        //배열과 다르게 지정순서, 위치에 상관없이 키 값에 따라 배정
+        console.log(one, two);
+
+        let three, four;
+        ({three, four} = {three : 3, four :4});
+        console.log(three, four);
+
+        let five, six;
+        // 기존의 변수(five,six)에 데이터(one,two)들을 맞춰 넣어야할때
+        ({one : five, two : six} = {one: 10, two :20});
+        console.log(five,six);
+
+        let n,t;
+         // 기존의 변수(n,t)에 데이터(nine,ten)들을 맞춰 넣어야할때
+        const obj = {nine : 9, plus : {ten :10}}
+        ({nine : n, plus : {ten : t}} = obj);
+        console.log(n,t);
+    </script>
+</body>
+</html>
