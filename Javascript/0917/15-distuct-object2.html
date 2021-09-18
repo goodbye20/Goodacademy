@@ -16,7 +16,12 @@
         // default 값으로 출력이되고, 값이 만약 입력되면 입력된 값으로 출력이됨
         console.log(width, height, color);
 
-        
+        // name, age, gender 값을 받아야하는데 name 값만 덜렁왔을 때 undefined를 막기위해 넘어온 변수명에 맞게 default 값 설정
+        const obj2 = {name : "john"};
+        let n, a, g;
+        ({name:n, age:a = 0, gender:g = "unknown"})
+
+        console.log(n, a, g);
     </script>
 </body>
 </html>

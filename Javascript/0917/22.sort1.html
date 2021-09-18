@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div1">
+        <p>라면</p>
+        <p>닭발</p>
+        <p>제육</p>
+        <p>초밥</p>
+        <p>된장찌개</p>
+        <p>계란말이</p>
+        <p>족발</p>
+        <p>마라탕</p>
+        <p>삼겹살</p>
+    </div>
+
+    <script>
+        const list = document.getElementById("div1").children;
+
+        Array.from(list)
+        .sort(function(a, b){ return a.textContent.localeCompare(b.textContent)})
+        // a텍스트 컨텐츠와 b텍스트 컨텐츠와 비교
+        .forEach(function(item){document.getElementById("div1").append(item)})
+        // 위에서 비교한 순서대로 foreach를 통해 하나씩 삽입
+    </script>
+</body>
+</html>

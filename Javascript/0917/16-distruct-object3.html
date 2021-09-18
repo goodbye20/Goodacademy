@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // 넘어온 데이터들 중 특정 데이터만 받고싶을 때
+        let option = {width : 300, height : 150, color : "green"};
+        let {color} = option;
+        // color 데이터만 필요 할때
+        console.log(color);
+
+        //넘어온 데이터들 중 특정 데이터(width)만 빼고는 나머지 값들은 객체 형태로 그대로 두고싶을때
+        // rest 파라미터를 이용할수 있음
+        let {width, ...rest} = option;
+        console.log(width);
+        console.log(rest);
+    </script>
+</body>
+</html>
