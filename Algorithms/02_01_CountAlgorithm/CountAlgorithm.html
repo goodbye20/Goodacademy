@@ -4,22 +4,23 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="">
     <title>Document</title>
 </head>
 <body>
+    //[?] 1부터 1,000까지의 정수 중 13의 배수의 개수(건수, 횟수)를 구하라
+
     <script>
-        // 1부터 1000까지의 정수 중 13의 배수
 
         let count = 0;
 
-        for (let index = 1; index < 1000; index++) {
-           if(index % 13 == 0){
-               count++
-           }
+        for (let index = 1; index <= 1000; index++) {
+            if([index] % 13 == 0){
+                count++
+            }
             
         }
-        console.log("13배수의 개수 : "+count)
+        console.log("13의 배수의 수: "+count);
+        
     </script>
 </body>
 </html>
