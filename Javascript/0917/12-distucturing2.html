@@ -25,8 +25,9 @@
 
 
         const arr2 = [5, 3, [10, 12]];
-        [one, two, three, four] = arr2 // => console을 찍어보면 10, 12 는 담기지않음
-        [one, two, [three, four]] = arr2;
+        [one, two, three, four] = arr2 // => console을 찍어보면 three 값에 10, 12가 담기고 four는 undifind
+        console.log(one, two, three, four);
+        [one, two, [three, four]] = arr2; // 비로소 한 배열에 다 담김
 
         console.log(one, two, three, four);
 
