@@ -13,25 +13,31 @@
             background-color: red;
             color: #fff;
         }
-        .closebtn {
+        #closebtn {
             float: right;
             font-size: 30px;
             font-weight: bold;
             cursor: pointer;
         }
-        .closebtn:hover {
+        #closebtn:hover {
             color: #000;
         }
     </style>
 </head>
 <body>
-    <div>
-        <span class="closebtn">X</span>
+    <div id="div1">
+        <span id="closebtn">X</span>
         <p>x 버튼을 누를 시 이 칸은 사라집니다.</p>
     </div>
 
     <script>
-       document.getElementsByClassName("closebtn")
+        const btn = document.getElementById("closebtn");
+        const div = document.getElementById("div1");
+        btn.addEventListener("click", function(){
+           div.style.display = "none";
+       }); 
+            
+
     </script>
 </body>
 </html>
