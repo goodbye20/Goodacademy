@@ -8,7 +8,16 @@
 </head>
 <body>
     <script>
-        
+        let a = function(num) {
+            console.log(`내가 입력한 수는 : ${num}입니다.`)
+        }
+        a(3);
+        // 기본
+
+        (function(num) {
+            console.log(`내가 입력한 수는 : ${num}입니다.`)
+        })(4);
+        // 즉시 실행함수 함수만 설정하면되지만 소괄호()로 꼭 모두 감싸줘야함.
     </script>
 </body>
 </html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #myDiv {
+            height: 250px;
+            width: 400px;
+            padding: 10px;
+            margin: 15px;
+            border: 5px solid red;
+            background-color: lightblue;
+        }
+    </style>
+</head>
+<body>
+    <button onclick="myFunction()">위치</button>
+
+    <div id="myDiv">
+
+    </div>
+    <p id="demo"></p>
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+    <script>
+        /*
+            clientHeight / clinetWidth = height/width + padding;
+            offsetHeight / offsetWidth = height/width + border;
+            offsetTop    / offsetLeft  = 실제위치?
+        */
+        function myFunction(){
+            const myDiv = document.getElementById("myDiv");
+            let text = `clientHeignt : ${myDiv.clientHeight}px
+                        clientWidth : ${myDiv.clientWidth}px
+            `
+            let text2 = `offsetHeignt : ${myDiv.offsetHeight}px
+                        offsettWidth : ${myDiv.offsetWidth}px
+            `
+            let text3 = `offsetTop : ${myDiv.offsetTop}px
+                        offsettLeft : ${myDiv.offsetLeft}px
+            `
+            document.getElementById("demo").textContent = text;
+            document.getElementById("demo2").textContent = text2;
+            document.getElementById("demo3").textContent = text3;
+        }
+    </script>
+</body>
+</html>

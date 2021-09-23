@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        document.write("<h1>이것은 바로 실행된 함수 결과</h1>")
+        function docuWrite() {
+            document.write("<h1>이것은 그 3초 뒤에 실행된 함수 결과</h1>")
+        }
+        // docuWrite();
+
+        setInterval(docuWrite, 3000);
+    </script>
+</body>
+</html>
