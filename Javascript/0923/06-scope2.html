@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Scope Level
+        /*
+            - 스코프가 어디에서 어디까지 적용되는지를 판단하는 기준
+            - 일반적으로 모든 언어에서는 블록레벨 스코프를 적용하지만 자바스크립트에서는 함수레벨 스코프를 지향한다.
+            - 즉 다시 이야기하자면 변수나 함수의 생존 소멸 범위는 함수의 로직 단위에서 이루어지며 함수의 로직이 종료되면
+              해당 변수나 함수는 소멸하게 된다.
+            - ECMScript 2015에서는 주된 변수인 var 변수가 함수레벨 스코프를 기준으로 동작 하였으며 그로 인해 많은 문제가 생겼었다.
+            - 하지만 이후 let과 const가 나오고 난 이후에 var에서 기준으로 삼았던 함수레벨 스코프에서 블록레벨 스코프로
+              기준이 변경되고 이후 블록레벨 스코프가 대세가 된다.
+            - 현재 개발자들이 let과 const를 많이 사용하고 있는 이유 중에 하나가 바로 이러한 스코프 범위가 함수였을때
+              발생할 수 있는 사이드 이펙트를 방지할 수 있기 때문이다.
+        */
+
+
+
+        // {
+        //     {
+        //         {
+        //             var a = 2
+        //         }
+        //     }
+        // }
+
+        // console.log(a);
+
+        // function aaa(){
+            
+        //     function bbb() {
+        //         var b = 2;
+
+        //         function ccc() {
+        //             var c = 1;
+        //             console.log(b);
+        //             // 안에서 바깥으로는 접근가능
+        //         }
+        //         ccc();
+        //         console.log(c); // Error
+        //         // 바깥에서 안으로는 접근 불가능
+        //     }
+        //     bbb();
+        // };
+        // aaa();
+        
+        // ***** 원래 자바 스크립트는 함수 단위 스코프 ********
+
+        // {
+        //     {
+        //         {
+        //             let a = 111;
+        //         }
+        //     }
+        //     console.log(a);
+        // }
+
+        // ******* let, const 는 블록 단위 스코프 *******
+        //       즉 함수가 아니여도 블록단위로 구분
+
+        for (var index = 0; index < 10; index++) {
+            
+            
+        }
+        console.log(index);
+        // 반복문은 함수가 아니기에 생존 그래서 문제가됨
+    </script>
+</body>
+</html>
