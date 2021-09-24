@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <ul class="ul1">
+        <li>볼고기</li>
+        <li>김치</li>
+        <li>감자전</li>
+        <li>호박전</li>
+        <li>육전</li>
+        <li>파래무침</li>
+    </ul>
+    <ul id="ul2">
+        
+    </ul >
+    <button id="sort">오름차순 정렬</button>
+
+    <script>
+        
+        document.getElementById("sort").addEventListener("click", function(){
+            const list = document.querySelector(".ul1").children
+            
+            Array.from(list)
+            .sort((a, b) => a.textContent.localeCompare(b.textContent))
+            .forEach(item => document.querySelector(".ul1").appendChild(item));
+        });
+                      
+                 // 방법1 document로 불러서 삽입 
+        
+        //     document.getElementById("sort").addEventListener("click", function(){
+        //     const list = document.querySelector(".ul1").children
+        //     const ul2 = document.querySelector("#ul2")
+            
+        //     Array.from(list)
+        //     .sort((a, b) => a.textContent.localeCompare(b.textContent))
+        //     .forEach(item => document.querySelector("#ul2").appendChild(item));
+        // });
+
+                // 방법2 새로운 ul을 하나 더만들고 그 ul2에 document로 불러서 삽입
+    </script>
+</body>
+</html>

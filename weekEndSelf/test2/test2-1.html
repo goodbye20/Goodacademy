@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+        /* header */
+
+        #header {
+            width: 100%;
+            text-align: center;
+            padding: 2em;
+        }
+
+
+        /* main */
+
+        .content-container {
+            width: 100%;
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 0.2em;
+        }
+        .content-container article:nth-child(4), .content-container article:nth-child(5) {
+            margin-top: 0.5em;
+        }
+        .content-container article:nth-child(5) {
+            grid-column: span 2;
+        }
+        .content-container article {
+            border: 2px solid #444;
+            color: white;
+            text-align: right;
+            padding-right: 2em;
+            line-height: 40rem;
+        }
+        .content-container .contentPho1{
+            height: 50vh;
+            background: url("images/coffee-1.png") no-repeat center;
+            background-size: cover;
+        }
+        .content-container .contentPho2{
+            height: 50vh;
+            background: url("images/coffee-2.png") no-repeat center;
+            background-size: cover;
+        }
+        .content-container .contentPho3{
+            height: 50vh;
+            background: url("images/coffee-3.png") no-repeat center;
+            background-size: cover;
+        }
+        .content-container .contentPho4{
+            height: 50vh;
+            background: url("images/coffee-4.png") no-repeat center;
+            background-size: cover;
+        }
+        .content-container .contentPho5{
+            height: 50vh;
+            background: url("images/coffee-5.png") no-repeat center;
+            background-size: cover;
+        }
+
+        /* footer */
+        #footer {
+            width: 100%;
+            height: 20vh;
+            margin: 0 auto;
+            background-color: #444;
+            color: white;
+            text-align: center;
+            padding-top: 5em;
+            margin-top: 2em;
+        }
+
+        @media (max-width : 1024px) {
+        /* main */
+            .content-container {
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                gap: 0.7em;
+            }
+            .content-container article:nth-child(4) {
+                margin-top: 0;
+            }
+        }
+
+        @media (max-width : 680px) {
+            .content-container {
+                display: grid;
+                grid-template-columns: repeat(1, 1fr);
+            }
+            .content-container article:nth-child(5) {
+                grid-column: span 1;
+                margin-top: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section id="header">
+            <h1>커피 이미지</h1>
+        </section>
+    </header>
+    <section id="main">
+        <section class="content-container">
+            <article class="contentPho1">
+                <h3>커피-1</h3>                                
+            </article>
+            <article class="contentPho2">
+                <h3>커피-2</h3>                            
+            </article>
+            <article class="contentPho3">
+                <h3>커피-3</h3>                        
+            </article>
+            <article class="contentPho4">
+                <h3>커피-4</h3>                        
+            </article>
+            <article class="contentPho5">
+                <h3>커피-5</h3>                       
+            </article>
+        </section> 
+    </section>
+    <footer>
+        <section id="footer">
+            <p>커피 이미지</p>
+        </section>
+    </footer>
+</body>
+</html>
