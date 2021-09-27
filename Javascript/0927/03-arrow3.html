@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // Default parameter
+        /*
+            
+        */
+        const plus = (one, two = 3) => one + two;
+        // default 값 주기
+        console.log(plus(3));
+
+        const funcA = ([one, two] = [10, 20]) => one + two;
+        // distucture 방식으로 인자 2개에 각각 default값 주기
+
+        const funcB = ({two : value} = {two : 20}) => value;
+        console.log(funcB());
+
+        const funcC = (...rest) => console.log(rest);
+        funcC(1,2,3,4);
+        
+    </script>
+</body>
+</html>

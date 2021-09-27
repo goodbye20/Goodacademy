@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let dt = new Date();
+        console.log(dt.getTime());
+        // 1970년 이래로 지금까지의 밀리초
+
+        let openDate = new Date("10 22, 2021 02:00:00").getTime();
+        // 1970년 이후로 open날짜까지의 숫자로 open날 지정
+        console.log(openDate);
+        // open 날짜 출력
+
+        let now = new Date().getTime();
+        // 1970년 이래로 지금까지의 밀리초
+        console.log(now);
+        // 현재 출력
+        console.log(openDate - now);
+        // 오픈 일짜로 부터 지금까지 흐른 시간을 빼줌 = 오픈일까지 남은시간
+
+        let remain = openDate - now;
+
+        let day = Math.floor(remain / (1000*60*60*24));
+        let hours = Math.floor((remain % (1000*60*60*24)) / (1000*60*60));
+        let minutes = Math.floor((remain % (1000*60*60)) / (1000*60));
+        let seconds = Math.floor((remain % (1000*60)) / 1000);
+
+        console.log(`앞으로 ${day}일 ${hours}시 ${minutes}분 ${seconds}초 남았습니다.`)
+    </script>
+</body>
+</html>

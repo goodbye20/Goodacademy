@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const funcA = function(value){
+            return value + 10;
+        }
+
+        const funcA2 = (value)=> value + 10;
+        // 인자가 하나밖에 없을 경우 ()을 생략도 가능하다.
+
+        const funcA3 = value => value + 10;
+
+
+
+        const funcB = function(){
+            return 3+4;
+        }
+        // 파라미더가 없을경우 반드시 ()을 넣어줘야한다.
+        const funcB2 = () => 3+4;
+        
+
+        const funcC = function(param){
+            return {sports : param};
+        }
+        // Arrow 함수에서 object 형태를 반환하려면 {}양 옆에 소괄호로 묶어주어야 한다.
+        const funcC2 = param => {sports : param}
+        console.log(funcC2("soccor")); // => undifind 
+
+        const funcC3 = param => ({sports : param});
+        console.log(funcC3("soccor"));
+
+        const funcD = function(){
+            console.dir(arguments);
+        }
+        funcD(1,2,3);
+
+        // const funcD2 = () => console.dir(arguments);
+        // funcD2(1,2,3); // error !!!!
+        // Arrow 함수내에서는 arguments 객체를 불러올 수 없다.(arguments 자체를 지원을 안함)
+    </script>
+</body>
+</html>
