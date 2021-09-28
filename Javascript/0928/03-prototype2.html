@@ -22,8 +22,9 @@
             }
         }
 
-        a.cc = 1;
+        a.cc = 1; // 그냥 a내에 cc선언
         b.__proto__.cc = 2;
+        // __proto__로 객체(object)에 접근해 cc선언
 
         console.log(a.cc);
         console.log(b.cc);
@@ -33,6 +34,7 @@
 
         c = [1, 2, 3]
         c.__proto__.__proto__.dd = 3;
+        // 한번 __proto__하면 배열, 한번 더 __proto__하면 객체(object) -> dd는 object에 접근해 선언.
         console.dir(c.dd)
 
         console.dir(c);

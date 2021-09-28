@@ -31,7 +31,8 @@
         console.dir(a);
 
         // a.__proto__.funcA();
-        a.funcA(); // __proto__ 은 생략가능
+        // __proto__는 선언때만 필요
+        a.funcA(); // __proto__ 은 그 외 기능을 실행할때는 생략가능
 
         const b = {
             c : 456

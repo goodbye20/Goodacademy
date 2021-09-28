@@ -47,21 +47,23 @@
 
     // 묶음으로써 동기화
 
-    function first(second) {
+    function first() {
             console.log("서울시 데이터 센터에서 받아온 데이터");
-            setTimeout(second(third), 5000);
+            setTimeout(second, 5000);
+            // 함수 second를 실행한다 5초뒤에
         }
 
-        function second(third) {
+        function second() {
             console.log("국제 IDC 센터에서 받아온 데이터");
             setTimeout(third, 1000);
+            // 함수 third를 실행한다 1초뒤에
         }
 
         function third() {
             console.log("내 서버에서 받아온 데이터");
         }
-
-        setTimeout(first(second), 3000);
+        setTimeout(first, 3000);
+        // 함수 first를 실행한다 3초뒤에
     </script>
 </body>
 </html>

@@ -9,8 +9,10 @@
 <body>
     <script>
         function Person(name, age, gender){
+               // new 를 쓰지 않아도 되도록 조건문을 거는 것
             if(!(this instanceof Person)){
-                // 만약 this가 Person객체에 해당하지 않는다면
+                // => 만약 this가 Person객체에 해당하지 않는다면
+                // new를 쓰지 않으면 this는 04-confuntion에서 봤듯이 person을 가르키지 않음(window를 가르킴)
                 return new Person(name, age, gender);
             }
             this.name = name;
