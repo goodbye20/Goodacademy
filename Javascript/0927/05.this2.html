@@ -57,8 +57,9 @@
             a : 20,
             b() {
                 const self = this;
+                // 아예 this를 담을 상수(self)를 선언해해주고 담아줍니다.
                 function c(){
-                    console.log(self);
+                    console.log(self); // window가 아닌 objC 를 가르킴
             }
             c();
         }

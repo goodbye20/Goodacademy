@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div {
+            width: attr(data-width);
+            height: attr(data-height);
+            background-color: attr(data-color);
+        }
+    </style>
+</head>
+<body>
+    <div id="div" data-width="300px" data-height="150px" data-color="red"></div>
+    <!--          date + 케밥 형식으로 속성 값 부여 -->
+    <!-- 웹 컴포넌트 를 찾아볼것
+         커스텀 값을 여기져기 커스텀하며 생산성 좋게 사용하기 좋다고함(?) -->
+    <script>
+        const div = document.getElementById("div");
+        console.log(div.dataset.width);
+        console.log(div.dataset.height);
+        console.log(div.dataset.color);
+        // data + 케밥 형식으로 선언해둔 속성 값을 dataset.____(가져올 속성값)으로 가져와서 사용
+
+        // div.style.width = div.dataset.width+"px";
+        // div.style.height = div.dataset.height+"px";
+        // div.style.backgroundColor = div.dataset.color;
+    </script>
+</body>
+</html>

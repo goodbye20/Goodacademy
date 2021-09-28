@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+  box-sizing: border-box;
+  font-family: 'Varela Round', sans-serif;
+}
+
+body {
+  background-color: #e8e8e8;
+}
+
+.stopwatch-container {
+  width: 500px;
+  border-radius: 16px;
+  background-color: #fff;
+  overflow: hidden;
+  padding: 0 20px;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 10px 15px #000;
+}
+
+.display {
+  margin: 40px 0;
+  text-align: center;
+  font-size: 72px;
+}
+
+.stopwatch-container button {
+  border: none;
+  border-radius: 5px;
+  padding: 10px 20px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  margin: 0 25px 20px;
+  outline: none;
+}
+
+.start-btn {
+  background-color: #61B15A;
+
+}
+
+.stop-btn {
+  background-color: #c75643;
+}
+
+.reset-btn {
+  background-color: #393e46;
+}
+
+.start-btn:hover,
+.stop-btn:hover,
+.reset-btn:hover {
+  filter: brightness(85%);
+}
+
+span {
+  font-size: 20px;
+}
+    </style>
+</head>
+<body>
+    <div class="stopwatch-container">
+        <h1 class="display">00:00</h1>
+      <button class="start-btn" type="button">Start</button>
+      <button class="stop-btn" type="button">Stop</button>
+      <button class="reset-btn" type="button">Reset</button>
+    </br>
+      <span>Time Lap</span>
+      <ul class="timelap-list">
+      </ul>
+    </div>
+
+    <script>
+        const display = document.querySelector('.display');
+
+let intervalId = 0,
+    minutes = 0,
+    seconds = 0,
+    displayArr = display.innerText.split(':');
+
+function startBtnHandler() {
+  const startBtn = document.querySelector('.start-btn');
+
+  startBtn.addEventListener('click', () =>{
+    intervalId = setInterval(() => {
+      if (!parseInt(displayArr[1])) {
+        seconds += 1;
+        if (seconds > 59) {
+          seconds = 0;
+          minutes += 1;
+        }
+        display.innerText = `${minutes < 10 ? `0${minutes}` : minutes}:${
+          seconds < 10 ? `0${seconds}` : seconds}`;
+      } else {
+        seconds = parseInt(displayArr[1]);
+        seconds += 1;
+        if (seconds > 59) {
+          seconds = 0;
+          minutes += 1;
+        }
+        display.innerText = `${minutes < 10 ? `0${minutes}` : minutes}:${
+          seconds < 10 ? `0${seconds}` : seconds}`;
+      }
+    }, 1000)
+})
+}
+
+function stopBtnHandler() {
+  const stopBtn = document.querySelector('.stop-btn');
+  stopBtn.addEventListener('click', () => {
+    clearInterval(intervalId);
+  })
+  minutes = parseInt(displayArr[0]);
+  seconds = parseInt(displayArr[1]);
+}
+
+function resetBtnHandler() {
+  const resetBtn = document.querySelector('.reset-btn'),
+        display = document.querySelector('.display');
+  resetBtn.addEventListener('click', () => {
+    const timelapList = document.querySelector('.timelap-list');
+    const li = document.createElement('li');
+    li.innerText = display.innerText;
+    timelapList.appendChild(li);
+    display.innerText = `00:00`;
+    clearInterval(intervalId);
+    seconds = 0;
+    minutes = 0;
+  })
+}
+
+function init() {
+  startBtnHandler();
+  stopBtnHandler();
+  resetBtnHandler();
+}
+
+init();
+    </script>
+</body>
+</html>

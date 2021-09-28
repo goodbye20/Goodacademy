@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Car(){
+            this.type="전기차"
+            this.excel = function(){
+                console.log("굴러간다");
+            }
+            this.break = function(){
+                console.log("선다");
+            }
+        }
+
+        Car.prototype.charge = function(){
+            // 프로토타입에 생성한 함수(charge)
+            console.log("충전한다");
+        }
+
+        console.dir(Car())
+        console.dir(Car);
+
+        const car1 = new Car();
+
+        console.dir(car1);
+        car1.charge();
+        // 생성자 함수인 car1에서 공유받을 수 있다.
+    </script>
+</body>
+</html>
