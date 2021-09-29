@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        const person1  = new person("홍길동", 29, "남성")
+        console.log(person1.name); // 호이스팅되서 올바르게 실행
+        // person1.working(); // 외부함수는 호이스팅 대상이 아니라 실행되지 않음
+
+        // 생성자 함수 방식
+         function person(name, age, gender){
+            this.name = name;
+            this.age = age;
+            this.gender = gender;
+        }
+
+        person.prototype.working = function(){
+            console.log(`${this.name}이 걷습니다.`);
+        }
+
+        person.prototype.profile = function(){
+            console.log(`이름 : ${this.name}, 나이 : ${this.age}, 성별 : ${this.gender}`)
+        }
+        
+
+
+        // ******** class 는 호이스팅이 되지않음 **********
+
+        // const person2 = new personClass("홍길동", 29, "남성");
+        // person2.working();
+        // person2.profile();     =====> ERROR !!!!!!
+        class personClass {
+//    = const personClass = class {  으로 선언해도 선언가능      
+            //초기화 시 쓰는 함수
+            constructor(name, age, gender){
+                this.name = name;
+                this.age = age;
+                this.gender = gender;
+            }
+
+            working(){
+                console.log(`${this.name}이 걷습니다.`)
+            }
+            profile(){
+                console.log(`이름 : ${this.name}, 나이 : ${this.age}, 성별 : ${this.gender}`)
+            }
+        }
+        
+    </script>
+</body>
+</html>

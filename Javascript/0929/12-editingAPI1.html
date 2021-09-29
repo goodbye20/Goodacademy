@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+
+<!--                폐기                 예정           -->
+
+
+<body onkeydown="myFunction(event)">
+    <h1>이것은 제목입니다.</h1>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius repudiandae a nesciunt neque recusandae, repellendus sit inventore aspernatur laborum animi explicabo ratione fugit suscipit enim voluptatibus. Libero, fuga! Qui, ipsum.</p>
+
+    <script>
+        document.designMode = "on";
+
+        function myFunction(event){
+            if(event.keyCode == 16){
+                // keyCode = shift -> 쉬프트를 누르면,
+                document.execCommand("bold");
+            }
+        }
+    </script>
+</body>
+</html>

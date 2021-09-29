@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var name = "이영주";
+
+        const Class1 = function(){};
+
+        Class1.prototype.getMthod1 = function(){
+            function funcA(){
+                console.log(this.name); // window.name
+                // 생성자 함수 내부에서 this는 window를 가르키기 떄문에
+            }
+            funcA();
+        }
+
+        const obj1 = new Class1();
+        obj1.getMthod1(); // this가 전역(window)함수 name의 값:  이영주 출력
+
+
+        class Class2 {
+            setMethod(name){
+                this.name = name;
+            }
+
+            getMethod1(){
+                    console.log(this.name);
+                }
+            
+            getMethod2(){
+                function f(){
+                    console.log(this.name);
+                }
+                f();
+            }
+        }
+
+        const obj2 = new Class2();
+        obj2.setMethod("홍길동");
+        obj2.getMethod1(); // 홍길동
+
+        // obj.getMthod2(); // 클래스의 값들은 window가 아닌 다른 힙이라는 영역에 선언되기 때문에
+                            // this가 대상을 찾지 못해 error가 발생
+        </script>
+    </body>
+</html>
