@@ -20,26 +20,33 @@
 <body>
     <section id="container">
         <section id="content-container">
-            <section id="input-box">
-                    <label for="#">수강생 이름 : </label><input type="text" id="text1"><br>
-                    <label for="#">수상생 홈피 : </label><input type="text" id="text2"><br>
-                </section>
-            <section id="button-box">
-                    <button id="btn">사용자 추가하기</button>
-                    <div id="outPut"></div>
-            </section>
+            <form action="">
+                <label for="text1">수강생 이름 : </label><input type="text" id="text1"><br>
+                <label for="text2">수강생 홈피 : </label><input type="text" id="text2"><br>
+                <button id="btn">사용자 추가하기</button>
+            </form>
+            <div id="outPut"></div>
+            
         </section>
     </section>
     <script>
         const outPut = document.getElementById("outPut");
-
         
-            document.getElementById("btn").addEventListener("click", function(){
-                let result1 = document.getElementById("text1").value;
-                let result2 = document.getElementById("text2").value;
-                
-                
-                outPut.innerHTML = `<a href="${result2}">${result1}</a>`;
+        document.getElementById("btn").addEventListener("click", function(e){
+            e.preventDefault()
+            const newA =  document.createElement("a");
+            const newBr = document.createElement("br")
+            let result1 = document.getElementById("text1").value;
+            let result2 = document.getElementById("text2").value;
+            let text1 = document.getElementById("text1");
+            let text2 = document.getElementById("text2");
+            
+                newA.innerHTML = `<a href="${result2}">${result1}</a>`;
+                outPut.appendChild(newA);
+                outPut.appendChild(newBr);
+                text1.value = ""
+                text2.value = ""
+                console.log(outPut);
             });
     </script>
 </body>

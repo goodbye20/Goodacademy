@@ -44,15 +44,15 @@
         // 클래스 방식
 
         class personClass {
-//    = const personClass = class {  으로 선언해도 선언가능      
-            //초기화 시 쓰는 함수
+//    const personClass = class {  으로 선언해도 선언가능      
+            // 초기화 시 쓰는 함수
             constructor(name, age, gender){
                 this.name = name;
                 this.age = age;
                 this.gender = gender;
             }
 
-            working(){
+            walking(){
                 console.log(`${this.name}이 걷습니다.`)
             }
             profile(){
@@ -61,7 +61,7 @@
         }
         // class는 prototype에 알아서 접근해줌
         const person2 = new personClass("홍길동", 29, "남성");
-        person2.working();
+        person2.walking();
         person2.profile();
     </script>
 </body>

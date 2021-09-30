@@ -10,7 +10,7 @@
     <script>
         const person1  = new person("홍길동", 29, "남성")
         console.log(person1.name); // 호이스팅되서 올바르게 실행
-        // person1.working(); // 외부함수는 호이스팅 대상이 아니라 실행되지 않음
+        // person1.walking(); // 외부함수는 호이스팅 대상이 아니라 실행되지 않음
 
         // 생성자 함수 방식
          function person(name, age, gender){
@@ -19,7 +19,7 @@
             this.gender = gender;
         }
 
-        person.prototype.working = function(){
+        person.prototype.walking = function(){
             console.log(`${this.name}이 걷습니다.`);
         }
 
@@ -43,7 +43,7 @@
                 this.gender = gender;
             }
 
-            working(){
+            walking(){
                 console.log(`${this.name}이 걷습니다.`)
             }
             profile(){

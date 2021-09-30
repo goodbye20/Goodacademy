@@ -19,6 +19,7 @@
         document.getElementById("btn").addEventListener("click", function(){
             const userName = document.getElementById("user-name");
             const userHome = document.getElementById("user-home");
+            const br = document.createElement("br");
 
             const aTag = document.createElement("a");
             aTag.href = userHome.value;
@@ -27,7 +28,6 @@
             aTag.append(aText);
 
             const memberList = document.getElementById("memberList");
-            const br = document.createElement("br");
 
             memberList.append(aTag);
             memberList.append(br);

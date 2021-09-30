@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Animal(name,age){
+            this.name = name;
+            this.age = age;
+        }
+
+        Animal.prototype.speak1 = function(){
+            console.log(this.name + " make a noise. ");
+        }
+
+        class Dog extends Animal {
+        // 생성자 함수를 class로 받을때엔 
+        // constructor를 사용하지 않아도 된다.
+            speak2(){
+                console.log(this.name + " barks");
+            }
+        }
+
+        const dog = new Dog("바둑이")
+        dog.speak1();
+        dog.speak2();
+
+
+
+        class Cat extends Animal {
+            // 하지만 constructor를 쓰게되면(age를 받기위해) name까지 
+            // 모두 constructor로 호출해야한다.
+            // 즉 안쓸거면 안쓰고 쓰게되면 모두 써서 호출해와야한다.
+            constructor(name,age){
+                super(name,age);
+            }
+            speak3(){
+                console.log(this.name + " 야옹 " + this.age+"살");
+            }
+        }
+
+        const cat = new Cat("나비", 2)
+        cat.speak1();
+        cat.speak3();
+    </script>
+</body>
+</html>

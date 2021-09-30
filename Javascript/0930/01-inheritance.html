@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function Person(name, age){
+            this.name = name || '이름없음';
+            this.age = age || "나이모름"
+        }
+
+        Person.prototype.getName = function(){
+            return this.name;
+        }
+        Person.prototype.getAge = function(){
+            return this.age;
+        }
+
+        // 생성자 함수에서는
+        // 1. 상속받을 생성자 함수의 속성값을 다 가지고 가야만 함
+        function Employee(name, age, position){
+            this.name = name || "이름없음";
+            this.age = age || "나이없음";
+            this.position = position || "직책없음";
+        }
+        // 상속
+        Employee.prototype = new Person();
+        Employee.prototype.constructor = Employee;
+        
+        // 2. 상속을 한 이후 기능정의가 일어나야 함
+        // 그렇지 않으면 상속됨과 동시에 덮여서 기능이 사라짐
+        Employee.prototype.getPostion = function(){
+            return this.position;
+        }
+        
+        console.dir(Person);
+        console.dir(Employee);
+
+        const gom = new Employee("이영주", 48, "CEO")
+        console.dir(gom);
+    </script>
+</body>
+</html>

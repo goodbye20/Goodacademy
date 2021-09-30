@@ -29,12 +29,12 @@
         const funcC = function(param){
             return {sports : param};
         }
-        // Arrow 함수에서 object 형태를 반환하려면 {}양 옆에 소괄호로 묶어주어야 한다.
+        // Arrow 함수에서 object 형태를 반환하려면 {}양 옆에 소괄호()로 묶어주어야 한다.
         const funcC2 = param => {sports : param}
         console.log(funcC2("soccor")); // => undifind 
 
         const funcC3 = param => ({sports : param});
-        console.log(funcC3("soccor"));
+        console.log(funcC3("soccor")); // -> soccor
 
         const funcD = function(){
             console.dir(arguments);
