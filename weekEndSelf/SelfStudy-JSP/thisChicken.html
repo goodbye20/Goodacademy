@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var chicken = '양념 치킨';
+        var home = {
+        chicken: '후라이드 치킨',
+        deliveryChicken: deliveryChickenFn
+    }
+
+function deliveryChickenFn() {	
+  console.log(`${this.chicken}이 배달됩니다.`);    
+}
+
+// (1) 객체 method 호출
+home.deliveryChicken(); // 후라이드 치킨이 배달됩니다..
+
+// (2) 함수 직접 호출
+deliveryChickenFn(); // 양념 치킨이 배달됩니다.
+
+    </script>
+</body>
+</html>
