@@ -70,15 +70,21 @@
         const li = document.createElement("li");
         const span = document.createElement("span");
         
+       function makeUser(){
+
+
+        
+       }
+       
+       
         document.getElementById("btn").addEventListener("click", function(){
             let result = document.getElementById("text-input").value;
             if(result == ""){
                 alert ("이름을 입력하세요.")
             }
-            const text = document.createTextNode(`${result}`);
-            li.append(text)
-            const xText = outPut.innerHTML = `<span class="closebtn">x;</span>`;
-            document.getElementById("outPut").append(li);
+            
+
+            
         });
         document.querySelector(".closebtn").addEventListener("click", function(){
             this.parentElement.style.display = "none"
