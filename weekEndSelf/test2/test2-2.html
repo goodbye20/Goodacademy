@@ -58,7 +58,7 @@
                 <h1>참가 신청</h1>
             </section>
             <section id="input-box">
-                    <input type="text" id="text-input" placeholder="이름을 입력하세요.">
+                    <input type="text" id="text-input" placeholder="이름을 입력하세요." required>
                     <button id="btn">신청</button>
                         <ul id="outPut"></ul>
             </section>
@@ -66,28 +66,39 @@
     </section>
 
     <script>
-        const outPut = document.getElementById("outPut");
-        const li = document.createElement("li");
-        const span = document.createElement("span");
-        
-       function makeUser(){
-
-
-        
+        function makeUser(){
+            const li = document.createElement("li");
+            
+            const userName = document.getElementById("text-input");
+            const liText = document.createTextNode(userName.value);
+            li.append(liText);
+            
+            const xBtn = document.createElement("span");
+            const xText = document.createTextNode(" x ");
+            xBtn.classList.add("closebtn")
+            xBtn.append(xText);
+            li.append(xBtn);
+            
+            
+            const outPut = document.getElementById("outPut");
+            outPut.append(li);
+            
+            xBtn.addEventListener("click", function(){
+                this.parentElement.style.display = "none"
+            });
+            
        }
        
        
-        document.getElementById("btn").addEventListener("click", function(){
+        document.getElementById("btn").addEventListener("click", function(e){
+            e.preventDefault();
             let result = document.getElementById("text-input").value;
             if(result == ""){
                 alert ("이름을 입력하세요.")
+            } else {
+                makeUser();
+                document.getElementById("text-input").value = "";
             }
-            
-
-            
-        });
-        document.querySelector(".closebtn").addEventListener("click", function(){
-            this.parentElement.style.display = "none"
         });
     </script>
 </body>
