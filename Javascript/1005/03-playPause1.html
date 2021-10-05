@@ -11,11 +11,39 @@
     <p><button id="pause">pause!</button></p>
     <p><button id="ispause">is pause?</button></p>
     <p><button id="isended">is ended?</button></p>
-
     <p id="printpause"></p>
     <p id="printended"></p>
     <script>
+        window.addEventListener("load", function(){
+            if(!window.Audio)return;
+            const audio = new Audio();
+            // 재생할 수 있는 오디오 형식을 판별하여 src에 지정
+            if(audio.canPlayType('audio/mpeg')){
+                audio.src = "media/audio.mp3";
+            }else if(audio.canPlayType("audio/ogg")){
+                audio.src = "media/audio.ogg";
+            }else{
+                return;
+            }
 
+            const button1 = document.getElementById("play");
+            button1.addEventListener("click",function(){ audio.play();});
+            const button2 = document.getElementById("pause");
+            button2.addEventListener("click",function(){ audio.pause();});
+            const button3 = document.getElementById("ispause");
+            button3.addEventListener("click",function(){ 
+                const print1 = document.getElementById("printpause");
+                print1.innerText = audio.paused;
+                // audio.paused => video, audio의 기본속성 멈춘상태이냐 아니냐에 따라 true / false 값 반환
+            });
+            const button4 = document.getElementById("isended");
+            button4.addEventListener("click",function(){ 
+                const print2 = document.getElementById("printended");
+                print2.innerText = audio.ended;
+                // audio.ended => video, audio의 기본속성 끝난상태이냐 아니냐에 따라 true / false 값 반환
+            });
+
+        });
     </script>
 </body>
 </html>
