@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id="text-box" size="50" value="some text for testing">
+    <button id="btn">select text</button>
+
+    <script>
+        document.getElementById("btn").addEventListener("click", function(){
+            const input = document.getElementById("text-box");
+            input.focus();
+            // input.select();
+            // 적혀져있는 전체 텍스트를 선택
+
+            
+            // input.selectionStart = 1;
+            // // 첫번째 열부터 해서
+            // input.selectionEnd = 5;
+            // // 5번째 열까지 
+            // 선택
+            input.setSelectionRange(1,5);
+            // 위와 같음
+        });
+    </script>
+</body>
+</html>

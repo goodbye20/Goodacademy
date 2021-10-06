@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://kit.fontawesome.com/c47106c6a7.js"
-    crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/c47106c6a7.js"crossorigin="anonymous"></script>
     <title>Document</title>
     <style>
         body {
@@ -31,6 +30,9 @@
         .side {
             bottom: 0;
         }
+        .penal .vid {
+            filter: saturate(0.1);
+        }
     </style>
 </head>
 <body>
@@ -50,28 +52,53 @@
             <section class="penal videoBox1">
                 <h3>01</h3>
                 <article><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt repellat fugiat ex nulla pariatur ut, eaque excepturi laudantium repudiandae et. </p></article>
-                <video src="video/vid1.mp4" width="80%" loop></video>
+                <video class="vid" src="video/vid1.mp4" width="80%" loop></video>
             </section >
             <section class="penal videoBox2">
                 <h3>02</h3>
                 <article><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt repellat fugiat ex nulla pariatur ut, eaque excepturi laudantium repudiandae et. </p></article>
-                <video src="video/vid2.mp4" width="80%" loop></video>
+                <video class="vid" src="video/vid2.mp4" width="80%" loop></video>
             </section>
             <section class="penal videoBox3">
                 <h3>03</h3>
                 <article><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt repellat fugiat ex nulla pariatur ut, eaque excepturi laudantium repudiandae et. </p></article>
-                <video src="video/vid3.mp4" width="80%" loop></video>
+                <video class="vid" src="video/vid3.mp4" width="80%" loop></video>
             </section>
             <section class="penal videoBox4">
                 <h3>04</h3>
                 <article><p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt repellat fugiat ex nulla pariatur ut, eaque excepturi laudantium repudiandae et. </p></article>
-                <video src="video/vid4.mp4" width="80%" loop></video>
+                <video class="vid" src="video/vid4.mp4" width="80%" loop></video>
             </section>
         </section>
     </section>
-
-    <script>
         
+    <script>
+        const penal = document.getElementsByClassName("penal");
+        const video = document.querySelectorAll("video");
+        
+        
+        function clearPenal(){
+            for (let index = 0; index < penal.length; index++) {
+                penal[index].onmouseleave = function(){
+                    video[index].pause();
+                    video[index].style.width = "80%";
+                    video[index].style.filter = "saturate(10%)";
+                    
+                }
+            }    
+        }
+        function upPenal(){
+            for (let index = 0; index < penal.length; index++) {
+                penal[index].onmouseenter = function(){
+                    video[index].play();
+                    video[index].style.filter = "saturate(100%)";
+                }
+                
+            }
+        }
+        clearPenal();
+        upPenal();
+            
     </script>
 </body>
 </html>

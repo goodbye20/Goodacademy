@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <video controls preload="auto" width="480" height="272">
+        <source src="../1005/media/video.mp4" type="video/mp4">
+        <source src="../1005/media/video.webm" type="video/webm">
+    </video>
+
+    <button id="btn">0.3</button>
+    <script>
+        const video = document.querySelector("video");
+
+        video.addEventListener("seeking", function(){
+            // seeking 탐색을 시작 (어떠한 영역을 찍었을 때)
+            console.log("비디오가 seeking 이벤트를 발생")
+        });
+        video.addEventListener("seeked", function(){
+            // seeked 탐색을 종료 (어떠한 영역을 찍었다 떼었을 때)
+            console.log("비디오가 seeked 이벤트를 발생")
+        });
+
+        document.getElementById("btn").addEventListener("click", function(){
+            video.playbackRate = 0.3;
+        });
+
+        video.addEventListener("ratechange", function(){
+            // 속도가 바뀌었을 시
+            console.log("스피드가 0.3으로 바뀜")
+        });
+        video.addEventListener("volumechange", function(){
+            // 볼륨 조정시
+            console.log("볼륨이 조정됨")
+        });
+    </script>
+</body>
+</html>
