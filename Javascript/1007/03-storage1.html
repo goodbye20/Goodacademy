@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // LocalStorage를 이용한 데이터 저장
+        localStorage.setItem("myCat", "Tom");
+
+        let cat = localStorage.getItem("mycat")
+        console.log(cat);
+
+        // LocalStorage.removeItem("mycat")
+        localStorage.clear();
+        // 제거해주는 속성들
+
+        console.log(localStorage.getItem("mycat"));
+    </script>
+</body>
+</html>
