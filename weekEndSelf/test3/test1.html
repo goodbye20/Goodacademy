@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Merienda:wght@700&display=swap">
+    <title>Document</title>
+    <style>
+        /* header */
+
+        body {
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+        header {
+            background-color: #3375C6;
+            color: white;
+        }
+        #hd-nav {
+            display: flex;
+        }
+        #hd-title {
+            width: 20%;
+            font-family:'Merienda', cursive;
+            font-size: 40px;
+        }
+        #nav-box {
+            text-align: center;
+            cursor: pointer;
+            width: 80%;
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .menu-1 {
+            visibility: hidden;
+            background-color: seashell;
+            color: black;
+            opacity: 0.8;
+        }
+        .menu-2 {
+            visibility: hidden;
+            background-color: seashell;
+            color: black;
+            opacity: 0.8;
+        }
+
+        #hd-img figure {
+            width: 100%;
+            margin: 0;
+        }
+        .slidbtn {
+            background-color: grey;
+            position: absolute;
+            opacity: 0.8;
+            width: 40px;
+            visibility: hidden;
+        }
+        #hd-img {
+            background-color: white;
+            width: 100%;
+            display: flex;
+        }
+        #hd-img1 {
+            height: 20em;
+            background: url("images/photo-1.jpg") no-repeat center;
+            background-size: cover;
+        }
+        #hd-img2 {
+            height: 20em;
+            background: url("images/photo-2.jpg") no-repeat center;
+            background-size: cover;
+            display: none;
+        }
+        #hd-img3 {
+            height: 20em;
+            background: url("images/photo-3.jpg") no-repeat center;
+            background-size: cover;
+            display: none;
+        }
+
+        /* main */
+
+        main {
+            display: flex;
+            height: 50vh;
+        }
+        
+        /* sidebar A */
+        .sidebar-a {
+            width: 40em;
+        }
+        .main-nav {
+            display: flex;
+            width: 45em;
+            margin-bottom: 1em;
+            border-bottom:2px solid #ccc;
+        }
+        .main-nav nav {
+            text-align: center;
+            width: 10em;
+            color: #c9c9c9;
+            cursor: pointer;
+        }
+
+        .nav-btn1 {
+            color: #B3433C;
+            background-color: #E9E9E9;
+            border: 1px solid #BFBFBF;
+        }
+        .main-nav nav:nth-child(1):hover {
+            color: #B3433C;
+            background-color: #E9E9E9;
+            border: 1px solid #BFBFBF;
+        }
+        .main-nav nav:nth-child(2):hover {
+            color: #B3433C;
+            background-color: #E9E9E9;
+            border: 1px solid #BFBFBF;
+        }
+        
+        #gallery {
+            display: grid;
+            display: none;
+            gap: 1em;
+            grid-template-columns: repeat(3, 1fr);
+        }
+        #gallery .gal-img1 {
+            background: url("images/img-1.jpg") no-repeat center;;
+            background-size: cover;
+            height: 8em;
+            margin: 0;
+        }
+        #gallery .gal-img2 {
+            background: url("images/img-2.jpg") no-repeat center;;
+            background-size: cover;
+            margin: 0;
+        }
+        #gallery .gal-img3 {
+            background: url("images/img-3.jpg") no-repeat center;;
+            background-size: cover;
+            margin: 0;
+        }
+        
+        
+        /* sidebar B */
+        .sidebar-b {
+            width: 70em;
+        }
+        .icon-box {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 50vh;
+            text-align: center;
+        }
+        .icon-box figure {
+            cursor: pointer;
+        }
+        .sideB-img1 {
+            background: url("images/icon-1.jpg") no-repeat center;
+            background-size: cover;
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+        }
+        .sideB-img2 {
+            background: url("images/icon-2.jpg") no-repeat center;
+            background-size: cover;
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+        }
+        .sideB-img3 {
+            background: url("images/icon-3.jpg") no-repeat center;
+            background-size: cover;
+            border-radius: 50%;
+            height: 200px;
+            width: 200px;
+        }
+
+
+        /* footer */
+
+        footer {
+            display: flex;
+            border-top: 3px solid black;
+        }
+
+        #fter-nav {
+            display: flex;
+            width: 50em;
+            color: #B1B5B7;
+        }
+        #fter-nav nav {
+            margin: 1em;
+            padding-right: 2em;
+            border-right: 2px solid #ccc;
+        }
+        #fter-nav nav:nth-child(1){
+            margin-left: 0;
+        }
+        footer address {
+            color: #D6D3D3;
+        }
+
+        #sns-icon {
+            display: flex;
+            width: 100%;
+            margin-top: 1em;
+            flex-direction: row-reverse;
+        }
+        .sns-logo1 {
+            background: url("images/sns-3.png") no-repeat center;
+            width: 50px;
+            height: 50px;
+        }
+        .sns-logo2 {
+            background: url("images/sns-2.png") no-repeat center;
+            width: 50px;
+            height: 50px;
+        }
+        .sns-logo3 {
+            background: url("images/sns-1.png") no-repeat center;
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <section id="hd-nav">
+            <article id="hd-title">
+                <h1>Dream Jeju</h1>
+            </article>
+            <article id="nav-box">
+                <nav id="menu-btn1">단체 여행
+                    <article class="menu-1">
+                        <article>회사 연수</article>
+                        <article>수학 여행</article>
+                    </article>
+                </nav>
+                <nav id="menu-btn2">맞춤 여행
+                    <article class="menu-2">
+                        <article>회사 연수</article>
+                        <article>수학 여행</article>
+                    </article>
+                </nav>
+                <nav><p>갤러리</p></nav>
+                <nav><p>문의하기</p></nav>
+            </article>
+        </section>
+        <section id="hd-img">
+            <figure class="slidbtn arror-left"></figure>
+            <figure id="hd-img1"></figure>
+            <figure id="hd-img2"></figure>
+            <figure id="hd-img3"></figure>
+            <figure class="slidbtn arrow-right"></figure>
+        </section>
+    </header>
+    <main>
+        <aside class="sidebar-a">
+            <section class="main-nav">
+                <nav id="nav-btn1"><h4>공지사항</h4></nav>
+                <nav id="nav-btn2"><h4>갤러리</h4></nav>
+            </section>
+            <article id="information">
+                <ul>
+                    <li> 사무실을 이전했습니다</li>
+                    <li> [참가 모집] 카약 체험에 초대합니다.</li>
+                    <li> [참가 모집] 여름 방학 기간, 오름 체험단을 모집합니다.</li>
+                    <li> 겨울, 추천 여행지</li>
+                    <li> 가을, 추천 여행지</li>
+                </ul>
+            </article>
+            <article id="gallery">
+                <figure class="gal-img1"></figure>
+                <figure class="gal-img2"></figure>
+                <figure class="gal-img3"></figure>
+                <figure class="gal-img1"></figure>
+                <figure class="gal-img2"></figure>
+                <figure class="gal-img3"></figure>
+            </article>
+        </aside>
+        <aside class="sidebar-b">
+            <section class="icon-box">
+                <article>
+                    <figure class="sideB-img1"></figure>
+                    <h5>평화기행</h5>
+                </article>
+                <article>
+                    <figure class="sideB-img2"></figure>
+                    <h5>힐링 워크샵</h5>
+                </article>
+                <article>
+                    <figure class="sideB-img3"></figure>
+                    <h5>문의하기</h5>
+                </article>
+            </section>
+        </aside>
+    </main>
+    <footer>
+        <section>
+            <article id="fter-nav">
+                <nav>회사 소개</nav>
+                <nav>개인정보처리방침</nav>
+                <nav>여행약관</nav>
+                <nav>사이트맵</nav>
+            </article>
+            <address>제주틀별자치도 ***동 ***로 (대표전화) 123-456-7890</address>
+        </section>
+        <section id="sns-icon">
+            <a href="https://www.instgram.com" class="sns-logo1"></a>
+            <a href="https://www.youtube.com" class="sns-logo2"></a>
+            <a href="https://www.facebook.com" class="sns-logo3"></a>
+        </section>
+    </footer>
+
+    <script>
+        const menu1 = document.getElementById("menu-btn1");
+        const menu2 = document.getElementById("menu-btn2");
+        const hdMenu1 = document.querySelector(".menu-1")
+        const hdMenu2 = document.querySelector(".menu-2")
+
+        menu1.addEventListener("mouseover", function(){
+            hdMenu1.style.visibility = "visible";
+        });
+        menu2.addEventListener("mouseover", function(){
+            hdMenu2.style.visibility = "visible";
+        });
+        menu1.addEventListener("mouseleave", function(){
+            hdMenu1.style.visibility = "hidden";
+        });
+        menu2.addEventListener("mouseleave", function(){
+            hdMenu2.style.visibility = "hidden";
+        });
+        
+
+        const information = document.getElementById("information");
+        const gallery = document.getElementById("gallery");
+        const navBtn1 = document.getElementById("nav-btn1");
+        const navBtn2 = document.getElementById("nav-btn2");
+        navBtn1.addEventListener("click", function(){
+            information.style.display = "block"
+            gallery.style.display = "none"
+        });
+        navBtn2.addEventListener("click", function(){
+            information.style.display = "none"
+            gallery.style.display = "grid"
+        });
+    </script>
+</body>
+</html>

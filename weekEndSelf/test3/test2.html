@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap">
+    <title>Document</title>
+    <style>
+        body {
+            font-family: 'Montserrat', sans-serif;
+            padding: 0;
+            margin: 0;
+            width: 100%;
+        }
+        header {
+            display: flex;
+            justify-content: space-between;
+            background-color: #ccc;
+            height: 12vh;
+            
+        }
+        .content-box {
+            border: 1px solid #ccc;
+            padding: 6.8em 1em;
+        }
+        main {
+            width: 100%;
+            text-align: center;
+        }
+
+        #logo {
+            background: url('images/logo.png') left no-repeat;
+            height: 75%;
+            width: 10em;
+            margin-left: 1em;
+        }
+        h1 {
+            font-size: 4em;
+        }
+
+        #search-bar {
+            border: none;
+            margin-top: 5em;
+            margin-right: 1em;
+        }
+        
+        .s-bar {
+            transition: 0.5;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <figure id="logo"></figure>
+        <article id="search-box">
+            <input type="text" id="search-bar" class="s-bar" placeholder="Type Here...">
+            <span id="del-btn"></span>
+        </article>
+    </header>
+    <main>
+        <section>
+            <section class="content-box">
+                <h1>This is Section #01</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias et, hic totam eligendi laudantium. Impedit quam ipsum, facere culpa tenetur dolorum inventore corporis fuga. Rem commodi perferendis dolorum minima!Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias et, hic totam eligendi laudantium. Impedit quam ipsum, facere culpa tenetur dolorum inventore corporis fuga. Rem commodi perferendis dolorum minima!Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias et, hic totam eligendi laudantium. Impedit quam ipsum, facere culpa tenetur dolorum inventore corporis fuga. Rem commodi perferendis dolorum minima!Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias et, hic totam eligendi laudantium. Impedit quam ipsum, facere culpa tenetur dolorum inventore corporis fuga. Rem commodi perferendis dolorum minima!Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias et, hic totam eligendi laudantium. Impedit quam ipsum, facere culpa tenetur dolorum inventore corporis fuga. Rem commodi perferendis dolorum minima!</p>
+            </section>
+            <section class="content-box">
+                <h1>This is Section #02</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias et, hic totam eligendi laudantium. Impedit quam ipsum, facere culpa tenetur dolorum inventore corporis fuga. Rem commodi perferendis dolorum minima!Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias et, hic totam eligendi laudantium. Impedit quam ipsum, facere culpa tenetur dolorum inventore corporis fuga. Rem commodi perferendis dolorum minima!Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias et, hic totam eligendi laudantium. Impedit quam ipsum, facere culpa tenetur dolorum inventore corporis fuga. Rem commodi perferendis dolorum minima!Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias et, hic totam eligendi laudantium. Impedit quam ipsum, facere culpa tenetur dolorum inventore corporis fuga. Rem commodi perferendis dolorum minima!Lorem ipsum dolor sit amet consectetur adipisicing elit. Porro alias et, hic totam eligendi laudantium. Impedit quam ipsum, facere culpa tenetur dolorum inventore corporis fuga. Rem commodi perferendis dolorum minima!</p>
+            </section>
+        </section>
+    </main>
+
+    <script>
+        const input = document.getElementById("search-bar");
+        const delBtn = document.getElementById("del-btn");
+        const ipClass = document.getElementById("search-bar").classList;
+
+        input.addEventListener("click", function(){
+            ipClass.add
+        });
+    </script>
+</body>
+</html>
