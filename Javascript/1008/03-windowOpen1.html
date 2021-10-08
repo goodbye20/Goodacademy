@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn">클릭</button>
+    <button id="btn-close">닫기</button>
+    <script>
+        let openwin = null;
+
+        document.getElementById("btn").addEventListener("click", function(){
+            openwin = window.open("https://www.w3schools.com", "_blank",
+            "toolbar= yes, scrollbars = yes, resizable=yes, top=500, left=500, width=400, height=400");
+            // 툴바, 스크롤바는 ie, 파이어폭스에서만 적용
+        });
+        document.getElementById("btn-close").addEventListener("click", function(){
+            openwin.close();
+        });
+    </script>
+</body>
+</html>

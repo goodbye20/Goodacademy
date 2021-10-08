@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="setnum">num 데이터 세팅</button>
+    <button id="btn">저장</button>
+    <script>
+    //    let = num = localStorage.getItem("num")
+    //         console.log(num);
+        
+
+    //     document.getElementById("btn").addEventListener("click",function(){
+    //         localStorage.setItem("num", num);
+    //     });
+
+    //     document.getElementById("setnum").addEventListener("click", function(){
+    //         num = 100;
+    //     });
+
+        // localstorage는 창을 종료해도 계속 저장한 값이 남아유지됨
+
+        let = num = sessionStorage.getItem("num")
+            console.log(num);
+        
+
+        document.getElementById("btn").addEventListener("click",function(){
+            sessionStorage.setItem("num", num);
+        });
+
+        document.getElementById("setnum").addEventListener("click", function(){
+            num = 100;
+        });
+
+        // sessionstorage는 창을 종료하면 값이 같이 사라짐
+    </script>
+</body>
+</html>
