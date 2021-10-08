@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <button id="btn1">href</button>
+    <button id="btn2">replace</button>
+    <script>
+        console.log(location.href);
+        document.getElementById("btn1").addEventListener("click", function(){
+            location.href = "https://www.naver.com";
+            // 화면을 이동할때 사용 이동했다가 뒤로가기하면 원래페이지로 옴
+            // html의 a태그와 같은기능
+        });
+        document.getElementById("btn2").addEventListener("click", function(){
+           location.replace("https://www.naver.com");
+            // href와 거의 유사하나 뒤로가기 가기가 되지않음
+        });
+    </script>
+</body>
+</html>

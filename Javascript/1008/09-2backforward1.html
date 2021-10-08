@@ -7,15 +7,13 @@
     <title>Document</title>
 </head>
 <body>
-    <button id="pull">땡겨오기</button>
-    <div id="content">
-        
-    </div>
+    <h1>backforward2</h1>
+    <a href="09-3backforward1.html">이동</a>
+    <button id="forward">앞으로 가기</button>
 
     <script>
-        document.getElementById("pull").addEventListener("click", function(){
-            document.getElementById("content").innerHTML =
-                opener.document.getElementById("content").innerHTML;
+        document.getElementById("forward").addEventListener("click", function(){
+            history.forward();
         });
     </script>
 </body>

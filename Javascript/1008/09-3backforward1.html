@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>backforward3</h1>
+    <button id="btn">뒤로가기</button>
+
+    <script>
+        document.addEventListener("click", function(){
+            // history.back();
+            // 히스토리에 저장되어있는 바로 전페이지
+            history.go(-2);
+            // 히스토리에 저장되어있는 인덱스에 따라 이동
+        });
+    </script>
+</body>
+</html>
