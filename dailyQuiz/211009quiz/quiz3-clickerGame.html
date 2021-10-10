@@ -27,8 +27,12 @@
             total.innerText = localStorage.sum;
         }
         window.onload = function (){
+            if(localStorage.sum == undefined){
+                total.innerText = "0";
+            } else {
             totalVal();
             sum = Number(localStorage.sum);
+            }
         }
     </script>
 </body>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            display: flex;
+        }
+        #container div {
+            margin: 1em;
+            cursor: pointer;
+        }
+        .naver {
+            font-weight: bold;
+            color: white;
+            width: 200px;
+            height: 200px;
+            background-color: seagreen;
+        }
+        .kakao {
+            font-weight: bold;
+            width: 200px;
+            height: 200px;
+            background-color: yellow;
+        }
+        .google{
+            font-weight: bold;
+            color: white;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div class="naver">NAVER</div>
+        <div class="kakao">KAKAO</div>
+        <div class="google">GOOGLE</div>
+    </div>
+
+    <script>
+        document.querySelector(".naver").addEventListener("click", function(){
+            location.href = "https://www.naver.com";
+        });
+        document.querySelector(".kakao").addEventListener("click", function(){
+            location.href = "https://www.kakao.com";
+        });
+        document.querySelector(".google").addEventListener("click", function(){
+            location.href = "https://www.google.com";
+        });
+    </script>
+</body>
+</html>
