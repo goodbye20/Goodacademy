@@ -69,33 +69,29 @@
       <button class="tablink" onclick="openCity('Tokyo', this, 'blue')">Tokyo</button>
       <button class="tablink" onclick="openCity('Oslo', this, 'orange')">Oslo</button> -->
       <script>
-        
-          const tabLinks = document.getElementsByClassName("tablink");
-          const tabContents = document.getElementsByClassName("tabcontent")
-          for (const tabLink of tabContents) {
-              tabLink.addEventListener("click", function(){
+        const tabContents = document.getElementsByClassName("tabcontent");
+        const tabLinks = document.getElementsByClassName("tablink");
+
+        for (const tabLink of tabLinks) {
+            tabLink.addEventListener("click", function(){
                 openCity(this.dataset.location, this, this.dataset.color);
-              });
-          }
-  
-  for (i = 0; i < tabContents.length; i++) {
-    tabContents[i].style.display = "none";
-    tabLinks[i].style.backgroundColor = "";
-  }
+            });
+        }
 
-  // Remove the background color of all tablinks/buttons
-//   tablinks = document.getElementsByClassName("tablink");
-//   for (i = 0; i < tabLinks.length; i++) {
-//       tablinks[i].style.backgroundColor = "";
-//   }
+        function openCity(cityName, elment, color) {
+            for (const tabContent of tabContents) tabContent.style.display = "none";
+            for (const tabLink of tabLinks) tabLink.style.backgroundColor = "";
 
-  // Show the specific tab content
-  document.getElementById(cityName).style.display = "block";
+            // Show the specific tab content
+            document.getElementById(cityName).style.display = "block";
 
+            // Add the specific color to the button used to open the tab content
+            elment.style.backgroundColor = color;
+        }
 
-// Get the element with id="defaultOpen" and click on it
-document.getElementById("defaultOpen").click();
-
-      </script>
+        // Get the element with id="defaultOpen" and click on it
+        document.getElementById("defaultOpen").click();
+    </script>
 </body>
+
 </html>

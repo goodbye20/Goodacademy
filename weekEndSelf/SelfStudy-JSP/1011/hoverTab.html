@@ -95,16 +95,16 @@
 
         // Get all elements with class="tabcontent" and hide them
         // tabContent = document.getElementsByClassName("tabcontent");
-        for (let i = 0; i < tabContents.length; i++) {
-            tabContents[i].style.display = "none";
-        }
-
+        // for (let i = 0; i < tabContents.length; i++) {
+        //     tabContents[i].style.display = "none";
+        // }
+        for (const tabContnet of tabContents) tabContnet.style.display = "none";
         // Get all elements with class="tablinks" and remove the class "active"
         // tablinks = document.getElementsByClassName("tablinks");
-        for (let i = 0; i < tabLinks.length; i++) {
-            tabLinks[i].className = tabLinks[i].className.replace(" active", "");
-        }
-
+        // for (let i = 0; i < tabLinks.length; i++) {
+        //     tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+        // }
+        for (const tabLink of tabLinks) tabLink.classList.remove("active")
         // Show the current tab, and add an "active" class to the link that opened the tab
         document.getElementById(cityName).style.display = "block";
         // evt.currentTarget.className += " active";
