@@ -9,6 +9,7 @@
         /* Style the tab */
         #container {
             display: flex;
+            flex-direction: row;
         }
         .tab {
         border: 1px solid #ccc;
@@ -79,36 +80,35 @@
     </div>
         
         <script>
-        const tabLinks = document.getElementsByClassName("tablink");
+        const tabLinks = document.getElementsByClassName("tablinks");
         const tabContents = document.getElementsByClassName("tabcontent");
             
-        for (const tablink of tabLinks) {
-            tablink.addEventListener("mouseover", function(){
-                openCity(this, this.textContent)
-            })
+        for (const tabLink of tabLinks) tabLink.addEventListener("mouseover",function(){
+                // console.log(this);
+                openCity(this.textContent);
+            });
+        
+
+        function openCity(cityName) {
+        // Declare all variables
+        // var i, tabcontent, tablinks;
+
+        // Get all elements with class="tabcontent" and hide them
+        // tabContent = document.getElementsByClassName("tabcontent");
+        for (let i = 0; i < tabContents.length; i++) {
+            tabContents[i].style.display = "none";
         }
 
-        function openCity(evt, cityName) {
-             // Declare all variables
-                
-  
-  
-  // Get all elements with class="tabcontent" and hide them
-//   tabcontent = document.getElementsByClassName("tabcontent");
-  for (let i = 0; i < tabContents.length; i++) {
-    tabContents[i].style.display = "none";
-  }
+        // Get all elements with class="tablinks" and remove the class "active"
+        // tablinks = document.getElementsByClassName("tablinks");
+        for (let i = 0; i < tabLinks.length; i++) {
+            tabLinks[i].className = tabLinks[i].className.replace(" active", "");
+        }
 
-  // Get all elements with class="tablinks" and remove the class "active"
-//   tablinks = document.getElementsByClassName("tablinks");
-  for (let i = 0; i < tabLinks.length; i++) {
-    tabLinks[i].className = tabLinks[i].className.replace(" active", "");
-  }
-
-  // Show the current tab, and add an "active" class to the link that opened the tab
-  document.getElementById(cityName).style.display = "block";
-  evt.currentTarget.className += " active";
-}
+        // Show the current tab, and add an "active" class to the link that opened the tab
+        document.getElementById(cityName).style.display = "block";
+        // evt.currentTarget.className += " active";
+        }
       </script>
 </body>
 </html>
