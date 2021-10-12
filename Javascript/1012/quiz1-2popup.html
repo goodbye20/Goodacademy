@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>POPUP</h1>
+    <br><br>
+    <input type="text" id="catch"><button id="push">전달</button><button id="pull">가져오기</button><br><br>
+    <button id="close-btn">창 닫기</button>
+
+    <script>
+        document.getElementById("close-btn").addEventListener("click", function(){
+            window.close();
+        });
+        document.getElementById("push").addEventListener("click", function(){
+            opener.document.getElementById("p-input").value =     
+            document.getElementById("catch").value;
+            document.getElementById("catch").value = ""; 
+        });
+        document.getElementById("pull").addEventListener("click", function(){
+            document.getElementById("catch").value =
+            opener.document.getElementById("p-input").value;
+            opener.document.getElementById("p-input").value = ""; 
+        });
+        
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <ul>
+        <li>아이템1</li>
+        <li>아이템2</li>
+        <li>아이템3</li>
+        <li>아이템4</li>
+        <li>아이템5</li>
+        <li>아이템6</li>
+        <li>아이템7</li>
+    </ul>
+    <ul>
+        <li>아이템8</li>
+        <li>아이템9</li>
+        <li>아이템10</li>
+        <li>아이템11</li>
+        <li>아이템12</li>
+        <li>아이템13</li>
+        <li>아이템14</li>
+    </ul>
+    <ul>
+        <li>아이템15</li>
+    </ul>
+    
+    <script>
+        // 속성 선택자
+        $(function(){
+            $("li").first().css("color", "red");
+            $("li:first").css("fontSize", "1.2rem")
+            $("li").last().css("fontSize", "1.5rem");
+            $("li:last").css("color", "blue")
+            $("li:odd").css("text-decoration", "overline");
+            $("li:even").css("text-decoration", "underline");
+            $("li:first-of-type").css("background-color", "cyan");
+            $("li:last-of-type").css("background-color", "pink");
+            $("li:nth-child(3)").css("border", "5px dashed black");
+            $("li:nth-child(3n)").css("fontFamily", "궁서");
+            $("li:nth-last-of-type(2)").css("background-color", "purple");
+            $("li:only-child").css("margin-left", "2em")
+            // 혼자 단일로 있는 녀석을 지정
+            $("li:eq(2)").css("transform", "translateX(3rem");
+            // eq = 이퀄 인덱스번호가 해당숫자와 같다면
+            $("li:gt(12)").css("transform", "rotatez(-3deg");
+            // gt = greater than 12보다 큰 모든 대상
+            $("li:lt(1)").css("transform", "rotatez(2deg");
+            // li = littler than 1보다 작은 모든 대상
+            $("li").slice(2,5).css("color", "green")
+            // 특정구간만 지정할수 있음
+
+
+        });
+    </script>
+</body>
+</html>

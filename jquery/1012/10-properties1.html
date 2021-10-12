@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <p><a href="http://ease.co.kr" target="_blank">이지</a></p>
+        <p><a href="https://naver.com">네이버</a></p>
+        <p><a href="http://daum.net">다음</a></p>
+        <p><a href="http://google.co.kr">구글</a></p>
+    </div>
+
+    <form action="#" method="get" id="member-f">    
+        <p><label for="user-id"></label>
+            <input type="text" id="user-id" name="user-id"></p>
+            <p><label for="user-pw"></label>
+                <input type="password" id="user-pw" name="user-pw"></p>
+            </form>
+    <script>
+        $(function(){
+            $("#wrap a[target]").css("color", "red");
+            $("#wrap a[href^=https]").css("color", "green");
+            // https로 시작하면
+            $("#wrap a[href$=net]").css("color", "blue");
+            // net으로 끝나면
+            $("#wrap a[href*=google]").css("color", "black");
+            // google을 포함하고있으면
+            $("#member-f :text").css("background-color", "yellow");
+            // 한칸 띄움으로써 type이 text라면
+            $("#member-f :password").css("background-color", "cyan");
+            // 한칸 띄움으로써 type이 password라면
+
+            
+        });
+    </script>
+</body>
+</html>
