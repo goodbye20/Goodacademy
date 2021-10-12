@@ -11,14 +11,27 @@
     <div id="outer_wrap">
         <h1>콘텐츠 탐색 선택자</h1>
         <section id="inner_1">
-
+            <h1>contain(), content(), has()</h1>
+            <p><span>내용1</span></p>
+            <p><strong>내용2</strong></p>
+            <p><span>내용3</span></p>
         </section>
         <section id="inner_2">
-
+            <h1>not(), end()</h1>
+            <p>내용4</p>
+            <p>내용5</p>
+            <p>내용6</p>
         </section>
     </div>
 
     <script>
+        $("#inner_1 p:contains(내용1)").css({"background-color": "yellow"});
+        // contains은 내용 기준
+        $("#inner_1 p:has(strong)").css({"background-color": "cyan"});
+        // 태그를 기준
+        $("#outer_wrap").contents().css("border", "1px dashed blue");
+        // 안의 컨텐츠들
+        $("#inner_2 p").not(":first").css({"background-color" : "green"});
 
     </script>
 </body>

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="outer_wrap">
+        <h1>콘텐츠 탐색 선택자</h1>
+        <section id="inner_1">
+            <h1>find(), filter()</h1>
+            <p class="txt1">내용1</p>
+            <p class="txt2">내용2</p>
+        </section>
+        <section id="inner_2">
+            <h1>filter(function)</h1>
+            <p>index 0</p>
+            <p>index 1</p>
+            <p>index 2</p>
+            <p>index 3</p>
+        </section>
+    </div>
+
+    <script>
+        $(function(){
+            $("#inner_1").find(".txt1").css("background-color", "yellow")
+            // (본 예시에서는 #inner_1) 기준으로 안에있는 하위태그들 중에서 특정태그(본 예시에서는 .txt1)를 찾고자하는 속성
+            $("#inner_1 p").filter(".txt2").css("background-color", "cyan")
+            // (본 예시에서는 inner_1 p)들 중 필요없는 것을 소거하고 특정 태그(본 예시에서는 .txt2)를 찾기위한 목적으로 사용
+            $("#inner_2 p").filter(function(idx, obj){
+                return (idx % 2 == 0);
+            }).css("backgroundColor", "green").end().css("fontSize","2rem");
+        })
+
+    </script>
+</body>
+</html>
