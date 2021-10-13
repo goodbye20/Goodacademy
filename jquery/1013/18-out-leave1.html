@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>mouseout</h1>
+    <div id="box_1">
+        <p><a href="#">내용1</a></p>
+        <p><a href="#">내용2</a></p>
+        <p><a href="#">내용3</a></p>
+    </div>
+    
+    <h1>mouseleave</h1>
+    <div id="box_2">
+        <p><a href="#">내용4</a></p>
+        <p><a href="#">내용5</a></p>
+        <p><a href="#">내용6</a></p>
+    </div>
+    <script>
+        $(function(){
+            $("#box_1").on("mouseout", function(){
+                $("#box_1").css({"background-color":"yellow"});
+            });
+            // 마우스가 자신의 안의 다른태그(p태그)에 들어가도 자신을 벗어났다고 판단
+
+            $("#box_2").on("mouseleave", function(){
+                $("#box_2").css({"background-color":"pink"});
+            });
+            // 자신의 안의 태그들에 아무리 마우스를 왔다갔다해도 자신안에 여전히 있다고 판단
+        
+        });
+    </script>
+</body>
+</html>

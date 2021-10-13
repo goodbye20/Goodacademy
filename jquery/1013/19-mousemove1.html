@@ -1,5 +1,4 @@
 <!DOCTYPE html>
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -9,17 +8,16 @@
     <script src="js/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-    <ul id="list-zone">
-        <li>리스트</li>
-    </ul>
+    <h1>mousemove</h1>
+    <p>X : <span class="posX">0</span></p>
+    <p>Y : <span class="posY">0</span></p>
     <script>
         $(function(){
-            $("#list-zone").append("<li>append</li>")
-            $("#list-zone").prepend("<li>prepend</li>")
-            
-            $("<li>appendTo</li>").appendTo("#list-zone")
-            $("<li>prependTo</li>").prependTo("#list-zone")
-
+            $(document).on("mousemove", function(e){
+             $(".posX").text(e.pageX);   
+             $(".posY").text(e.pageY);   
+             // X값, Y값을 받아올수있는 메서드가 e로 불러올수있기에 e인자를 이용
+            });
         });
     </script>
 </body>

@@ -15,14 +15,22 @@
         $(function(){
             console.time();
             $(document).ready(function(){
+                // let h1 = $(".img1").height();
+                // console.log(h1);
                 console.log("ready : ");
                 console.timeLog();
+                
             });
-            // loaded = load
+            // DOMContentLoaded = ready
+            // html에 DOM들이 모두 로드되었을떄
             $(window).on({"load":function(){
+                // let h1 = $(".img1").height();
+                // console.log(h1);
                 console.log("load : ");
                 console.timeEnd();
             }});
+            // Loaded = Load
+            // 페이지의 이미지, 미디어 파일 등 모든것들이 모두 로드 되었을때
         });
     </script>
 </body>

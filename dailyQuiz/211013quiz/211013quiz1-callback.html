@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        #container {
+            display: flex;
+        }
+        #container section {
+            display: flex;
+            width: 600px;
+            height: 40px;
+            overflow: hidden;
+        }
+        .photo {
+            width: 100px;
+            height: 200px;
+        }
+        
+        .pho1 {
+            background: url("images/newbtn.bar.1.png") no-repeat;
+        }
+        .pho2 {
+            background: url("images/newbtn.bar.2.png") no-repeat;
+        }
+        .pho3 {
+            background: url("images/newbtn.bar.3.png") no-repeat;
+        }
+        .pho4 {
+            background: url("images/newbtn.bar.4.png") no-repeat;
+        }
+        .pho5 {
+            background: url("images/newbtn.bar.5.png") no-repeat;
+        }
+        .pho6 {
+            background: url("images/newbtn.bar.6.png") no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+       <section class="sec1">
+           <div class="photo pho1"></div>
+           <div class="photo pho2"></div>
+           <div class="photo pho3"></div>
+           <div class="photo pho4"></div>
+           <div class="photo pho5"></div>
+           <div class="photo pho6"></div>
+        </section>
+    </div>
+    <script>
+        $(function(){
+            let $photo = $(".photo");
+            let $sec = $("section")
+            let index = 0;
+
+            $photo.on("mouseover", function(){
+                function light1(){
+                    $("section div:eq(0)").css("transform", "translateY(-40px)");
+                }
+                light1();
+                setTimeout(light2, 1000)
+                function light2(){
+                    $photo.css("transform", "translateY(-80px)");
+                    $sec.css("height", "80")
+                }
+                // setinterval(function(){
+
+                // }, 1000);
+
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <p>
+        <p><button class="btn1">버튼1</button></p>
+        <p>내용</p>
+        <p><button class="btn2">버튼2</button></p>
+        <p>내용2</p>
+    </p>
+    <script>
+        $(function(){
+            $(".btn1").click(function(){
+                // $(".btn1").parent().next().css({"color":"red"});
+                $(this).parent().next().css({"color":"red"});
+
+            });
+            $(".btn2").on({
+                "mouseover foucus":function(){
+                $(this).parents().next().css({"color":"green"});
+            },
+                "mouseout blur":function(){
+                $(this).parents().next().css({"color":"black"});
+            }
+            // on.이벤트 선언이 확장서잉 좋아서 주로 사용하는것이 좋음
+        });
+
+        // $(".btn1").click(); // 강제 실행 방법1
+        // $(".btn2").trigger("mouseover"); // 강제 실행 방법2
+
+
+        // $(".btn1").off("click");
+        // $(".btn1").off("mouseover focus");
+        // 지정해둔 이벤트들을 off 시킴으로서 강제로 사용불가도록함
+     });
+    </script>
+</body>
+</html>
