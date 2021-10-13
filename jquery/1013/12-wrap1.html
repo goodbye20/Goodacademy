@@ -27,7 +27,7 @@
         $(function(){
             $("strong").unwrap();
             // 바로 위에 있는 상위 태그하나만 삭제
-            // 바로 위 h1태그는 날아가고, 그 위의 div는 남음
+            // 타겟(strong)의 바로 위 h1태그는 날아가고, 그 위의 div는 남음
             $(".ct1").wrap("<div />");
             $(".ct2").wrapAll("<div />");
             // wrapAll => 전체를 하나의 덩어리로 감싼다.

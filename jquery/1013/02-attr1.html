@@ -16,13 +16,16 @@
     <script>
         $(function(){
             let srcVal = $("#sec_1 img").attr("src");
+            // 속성을 선택할때 사용
             console.log(srcVal);
 
             $("#sec_1 img").attr({
+                // 속성을 추가(add와 비슷)
                 "width": 200,
                 "src": srcVal.replace("1.jpg","2.jpg"),
                 "alt": "바위"
             }).removeAttr("border");
+            // 속성을 제거
         });
     </script>
 </body>
