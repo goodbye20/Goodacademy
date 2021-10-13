@@ -36,11 +36,11 @@
         $(".prev").prevAll().css("fontSize", "1.5rem");
         // (본인은 제외)를 기준으로 위에있는 모두
         $(".prevuntil").prevUntil(".prev").css("fontStyle", "italic");
-        // (아이템3)부터 (아이템5) 사이
+        // (아이템5)부터 (아이템3) 이전까지 사이있는 객체선택
         $(".next").next().css("fontFamily", "궁서");
         $(".next").nextAll().css("border", "1px dashed green");
         $(".next").nextUntil(".nextuntil").css("backgroundColor", "cyan");
-        
+        // next 부터 nextUntil(본인제외)이전까지 선택
     </script>
 </body>
 </html>
