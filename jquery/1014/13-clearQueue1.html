@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        .txt1, .txt2 {width: 50px; text-align: center; background-color: aqua;}
+        .txt2 {background-color: orange;}
+    </style>
+</head>
+<body>
+    <p class="txt1">내용1</p>
+    <p class="txt2">내용2</p>
+    <p class="txt3">내용3</p>
+    <script>
+        // clearQueue : 큐 안의 애니매이션들을 지울 때 사용
+        $(function(){
+            $(".txt1")
+            .animate({marginLeft:"100px"},1000)
+            .animate({marginLeft:"300px"},1000)
+            .animate({marginLeft:"400px"},1000)
+            
+            
+            $(".txt2")
+            .animate({marginLeft:"100px"},1000)
+            // 첫 애니매이션은 그냥 실행됨
+            // queue의 대기열에 들어가는 건 첫번 째를 제외한
+            // 다음 순서의 애니매이션들이기 때문에 clearQueue()를 사용하게되면
+            // 대기열에 들어가있던 나머지 애니매이션들은 삭제되어 작동되지 않는다.
+            .animate({marginLeft:"300px"},1000)
+            .animate({marginLeft:"400px"},1000)
+            $(".txt2").clearQueue();
+
+            $(".txt3")
+            .animate({marginLeft:"100px"},1000)
+            .animate({marginLeft:"300px"},1000)
+            .animate({marginLeft:"400px"},1000)
+            .stop(true, false);
+        });
+        </script>
+</body>
+</html>

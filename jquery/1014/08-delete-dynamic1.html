@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <div id="wrap">
+        <p><button class="btn_1">버튼1</button></p>
+    </div>
+    <p>
+        <button class="del_1">버튼1 이벤트 해지</button>
+        <button class="del_2">버튼2 이벤트 해지</button>
+    </p>
+    <script>
+        $(function(){
+            $(".btn_1").on("mouseover", function(){
+                alert("HELLO!!")
+            });
+
+            $("#wrap").on("mouseover", ".btn_2", function(){
+                alert("WELCOME!!")
+            });
+
+            // 객체 추가
+            const btn_2 = $("<p><button class=\"btn_2\">버튼2</button></p>")
+            $("#wrap").append(btn_2);
+
+            $(".del_1").on("click", function(){
+                $(".btn_1").off("mouseover");
+            });
+
+            // 동적 이벤트 제거
+            $(".del_2").on("click", function(){
+                $("#wrap").off("mouseover", ".btn_2");
+                // 적용시킬 이벤트를 추가했던 곳에서 적용시켜주고 이벤트의 타겟도 ,뒤에 적어줌
+            });
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+</head>
+<body>
+    <h1>focus / blur</h1>
+    <form action="#">
+        <p><label for="user_id_1">ID</label><input type="text" id="user_id_1" name="user_id_1"></p>
+        <p><label for="user_pw_1">PW</label><input type="password" name="user_pw_1" id="user_pw_1"></p>
+
+    </form>
+    <h1>focusin / focusout</h1>
+    <form action="#" id="frm_2">
+        <p><label for="user_id_2">ID</label><input type="text" id="user_id_2" name="user_id_2"></p>
+        <p><label for="user_pw_2">PW</label><input type="password" name="user_pw_2" id="user_pw_2"></p>
+    </form>
+    <script>
+        // focus / blur 는 주로 input창에 주로 사용
+        // focusin / focusout 은 input외의 다른곳의 주로 사용
+        // 기능의 차이는 없다고 생각하면 된다.
+        $(function(){
+            $("#user_id_1, #user_pw_1").on("focus", function(){
+                $(this).css({"background-color":"pink"});
+            });
+            $("#user_id_1, #user_pw_1").on("blur", function(){
+                // blur = 다른 곳 or 다른 칸을 클릭함으로써 focus를 상실했을때
+                $(this).css({"background-color":"white"});
+            });
+
+            $("#frm_2").on("focusin", function(){
+                $(this).css({"background-color":"pink"});
+            });
+            $("#frm_2").on("focusout", function(){
+                
+                $(this).css({"background-color":"white"});
+            });
+        });
+    </script>
+</body>
+</html>
