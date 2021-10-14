@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        .item {
+            text-align: center;
+            font-size: 4rem;
+            font-weight: bold;
+            width: 500px;
+            height: 500px;
+        }
+        .pho1 {
+            background-image: url(images/dog.png);
+        }
+        .pho2 {
+            background-image: url(images/cat.png);
+            color: white;
+        }
+        .pho3 {
+            background-image: url(images/fish.png);
+        }
+        .hide {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <button id="prev-btn">이전</button>
+    <button id="next-btn">다음</button>
+    <div id="wrap">
+        <div class="item pho1">1</div>
+        <div class="item pho2 hide">2</div>
+        <div class="item pho3 hide">3</div>
+    </div>
+    <script>
+        $(function(){
+            const items = $(".item");
+            let index = 0;
+
+            // 이전 버튼
+            $("#prev-btn").on("click", function(){
+                items.eq(index).toggleClass("hide");
+                if(index == 0){
+                    index = 2
+                    items.eq(index).toggleClass("hide");
+                } else {
+                    items.eq(index-1).toggleClass("hide");
+                    index--
+                }
+                console.log(index);
+            });
+            
+            // 다음 버튼
+            $("#next-btn").on("click", function(){
+                items.eq(index).toggleClass("hide");
+                if(index < 2){
+                    items.eq(index+1).toggleClass("hide");
+                    index++
+                } else {
+                    index = 0;
+                    items.eq(index).toggleClass("hide");
+                }
+                console.log(index);
+            });
+        });
+    </script>
+</body>
+</html>

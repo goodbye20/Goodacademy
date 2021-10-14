@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        #car-wrap{
+            display: flex;
+            width: 100%;
+            justify-content: center;
+        }
+        #btn-box{
+            display: flex;
+            justify-content: center;
+        }
+        div#car {
+            border: 1px solid black;
+            width: 800px;
+            height: 500px;
+            background: url(images/1.jpg) no-repeat center;
+        }
+    </style>
+</head>
+<body>
+    <div id="car-wrap">
+        <img src="images/1.jpg" alt="" id="car">
+    </div>
+        <div id="btn-box">
+            <button id="play-btn">PLAY</button>
+            <button id="STOP-btn">stop</button>
+            <button id="PREV-btn">prev</button>
+            <button id="next-btn">NEXT</button>
+        </div>
+    <script>
+        const $carVal = $("#car").attr("src");
+        let index = 2;
+
+        $(function(){
+            $("#play-btn").on("click", function(){
+                let carRotation = setInterval(() => {
+                    if(index > 60){
+                        index = 1;
+                    } else {
+                    $("#car").attr({
+                       "src" : $carVal.replace(`${1}.jpg`,`${index}.jpg`)
+                    })
+                }
+                console.log(index);
+                index++
+                }, 100);
+            })
+
+            $("#stop-btn").on("click", function(){
+                clearInterval(carRotation);
+            })
+        });
+    </script>
+</body>
+</html>
