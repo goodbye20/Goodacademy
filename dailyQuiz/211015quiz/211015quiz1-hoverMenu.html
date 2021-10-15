@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        #container {
+            width: 650px;
+            margin: 0 auto;
+            justify-content: center;
+        }
+        ul#tab-menu {
+            display: flex;
+            list-style: none;
+            text-align: center;
+            justify-content: center;
+            color: white;
+            background-color: yellowgreen;
+        }
+        ul#tab-menu li {
+            width: 100%;
+            padding: 1em;
+        }
+        ul#tab-menu li:hover {
+            background-color: green;
+            
+        }
+        ul#tab-menu li ul.tab-content {
+            width: 100%;
+            background-color: #ccc;
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <ul id="tab-menu">
+            <li class="html">HTML
+                <ul class="tab-content">
+                    <li>HTML Tutorial</li>
+                    <li>HTML Forms</li>
+                    <li>HTML5</li>
+                    <li>HTML Graphics</li>
+                    <li>HTML Media</li>
+                    <li>HTML APIS</li>
+                </ul>
+            </li>
+            <li class="css">CSS
+                <ul class="tab-content">
+                    <li>CSS Tutorial</li>
+                    <li>CSS3</li>
+                    <li>CSS Responsive</li>
+                </ul>
+            </li>
+            <li class="JavaScript">JavaScript
+                <ul class="tab-content">
+                    <li>JS Tutorial</li>
+                    <li>JS Forms</li>
+                    <li>JS Objects</li>
+                    <li>JS Functions</li>
+                    <li>JS HTML DOM</li>
+                    <li>JS Brower BOM</li>
+                    <li>JS Libraries</li>
+                </ul>
+            </li>
+            <li class="JQuery">JQuery
+                <ul class="tab-content">
+                    <li>jQuery Tutorial</li>
+                    <li>jQuery Effects</li>
+                    <li>jQuery HTML</li>
+                    <li>jQuery Traversing</li>
+                    <li>jQuery AJAX</li>
+                </ul>
+            </li>
+        </ul>
+        </div>
+        <script>
+
+        $(function(){
+            
+        });
+    </script>
+</body>
+</html>
