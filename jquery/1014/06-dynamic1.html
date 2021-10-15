@@ -18,13 +18,16 @@
                 alert("HELLO!");
             });
             $(".btn_1").addClass("on");
+            // 위는 클래스가 이벤트함수 아래에서 추가되어 이벤트가 작동되지 않음.
             
             // 동적 이벤트 리스너
             // $(document).on("mouseover focus", ".btn_2.on",function(){
                 // 꼭 document가 아니더라도 이벤트를 적용시킬 타겟보다 위의 객체에 선언가능
                 // 동적이란 객체나 새로운 무언가를 추가할때 이벤트를 추가를 추가적으로 설정해주지않아도
                 // 적용될 수 있도록 하는 것
+
             $("#wrap").on("mouseover focus", ".btn_2.on",function(){
+                //    이벤트와 함수사이 타겟을 지정해줌으로써 동적으로 작동
                 alert("HELLO!");
             });
             $(".btn_2").addClass("on");
