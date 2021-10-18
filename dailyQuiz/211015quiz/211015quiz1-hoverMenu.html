@@ -26,18 +26,23 @@
         }
         ul#tab-menu li {
             width: 100%;
-            padding: 1em;
+            padding: 1em auto;
+            list-style: none;
         }
         ul#tab-menu li:hover {
             background-color: green;
             
         }
         ul#tab-menu li ul.tab-content {
-            width: 100%;
-            background-color: #ccc;
-            display: none;
+            display:none;
+            width: 160px;
+            position: absolute;
+            font-size:14px;
+            background: #ccc;
         }
-
+        ul#tab-menu > li:hover > ul {
+                display:block;
+            }
     </style>
 </head>
 <body>
