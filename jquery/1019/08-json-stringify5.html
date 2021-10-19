@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="demo"></p>
+    <script>
+        function replacer(key, value){
+            if(typeof value == "string"){
+                return undefined
+            } 
+            return value;
+        }
+        const foo = {foundation: "mozilla", model : "box", week:45, transport: "car", month:7}
+        let jsonString = JSON.stringify(foo, replacer);
+        console.log(jsonString);
+        // undifind라는 값은 JSON타입에 담기지 않기때문에 
+        // 출력되지 않을뿐더러 key값 또한 같이 소멸
+    </script>
+</body>
+</html>
