@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="js/jquery-3.6.0.min.js">
+    <style>
+        *, body { box-sizing: border-box; font-family: 'Montserrat', sans-serif; } html { font-size: 62.5%; }
+
+    </style>
+</head>
+<body>
+    <header> <h1></h1>
+         <div class="mBtn"></div>
+          <nav class="mNav">
+            <ul class="sub"> <div class="closeBtn"><a href="javascript:;">메뉴닫기</a></div> <li><a href="#!">Menu01</a></li> <li><a href="#!">Menu02</a></li> <li><a href="#!">Menu03</a></li> </ul>
+
+          </nav>
+           <div class="bg-shadow">
+           </div>
+     </header>
+
+     <script>
+         const navtab = { init: function(){ this.motab(); }, motab: function() { let mBtn = $(".mBtn"); 
+         let closeBtn = $(".closeBtn"); 
+           // 모바일 버튼 클릭
+          $(mBtn).click(function(){ $(".mNav").addClass("on"); $(".bg-shadow").css("display", "block"); });
+           // 화면 클릭
+            $(".bg-shadow").click(function(){ $(".mNav").removeClass("on"); $(".bg-shadow").css("display", "none"); }); 
+            // 닫기 버튼 클릭
+             $(closeBtn).click(function(){
+                  $(".mNav").removeClass("on"); $(".bg-shadow").css("display", "none"); });
+             } 
+            } 
+             $(document).ready(function(){ navtab.init(); })
+
+     </script>
+</body>
+</html>
