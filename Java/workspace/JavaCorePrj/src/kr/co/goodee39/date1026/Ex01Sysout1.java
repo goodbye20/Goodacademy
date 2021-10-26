@@ -3,7 +3,7 @@ package kr.co.goodee39.date1026;
 public class Ex01Sysout1 {
 
 	public static void main(String[] args) {
-		// println : 한줄 개행하여 출력할 경우 사용.
+		// println : 한줄 개행하여 출력할 경우 사용
 		System.out.println("안녕하세요");
 		System.out.println("반갑습니다");
 		System.out.println(12345);
