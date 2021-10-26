@@ -6,70 +6,119 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script src="js/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="./fontawesome/css/all.min.css">
     <style>
-        #myinput {
-            width : 50vw;
-            font-size : 1rem;
-            padding : 12px 20px;
-            border : 1px solid #ddd;
-            margin-bottom: 12px;
+        .row {
+            display: flex;
+            flex-direction: column;
         }
 
-        .mytable {
-            border-collapse : collapse;
+        .column {
             width : 100%;
-            border : 1px solid #ddd;
-            font-size : 1.2rem
+            display : block;
         }
 
-        .mytable th,
-        .mytable td {
-            text-align: left;
-            padding : 12px;
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
         }
 
-        .mytable tr{
-            border-bottom: 1px solid #ddd;
+        .container {
+            padding : 0 1rem;
         }
 
-        .mytable thead tr.header,
-        .mytable thead tr:hover{
-            background-color: #f1f1f1;
+        .container::after,
+        .row::after {
+            content : "";
+            clear : both;
+            display: block;
         }
 
-        #btn {
-            padding : 8px 20px;
-            font-size : 1rem;
-            background-color: green;
-            color : white;
+        .title {
+            color : gray;
+        }
+
+        .button {
             border : none;
-            border-radius: 3px;
+            outline : 0;
+            display: inline-block;
+            padding : 8px;
+            color : white;
+            background-color: #1f1f1f;
+            text-align: center;
+            cursor : pointer;
+            width : 100%;
+        }
+
+        .button:hover {
+            background-color: #555;
+        }
+
+        @media (min-width: 650px){
+            .row {
+                flex-direction: row;
+            }
+
+            .column {
+                flex-grow: 1;
+                margin-bottom: 1rem;
+                padding : 0 8px;
+            }
         }
     </style>
 </head>
 <body>
-    <input type="text" id="myinput" placeholder="Search for names...">
-    <button id="btn">클 릭</button>
-    <table class="mytable">
-        <thead>
-            <tr class="header">
-                <th style="width:60%">Name</th>
-                <th style="width:40%">Country</th>
-            </tr>
-        </thead>
-        <tbody></tbody>
-    </table>
+    <div class="row">
+        <div class="column">
+            <div class="card">
+                <div class="img"></div>
+                <div class="container">
+                    <h2 class="name"></h2>
+                    <p class="title"></p>
+                    <p class="content"></p>
+                    <p class="email"></p>
+                    <p><button class="button">연결하기</button></p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="img"></div>
+                <div class="container">
+                    <h2 class="name"></h2>
+                    <p class="title"></p>
+                    <p class="content"></p>
+                    <p class="email"></p>
+                    <p><button class="button">연결하기</button></p>
+                </div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="card">
+                <div class="img"></div>
+                <div class="container">
+                    <h2 class="name"></h2>
+                    <p class="title"></p>
+                    <p class="content"></p>
+                    <p class="email"></p>
+                    <p><button class="button">연결하기</button></p>
+                </div>
+            </div>
+        </div>
+    </div>
     <script>
         $(function(){
-            $("#btn").on("click", function(){
-                $(".mytable tbody").empty();
-                $.getJSON("table.json", function({list}){
-                    let str = $("#myinput").val();
-                    $.each(list, function(i, {name, country}){
-                        if(name.toUpperCase().indexOf(str.toUpperCase()) > -1){
-                            $(".mytable tbody").append(`<tr><td>${name}</td><td>${country}</td></tr>`);
-                        }
+            $.getJSON("team.json", function({team}){
+                $.each(team, function(i, {img, name, title, content, email}){
+                    $(`.img:eq(${i})`).css({
+                        "background":`url(${img}) no-repeat center`,
+                        "background-size":"cover",
+                        "width":"100%",
+                        "height":"200px"
                     });
+                    $(`.name:eq(${i})`).text(name);
+                    $(`.title:eq(${i})`).text(title);
+                    $(`.content:eq(${i})`).text(content);
+                    $(`.email:eq(${i})`).text(email);
                 });
             });
         });

@@ -103,7 +103,7 @@
     <script>
         $(function(){
             $.getJSON("team.json", function({team}){
-                $.each(team, function(i, {img, name, content, email}){
+                $.each(team, function(i, {images, name, title, content, email}){
                     $(`.img:eq(${i})`).css({
                         "background" : `url(${images}) no-repeat center`,
                         "background-size" : "cover",
