@@ -7,9 +7,9 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>안녕하세요</h1>
-	<script type="text/javascript">
-		console.log("이것은 jsp 파일에서 나오는 javascript!");
-	</script>
+<h1>자바 스크립트에서 열리는 창</h1>
+<script>
+console.log("a");
+</script>
 </body>
 </html>
