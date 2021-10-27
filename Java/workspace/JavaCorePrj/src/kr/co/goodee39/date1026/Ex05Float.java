@@ -9,6 +9,10 @@ public class Ex05Float {
 		double f2 = 12.34567;
 		float f3 = 3.4e-45f;
 		double f4 = 2.12e-50;
+		System.out.println(f1);
+		System.out.println(f2);
+		System.out.println(f3);
+		System.out.println(f4);
 		// 실수
 		/* - 실수형을 저장하는데 사용되는 타입
 		 * - 실수형에는 두가지 자료형이 존재하고(float, double) 기본형은 double이다.
