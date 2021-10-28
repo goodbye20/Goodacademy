@@ -22,6 +22,11 @@ String mBanner2 = "fine211@kornet.net";
 String mBanner3 = "예금주/***";
 String mBanner4 = "485-000000-00000";
 
+String proPrice1 = "천연염색은사 <br> 289,000원";
+String proPrice2 = "천연염색차렵이 <br> 199,000원";
+String proPrice3 = "피그먼트차렵이 <br> 149,000원";
+String proPrice4 = "메모리폼 <br> 29,000원";
+
 String notice1 = "카드 결제 등록이 완료되었습니다.";
 String notice2 = "저희 쇼핑몰의 모든 상품은 백화점 판매 제품과 동일합니다.";
 String notice3 = "5월 중 백화점 판매일정 - 롯데 백화점 관악점, 영등포점 ...";
@@ -102,8 +107,8 @@ String fCotent4 = "본사전화 031-957-1510｜팩스 031-957-1509｜통신판�
 						<a><img src="images/banner3.jpg"></a>
 					</p>
 					<p></p>
-				</aside>
-				<section class="m-contentBox1">
+				</aside>			
+				<section class="m-contentBox1">	
 					<figure>
 						<img src="images/title_shop.gif">
 					</figure>
@@ -119,10 +124,14 @@ String fCotent4 = "본사전화 031-957-1510｜팩스 031-957-1509｜통신판�
 						<a><img src="images/btn_more1.gif"></a> <img
 							src="images/title_new_product.gif">
 						<figure>
-							<a><img src="images/photo_product1.jpg"></a>
-							<a><img src="images/photo_product2.jpg"></a>
-							<a><img src="images/photo_product3.jpg"></a>
-							<a><img src="images/photo_product4.jpg"></a>
+							<a><img src="images/photo_product1.jpg">
+							<p><%=proPrice1 %></p></a>
+							<a><img src="images/photo_product2.jpg">
+							<p><%=proPrice2 %></p></a>
+							<a><img src="images/photo_product3.jpg">
+							<p><%=proPrice3 %></p></a>
+							<a><img src="images/photo_product4.jpg">
+							<p><%=proPrice4 %></p></a>
 						</figure>
 					</article>
 					<article class="gallery">

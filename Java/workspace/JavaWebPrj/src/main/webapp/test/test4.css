@@ -100,6 +100,9 @@ header ul {
 	display: flex;
 	padding: 50px 0;
 }
+.product a{
+	text-align: center;
+}
 .m-content li:before {
     content: "• ";
     color: green;
