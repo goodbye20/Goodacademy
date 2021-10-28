@@ -1,0 +1,134 @@
+@charset "UTF-8";
+
+/* defalut*/
+
+body {
+	-webkit-font-smoothing: antialiased;
+	background-color: #fff;
+	color: #333;
+}
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+div, span, article, section, header, footer, aside, p, ul, li, fieldset, legend, label, a, nav, form {
+	box-sizing: border-box;
+	/* content-box */
+}
+ol, ul, li {
+	list-style: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+img {
+	max-width: 100%;
+	height: auto;
+	border: 0;
+}
+a {
+	display: inline-block;
+	cursor: pointer;
+}
+button {
+	border: 0;
+	background: transparent;
+	cursor: pointer;
+}
+
+link, text {
+	font-family: "돋움체";
+	font-size: 12px;
+}
+#container {
+	width: 1000px;
+	border: 2px solid #e0e0e0;
+}
+
+/* header */
+header ul {
+	width: 100%;
+	justify-content: right;
+}
+.h-menu > ul {
+	display: flex;
+	font-size: 11px;
+}
+.h-title {
+	width: 100%;
+	display: flex;
+	justify-content: space-between;
+}
+
+
+
+/* main */
+
+.m-menu > ul{
+	display: flex;
+	width: 100%;
+	background-color: #415B17;
+	border-bottom: 1rem solid #eee;
+}
+
+.m-menu > ul > li>a:nth-child(2n) {
+	display: none;
+}
+
+.m-content {
+	display: flex;
+	padding: 50px 0;
+}
+.m-content li:before {
+    content: "• ";
+    color: green;
+}
+aside {
+	padding: 90px 10px;
+} 
+aside a, aside a:active, aside a:visited {
+	text-decoration: none;
+	color: #333;
+}
+aside > ul > li{
+	font-size: 11px;
+}
+.m-contentBox2 {
+	padding: 30px 10px;
+}
+.sidebar p {
+	font-size: 14px;
+}
+.gallery > figure >img {
+	display: none;
+}
+.gallery > figure >img:first-child {
+	display: block;
+}
+
+/* footer */
+.f-container {
+	width: 100%;
+	font-size: 14px;
+}
+ .f-container tr, .f-container td {
+	border: 2px solid #e0e0e0;
+	padding: 0 1em;
+}
