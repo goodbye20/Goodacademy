@@ -156,33 +156,34 @@ String fCotent4 = "본사전화 031-957-1510｜팩스 031-957-1509｜통신판�
 			</table>
 		</footer>
 	</div>
+
 	<script>
-	$(function(){
+		$(function(){
 			$(".nav").on("mouseover", function(){
 				$(this).attr({
 						   "src" : $(this).attr("src").replace(".jpg","_over.jpg")
-				})
+				},)
 			});
 			$(".nav").on("mouseout", function(){
 				$(this).attr({
 						   "src" : $(this).attr("src").replace("_over.jpg",".jpg")
-				})
+				},)
 			});
 			
 		const $galPho = $("#gal").attr("src");
 		let index = 2;
-		
-			setInterval(function(){
+		$(window).on("load", function(){
+			setInterval(() => {
 				if(index > 4){
                         index = 1;
                     } else {
                     $("#gal").attr({
-                    	"src" : $galPho.replace(+1+".jpg",+index+".jpg")
+                       "src" : $galPho.replace(+1+".jpg",+index+".jpg")
                     })
                 };
                 index++
                 }, 4000);
-           
+            })
 
 		});
 	</script>

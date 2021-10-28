@@ -63,15 +63,11 @@ link, text {
 }
 
 /* header */
-header {
-	padding: 10px 0;
-}
 header ul {
 	width: 100%;
 	justify-content: right;
 }
 .h-menu > ul {
-	padding: 10px 0;
 	display: flex;
 	font-size: 11px;
 }
