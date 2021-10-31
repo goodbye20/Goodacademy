@@ -346,32 +346,29 @@
     </div>
     <script>
         $(function () {
-         const $info = $(".help_contents tbody a.info");
-         const $tbody = $(".help_content tbody");
-         let heightArray = new Array();
+            const $info = $(".help_contents tbody a.info");
+            const $tbody = $(".help_contents tbody");
+            let heightArray = new Array();
 
-         $tbody.each(function(){
-            heightArray.push($(this).find(".description").height());
-         })
+            $tbody.each(function(){
+                heightArray.push($(this).find(".description").height());
+            });
 
-         $info.on("click", function(e){
-            e.preventDefault();
-            if($(this).parent("tbody").hasClass("on")){
-               $(this).parent("tbody").removeClass("on");
-               // on이 되있으면 on을 날려줌
-            } else {
-               $(".help_contents tbody").removeClass("on");
-               $(this).parent("tbody").addClass("on");
-               let n = $(this).parent("tbody").find(".num").text()-1;
-               // 배열의 인덱스는 0부터 시작이기에 .num의 택스트 값을 찾아준후 -1
-               let h = heightArray[n] -50;
-               // 높이 값을 뽑아내줌
-               const $info = $(this).parent("tbody").find(".answer");
-               $info.stop().css({height:0}).animate({height:h}, 300);
-            }
-         });
+            $info.on("click", function(e){
+                e.preventDefault();
+                if($(this).parents("tbody").hasClass("on")){
+                    $(this).parents("tbody").removeClass("on");
+                }else{
+                    $(".help_contents tbody").removeClass("on");
+                    $(this).parents("tbody").addClass("on");
+                    let n = $(this).parents("tbody").find(".num").text()-1;
+                    let h = heightArray[n]-50;
+                    const $info = $(this).parents("tbody").find(".answer");
+                    $info.stop().css({height:0}).animate({height:h},300);
+                }
+            });
         });
     </script>
 </body>
- 
+
 </html>
