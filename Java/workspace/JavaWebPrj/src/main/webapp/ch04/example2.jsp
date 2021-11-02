@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%
+//  action include식 개발
 	request.setCharacterEncoding("UTF-8");
 	String header = "이것은 헤더에 들어가는 내용입니다.";
 	String footer = "이것은 푸터에 들어가는 내용입니다.";

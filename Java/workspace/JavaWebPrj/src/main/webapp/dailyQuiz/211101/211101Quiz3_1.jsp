@@ -1,5 +1,8 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+<%
+	
+%>    
 <!DOCTYPE html>
 <html>
 <head>
@@ -14,7 +17,6 @@
 		<option value="page3">3페이지</option>
 	</select><br>
 	<button type="submit">이동</button>
-	</form>
-	
+	</form>	
 </body>
 </html>
