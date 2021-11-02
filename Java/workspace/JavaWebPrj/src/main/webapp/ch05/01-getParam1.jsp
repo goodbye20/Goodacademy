@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="example1_1.jsp" method="get">
+	<form action="01-getParam1-2.jsp" method="get">
 		<label for="id">아이디 : </label>
 		<input type="text" id="id" name="id"/>
 		<br />

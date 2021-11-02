@@ -4,6 +4,8 @@
 	request.setCharacterEncoding("utf-8");
 	//String id = request.getParameter("id");
 	//String pw = request.getParameter("pw");
+	
+	// 아래 body에서 바로 받을 수도 있다.
 %>
 <!DOCTYPE html>
 <html>

@@ -1,6 +1,6 @@
 package kr.co.goodee39.date1101;
 
-public class Ex3Switch {
+public class Ex03Switch {
 	public static void main(String[] args) {
 		// switch~case
 		/*
