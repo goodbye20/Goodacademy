@@ -33,11 +33,11 @@
 			color: black;
 		}
 	}
-	key-frames background-color-fix {
-		100% {
-			background-color: #AEEA00;
-		}
+	@keyframes background-color-fix {
+	100% {
+		background-color : #AEEA00;
 	}
+}
 	.choose-header {
 		font-size: 2.4rem;
 		color: crimson;
