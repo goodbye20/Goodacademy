@@ -47,12 +47,12 @@ public class Example1ServletController extends HttpServlet {
 		//결과 페이지로 전송하는 방법
 		// 1-1 서블릿 리다이렉트 쿼리-> getParam
 //		response.sendRedirect(request.getContextPath()+"/ch08/Example1_result1.jsp?data1="+data1+"&data2="+data2);
-		response.sendRedirect(request.getContextPath()+"/ch08/Example1_result1.jsp");
+//		response.sendRedirect(request.getContextPath()+"/ch08/Example1Session_result1.jsp");
 		// 서블릿 형식으로 리다이렉트를 통해 정보를 전달하기위해서는 쿼리형식(getParam)으로 전달해줘야함
 		
 		// 2 서블릿 포워드+getAttri 방식
-//		RequestDispatcher rdp = request.getRequestDispatcher("/ch08/Example1_result1.jsp");
-//		rdp.forward(request, response);
+		RequestDispatcher rdp = request.getRequestDispatcher("/ch08/Example1Session_result1.jsp");
+		rdp.forward(request, response);
 	}
 
 	/**

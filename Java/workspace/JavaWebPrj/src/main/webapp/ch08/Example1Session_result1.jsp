@@ -19,7 +19,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>이곳은 Example1.jsp 결과 페이지입니다.</h1>
+	<h1>이곳은 Session방식을 확용한 데이터 전달 결과 페이지입니다.</h1>
 	<p>data1 : <%=data1 %></p>
 	<p>data2 : <%=data2 %></p>
 </body>

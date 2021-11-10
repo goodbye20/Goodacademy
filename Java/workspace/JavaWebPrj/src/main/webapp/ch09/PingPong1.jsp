@@ -7,10 +7,10 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<form action="<%=request.getContextPath() %>/ServletSessionController">
+	<form action="<%=request.getContextPath() %>/PingPongServletController" method="post">
 		<ul>
-			<li><label for="data1"></label>데이타1<input type="text" id="data1" name="data1" /></li>
-			<li><label for="data2"></label>데이타2<input type="text" id="data2" name="data2" /></li>
+			<li><label for="id">아이디</label><input type="text" id="id" name="id"/></li>
+			<li><label for="pw">패스워드</label><input type="password" id="pw" name="pw"/></li>
 			<li><button>전송</button></li>
 		</ul>
 	</form>

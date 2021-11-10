@@ -14,8 +14,8 @@
 </head>
 <body>
 	<ul>
-		<% for(int i = 1; i <= check.length; i++){
-			out.println("<li>" + check + "</li>");
+		<% for(int i = 0; i < check.length; i++){
+			out.println("<li>" + check[i] + "</li>");
 		 } %>
 	</ul>
 </body>
