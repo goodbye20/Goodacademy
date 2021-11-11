@@ -38,7 +38,7 @@ public class Ex03Method {
 	}
 	
 	// 리턴 타입은 오로지 하나만 작성 가능하다.
-//	public int,String method5(){
+//	public int, String method5(){
 //		return 1,"abc"
 //	}
 	

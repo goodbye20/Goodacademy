@@ -29,7 +29,7 @@ public class Ex06This {
 		
 		public void method1() {
 			a = 10; // 사실 앞에 this.가 생략되어 있음
-			this.b = "abc"; // 그냥 b = "abc"; 해줘도 이상없이 정상작동
+			this.b = "abc"; // 그냥 b = "abc"; 해줘도 이상 없이 정상작동
 //			this.method2();
 			method2();
 		
