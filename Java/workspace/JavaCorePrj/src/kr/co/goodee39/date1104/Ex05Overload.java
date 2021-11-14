@@ -32,6 +32,8 @@ public class Ex05Overload {
 	public static void main(String[] args) {
 		Ex05Overload over = new Ex05Overload();
 		over.method1();
+		over.method1("5");
+		over.method1("햄버거","감자튀김");
 	}
 
 }

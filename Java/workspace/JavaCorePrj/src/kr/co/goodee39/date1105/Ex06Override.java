@@ -8,6 +8,7 @@ public class Ex06Override {
 	 *   막는 형태의 메커니즘을 가짐
 	 * - 만약 강제로 부모 클래스의 기능을 접근하고 싶다면 super을 활용하여 부모 객체의 접근이 가능함.
 	 * */
+	
 	public static void main(String[] args) {
 		ChildClass4 cc1 = new ChildClass4();
 		cc1.method1();
