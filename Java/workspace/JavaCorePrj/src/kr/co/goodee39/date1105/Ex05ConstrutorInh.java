@@ -22,6 +22,7 @@ public class Ex05ConstrutorInh {
 		 * */
 		ChildClass3 cc1 = new ChildClass3();
 		cc1.method3();
+		cc1.method4();
 		
 	}
 }

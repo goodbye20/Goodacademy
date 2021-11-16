@@ -21,5 +21,6 @@ public class Ex04Inheritance {
 		ChildClass2 cc2 = new ChildClass2();
 		System.out.println(cc2.field1);
 		cc2.method1();
+		cc2.method3();
 	}
 }
