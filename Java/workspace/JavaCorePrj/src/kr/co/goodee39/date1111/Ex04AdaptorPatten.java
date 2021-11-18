@@ -1,6 +1,6 @@
 package kr.co.goodee39.date1111;
 
-public class Ex04Adaptor {
+public class Ex04AdaptorPatten {
 	public static void main(String[] args) {
 		CModule module1 = new CMouduleImpl();
 		Board(module1);

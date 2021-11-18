@@ -2,7 +2,7 @@ package kr.co.goodee39.date1111;
 
 import java.util.Scanner;
 
-public class Ex03Command {
+public class Ex03CommandPatten {
 	public static void main(String[] args) {
 		
 		Scanner scan = new Scanner(System.in);

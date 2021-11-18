@@ -19,7 +19,7 @@ public class Ex04GenericExtends {
 		ChildProduct1<String, Integer, String> child1 = new ChildProduct1<String, Integer, String>();
 		child1.setT("제네릭 T 타입");
 		child1.setM(1234);
-		child1.setC("자식 제네릭 M 타입");
+		child1.setC("자식 제네릭 C 타입");
 		
 		System.out.println(child1.getT());
 		System.out.println(child1.getM());
