@@ -17,6 +17,7 @@ public class Ex04Set {
 	public static void main(String[] args) {
 		Set<String> set1 = new HashSet<String>();
 		
+		// add을 통해 값을 추가
 		set1.add("bbb");
 		set1.add("aaa");
 		set1.add("ddd");
@@ -35,6 +36,8 @@ public class Ex04Set {
 		
 		Set<String> set2 = new TreeSet<String>();
 		
+		
+		// add을 통해 값을 추가
 		set2.add("bbb");
 		set2.add("aaa");
 		set2.add("ddd");
@@ -45,6 +48,7 @@ public class Ex04Set {
 		System.out.println(set2);
 		System.out.println(set2.size());
 		
+		// remove을 통해 값을 제거
 		System.out.println(set2.remove("ddd"));
 		System.out.println(set2);
 	}
