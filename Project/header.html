@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="format.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
+        @import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
+
+        * {
+            box-sizing:border-box;
+            font-family: 'Montserrat', sans-serif; 
+        }
+
+        body {
+            margin: 0;
+            color: #333;
+            font-size: 18px;
+            line-height: 1.6em;
+        }
+
+        a {
+            text-decoration: none;
+            color: #333;
+        }
+
+        /* header */
+
+        header {
+            width: 100%;
+            height: 200px;
+            position: fixed;
+        }
+        #container {
+            width: 100%;
+        }
+
+
+        /* header top-menu */
+
+        #top-menu {
+            background-color: #eee;
+            height: 80px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0 30px 0 100px;
+            width: 100%;
+        }
+        #top-menu a h1 {
+            padding-left: 2.5em;
+        }
+        .search {
+            background-color: #fff;
+            width: 50px;
+            height: 50px;
+            border-radius: 50px;
+            box-shadow: 0 0 10px rgba(0, 0 , 0 , 0.15);
+            overflow: hidden;
+            position: relative;
+            transition: 0.5s;
+        }
+
+        .search.active {
+            width: 400px;
+        }
+
+        .icon {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 54px;
+            font-size: 1.9rem;
+            cursor: pointer;
+            background-color: #fff;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+
+        .input-frame {
+            position: absolute;
+            top: 12px;
+            left: 60px;
+            width: 300px;
+        }
+
+        .input-frame input[type=text]{
+            width: 100%;
+            border: none;
+            outline: none;
+            font-size: 1.15rem;
+        }
+
+        .input-frame input[type=text]::placeholder {
+            transition: 0.5s;
+        }
+        .input-frame input[type=text]:focus::placeholder {
+           opacity: 0;
+        }
+        .clear {
+            position: absolute;
+            right: 20px;
+            top: 12px;
+            cursor: pointer;
+        }
+
+        .top-side {
+            display: flex;
+        }
+        .top-side a{
+            padding-right: 2em;
+        }
+
+
+        /* header nav-menu */
+        nav {
+            display: flex;
+            justify-content: center;
+            width: 100%;
+            height: 100px;
+        }
+
+        #nav-menu {
+            display: flex;
+            height: 60px;
+        }
+
+        #nav-menu>li {
+            position: relative;
+        }
+
+        #nav-menu>li>a {
+            display: block;
+            font-weight: bold;
+            text-shadow: 0 1px black;
+            padding: 10px 50px;
+        }
+
+        #nav-menu>li>a>span {
+            font-size: 0.5em;
+        }
+
+        #nav-menu>li>a:hover {
+            color: #000;
+            text-shadow: 0 -1px #07c;
+        }
+
+        #nav-menu>li>ul {
+            display: none;
+            position: absolute;
+            width: 200px;
+            background-color: rgba(255, 255, 255, 0.6);
+            left: 55px;
+            margin: 0;
+        }
+
+        #nav-menu>li>ul>li>a {
+            font-size: 0.85rem;
+            padding: 10px;
+            color: #000;
+        }
+
+        #nav-menu>li:hover>ul {
+            display: block;
+            z-index: 10;
+        }
+
+        #nav-menu>li>ul>li>a:hover {
+            font-weight: bolder;
+        }
+
+        .tab-content {
+            height: 200px;
+            padding: 50px;
+            text-align: center;
+        }        
+
+    </style>
+</head>
+<body>
+    <div id="container">
+        <header>
+            <section id="top-menu">   
+                <div class="search">
+                    <span class="clear"><i class="xi-close-thin"></i></span>
+                    <div class="icon"><i class="xi-search"></i></div>
+                    <div class="input-frame">
+                        <input type="text" id="search-input" placeholder="Type here...">
+                    </div>
+                </div>
+                <div><a href=""><h1>BalanceDiary</h1></a></div>
+                <div class="top-side">
+                    <div><a href="">다이어리</a></div>
+                    <div><a href="">로그인</a></div>
+                </div>
+            </section>
+            <nav>
+                <ul id="nav-menu">
+                    <li><a href="#">회사소개 <span>▼</span></a>
+                        <ul>
+                            <li><a href="#">구상 계기</a></li>
+                            <li><a href="#">발전 계획</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">식단 가이드 <span>▼</span></a>
+                        <ul>
+                            <li><a href="#">다이어트 + 근육 증가</a></li>
+                            <li><a href="#">단순 체중 감량</a></li>
+                            <li><a href="#">체중 + 근육 증량</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">Information <span>▼</span></a>
+                        <ul>
+                            <li><a href="#">자주 묻는 질문 Q&A</a></li>
+                            <li><a href="#">BalanceDiary 추천 레서피</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="#">우리들의 Diary</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+            </nav>
+            <section>
+                <div id="lean-mass-up" class="tab-content">
+                    <h1>당신은 어떤 식단을 원하십니까?</h1>
+                    <p>바쁜 생활 혹은 잘못된 습관으로 인해 나도 모르게 불어난 몸에 고민이시지 않은가요?</p><br>
+                    <p>건강한 체중감량을 통해 날씬하고 탄탄한 몸을 만드는 식단을 함께 알아보러 가보실까요?</p>
+                  </div>
+                  
+                  <div id="diet" class="tab-content">
+                    <h1>당신은 어떤 식단을 원하십니까?</h1>
+                    <p>오랜 기간 잘못된 식습관으로 인해 늘어난 체중 때문에 늘 고민하고 먹고싶은 것을 참아도 보고 
+                       굶어봐도 금방 제자리인 몸무게에 힘들어 하고 계신가요?</p><br>
+                    <p>이대로는 건강조차 헤칠수 있습니다. 먹지않고 굶는 것은 결국 단기적일뿐, 건강한 식습관을 통해 이젠 굶지 않고 챙겨먹으면서
+                     날씬한 몸을 만드는 식단을 함께 알아보러 가보실까요?</p>
+                  </div>
+                  
+                  <div id="bulk-up" class="tab-content">
+                    <h1>당신은 어떤 식단을 원하십니까?</h1>
+                    <p>어릴적부터 외소해서 아무리 열심히 운동을 하고, 뭐든지 잘챙겨먹는데도 불구하고 성장하지 않는 몸에 스트레스 받고, 남들이 항상
+                       너무 이렇게나 잘먹는데 어떻게 이렇게 말랐냐는 소리를 듣지는 않으신가요?</p><br>
+                    <p>지금부터 조금만 식습관을 바꾸고, 개선하면 건장하고 멋진 몸으로 거듭날 수 있습니다. 우리 함께 알아보러 가보실까요?</p>
+                  </div>
+                  <button class="tab-btn" id="defaultOpen">다이어트 + 근육 증가</button>
+                  <button class="tab-btn" >단순 체중 감량</button>
+                  <button class="tab-btn" >체중 + 근육 증량</button>
+            </section>
+        </header>
+    </div>
+
+    <script>
+        // top-menu search
+        const icon = document.querySelector(".icon");
+        const clear = document.querySelector(".clear");
+        const topMenu = document.getElementsByTagName("#top-menu");
+        const search = document.querySelector(".search");
+        const searchInput = document.getElementById("search-input")
+
+        icon.addEventListener("click", function(){
+            search.classList.toggle("active")
+        });
+
+        clear.addEventListener("click", function(){
+            searchInput.value = "";
+        });
+
+        for (let index = 0; index < topMenu.length; index++) {
+            section[index].addEventListener("click", function(){
+                search.classList.remove("active");
+            })
+            
+        }
+
+        // tab-content        
+        const tabContents = document.getElementsByClassName("tab-content");
+        const tabBtns = document.getElementsByClassName("tab-btn");
+
+        for (const tabBtn of tabBtns) {
+            tabBtn.addEventListener("click", function(){
+                clearContent()
+            });
+        }
+
+        function clearContent() {
+            for (const tabContent of tabContents) tabContent.style.display = "none";
+        }
+
+
+        document.getElementById("defaultOpen").click();
+    </script>
+</body>
+</html>

@@ -109,7 +109,7 @@ FROM emp;
 SELECT COUNT(comm)
 FROM emp;
 
--- 원하는 컬럼들의 값만을 색인하여 받을때 : GROUP BY
+-- 원하는 컬럼들의 값만을 색인하여 출력값을  받을때 : GROUP BY
 SELECT job, COUNT(*)
 FROM emp
 GROUP BY job;
