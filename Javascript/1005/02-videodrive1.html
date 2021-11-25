@@ -9,13 +9,15 @@
     <style>
         video {
             position: absolute;
-            display: none;
+            /* display: none; */
+            width: 200px;
+            height: 200px;
         }
     </style>
 </head>
 
 <body>
-    <video src="media/video.mp4" width="480" height="272"></video>
+    <video src="media/video.mp4" width=400 height=200></video>
 
     <script>
         // video 요소
@@ -50,7 +52,9 @@
             } else {
                 // 원래 크기로 되돌리기
                 video.width = video.videoWidth;
+                // video.width = "480px";
                 video.height = video.videoHeight;
+                // video.height = "272px";
                 // video 요소를 한가운데로 이동
                 centering();
                 video.pause();
