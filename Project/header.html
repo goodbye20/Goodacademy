@@ -249,6 +249,9 @@
             </section>
                     <div class="content-area">
                     <div id="lean-mass-up" class="tab-content" style="display: block">
+                        <video data-="">
+                            <source>
+                        </video>
                         <h1>당신은 어떤 식단을 원하십니까?</h1>
                         <p>바쁜 생활 혹은 잘못된 습관으로 인해 나도 모르게 불어난 몸에 고민이시지 않은가요?</p><br>
                         <p>건강한 체중감량을 통해 날씬하고 탄탄한 몸을 만드는 식단을 함께 알아보러 가보실까요?</p>
@@ -274,7 +277,7 @@
                   <div class="tab-menu">
                       <ul class="tab-menu-list">
                           <li class="is_on">
-                              <a href="#lean-mass-up" id="defaultOpen" class="tab-btn">다이어트 + 근육 증가</a>
+                              <a href="#lean-mass-up" id="defaultOpen" class="tab-btn" data-video="video/bulk-up.mp4">다이어트 + 근육 증가</a>
                           </li>
                           <li>
                               <a href="#diet" class="tab-btn">단순 체중 감량</a>
@@ -363,6 +366,15 @@
             nextTab();
         });
         showTab(current);
+
+        // background-video
+        const tabvideo = document.querySelectorAll('.content-area .tab-content')
+        function showVideo(n){
+            if(tabvideo.element.classList.contains("is_on"))
+            var dataVideo = this.dataset.video;
+            
+            tabvideo.style.background = "src="+dataVideo;
+        }
 }
     </script>
 </body>
