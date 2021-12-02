@@ -17,6 +17,7 @@ public class MVCService2 {
 		// 커넥션을 통해 리스트에 넣어줌
 		
 		request.setAttribute("list", list);
+		// request로 값을 보내줄수 있게 set
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

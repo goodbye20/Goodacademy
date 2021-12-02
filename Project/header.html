@@ -5,6 +5,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <!-- https://fontawesome.com/start -->
+    <script src="https://kit.fontawesome.com/f1def33959.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="format.css">
     <style>
         @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
@@ -26,6 +28,7 @@
             text-decoration: none;
             color: #333;
         }
+
 
         /* header */
 
@@ -182,18 +185,45 @@
         #nav-menu>li>ul>li>a:hover {
             font-weight: bolder;
         }
+        
+        /* 재생바 */
+        .progress {
+        flex: 10;
+        position: relative;
+        display: flex;
+        flex-basis: 100%;
+        height: 5px;
+        transition: height 0.3s;
+        background: #F5F5F5;
+        cursor: ew-resize;
+        }
+
+        .progress__filled {
+        width: 50%;
+        background: #215190;
+        flex: 0;
+        flex-basis: 50%;
+        }
 
 
         /* tab-menu */
         .tab-content {
             color: white;
-            display: none;
+            display: flex;
             padding-top: 20%;
             height: 1000px;
             text-align: center;
         }        
+        .tab-content-box {
+            width: 60%;
+            margin: auto;
+        }
+        .tab-content h1 {
+            margin-bottom: 3em;
+        }
 
         .tab-menu .tab-menu-list{
+            background: #F5F5F5;
             display: flex;
             justify-content: center;
         }
@@ -201,32 +231,92 @@
             padding: 1em;
         }
         .tab-menu .tab-menu-list a {
-            color: white;
+            color: #B5B5B5;
+        }
+
+        .is_on{
+            font-weight: bold;
+            border-bottom: 2px solid #333;
         }
 
         /* slide-tab */
-        #prev {
+        #prev-btn {
+            position: absolute;
+            opacity: 50%;
+            top: 40%;
             left: 0;
+            font-size: 2em;
         }
-
-        #next {
+        
+        #next-btn {
+            position: absolute;
+            opacity: 50%;
+            top: 40%;
             right: 0;
+            font-size: 2em;
         }
-
-
+        #prev-btn:hover {
+            color: #fff;
+        }
+        #next-btn:hover {
+            color: #fff;
+        }
+        
         .bgvid{
             display: none;
             position: absolute;
             width: 100%;
             z-index: -100;
         }
+
+        /* main */
+
+        /* dont-give-up */
+        .dont-giveup-wrap {
+            display: flex;
+            height: 500px;
+        }
+
+        .d-giveup-imgbg {
+            display: flex;
+            justify-content: right;
+            align-items: center;
+            width: 50%;
+            background-color: #615050;
+            
+        }
+
+        .d-giveup-img {
+            width: 70%;
+            margin-right: -10%;
+        }
+
+        .d-giveup-content-wrap {
+            display: flex;
+            width: 50%;
+        }
+
+        .d-giveup-content {
+            text-align: center;
+            margin: auto;
+            font-weight: bold;
+        }
+        
+        .d-giveup-content h1 {
+            padding-bottom: 1em;
+            border-bottom: 3px solid #333;
+        }
+        .d-giveup-content p {
+            padding-top: 5em;
+
+        }
     </style>
 </head>
 <body>
     <div id="container">
         <header>
-            <section id="top-area">
-                <section id="top-menu">   
+                <section id="top-area">
+                    <section id="top-menu">   
                     <div class="search">
                         <span class="clear"><i class="xi-close-thin"></i></span>
                         <div class="icon"><i class="xi-search"></i></div>
@@ -277,34 +367,42 @@
                     <source src="video/bulk-up.mp4" type="video/mp4">
                 </video>
                     <div id="lean-mass-up" class="tab-content" style="display: block">
-                        <h1>당신은 어떤 식단을 원하십니까?</h1>
-                        <p>바쁜 생활 혹은 잘못된 습관으로 인해 나도 모르게 불어난 몸을 바꾸고 싶어 운동을 시작했으나, 맘처럼 변화가 없거나 작은 변화가 있었지만 그것도 잠시 다시 제자리걸음인 것만 같아 고민이시지 않은가요?</p><br>
-                        <p>건강한 체중감량을 통해 날씬하고 탄탄한 몸을 만드는 식단을 함께 알아보러 가보실까요?</p>
+                        <div class="tab-content-box">
+                            <h1>당신은 어떤 식단을 원하십니까?</h1>
+                            <h1>탄탄하고 건강미 넘치는 몸을 가꾸고 싶나요?</h1>
+                            <p>바쁜 생활 혹은 잘못된 습관으로 인해 나도 모르게 불어난 몸을 바꾸고 싶어 운동을 시작했으나, 맘처럼 변화가 없거나 작은 변화가 있었지만 그것도 잠시 다시 제자리걸음인 것만 같아 고민이시지 않은가요?</p><br>
+                            <p>건강한 체중감량을 통해 날씬하고 탄탄한 몸을 만드는 식단을 함께 알아보러 가보실까요?</p>
+                        </div>
                     </div>
                     
                    <div id="diet" class="tab-content">
                        <h1>당신은 어떤 식단을 원하십니까?</h1>
-                    <p>오랜 기간 잘못된 식습관으로 인해 늘어난 체중 때문에 늘 고민하고 먹고싶은 것을 참아도 보고 
+                       <h1>늘어난 뱃살, 운동할 시간은 부족하고 식단을 통해 체중감량을 하고 싶으신가요?</h1>
+                       <p>오랜 기간 잘못된 식습관으로 인해 늘어난 체중 때문에 늘 고민하고 먹고싶은 것을 참아도 보고 
                         굶어봐도 금방 제자리인 몸무게에 힘들어 하고 계신가요?</p><br>
                         <p>이대로는 건강조차 헤칠수 있습니다. 먹지않고 굶는 것은 결국 단기적일뿐, 건강한 식습관을 통해 이젠 굶지 않고 챙겨먹으면서
                             날씬한 몸을 만드는 식단을 함께 알아보러 가보실까요?</p>
-                    </div>
-                    
+                        </div>
+                        
                     <div id="bulk-up" class="tab-content">
                         <h1>당신은 어떤 식단을 원하십니까?</h1>
+                        <h1>왜소한 체형에서 이제 그만 건장하고 큰 골격의 멋진 몸으로 바뀌고 싶나요?</h1>
                         <p>어릴적부터 외소해서 아무리 열심히 운동을 하고, 뭐든지 잘챙겨먹는데도 불구하고 성장하지 않는 몸에 스트레스 받고, 남들이 항상
                             너무 이렇게나 잘먹는데 어떻게 이렇게 말랐냐는 소리를 듣지는 않으신가요?</p><br>
                             <p>지금부터 조금만 식습관을 바꾸고, 개선하면 건장하고 멋진 몸으로 거듭날 수 있습니다. 우리 함께 알아보러 가보실까요?</p>
                     </div>
-                    <button id="prev-btn">&lang;</button>
-                    <button id="next-btn">&rang;</button>
+                    <button id="prev-btn"><i class="fas fa-chevron-circle-left"></i></button>
+                    <button id="next-btn"><i class="fas fa-chevron-circle-right"></i></button>
                 </div>
-                  <div class="tab-menu">
+                <div class="progress">
+                    <div class="progress__filled"></div>
+                </div>
+                <div class="tab-menu">
                       <ul class="tab-menu-list">
                           <li>
-                              <a href="#lean-mass-up" class="tab-btn" data-num ="0">다이어트 + 근육 증가</a>
-                          </li>
-                          <li>
+                              <a href="#lean-mass-up" class="tab-btn is_on" data-num ="0">다이어트 + 근육 증가</a>
+                            </li>
+                            <li>
                               <a href="#diet" class="tab-btn" data-num ="1">단순 체중 감량</a>
                           </li>
                           <li>
@@ -313,9 +411,37 @@
                       </ul>
                   </div>
         </header>
+        <main>
+            <section class="dont-giveup-wrap">
+                <div class="d-giveup-imgbg">
+                   <img src="images/dont-give-up.webp" class="d-giveup-img" alt="d-giveup-img">
+                </div>
+                <div class="d-giveup-content-wrap">
+                    <div class="d-giveup-content">
+                        <h1>We Can Do It !</h1>
+                        <p>여러분들이 포기하지 않는다면 <br>
+                            저희들도 여러분을 포기 하지않겠습니다.
+                            <br><br><br>
+                            
+                            포기하지마세요.</p>
+                    </div>
+                </div>
+            </section>
+        </main>
     </div>
 
     <script>
+        // scroll top-menu
+        window.onscroll = function(){ scrollFunction()};
+
+        function scrollFunction() {
+        if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
+
+            document.getElementById("top-menu").style.backgroundColor = "teal";
+        } else {
+            document.getElementById("top-menu").style.backgroundColor = "";
+        }
+    }
         // top-menu search
         const icon = document.querySelector(".icon");
         const clear = document.querySelector(".clear");
@@ -342,6 +468,7 @@
 
         // tab-content        
         const tabList = document.querySelectorAll('.tab-menu .tab-menu-list li');
+        const tabListA = document.querySelectorAll('.tab-menu .tab-menu-list li a');
         const tabContents = document.querySelectorAll('.content-area .tab-content')
 
         for(var i = 0; i < tabList.length; i++){
@@ -349,12 +476,16 @@
          e.preventDefault();
         for(var j = 0; j < tabList.length; j++){
          tabContents[j].style.display = 'none';
+         tabListA[j].classList.remove("is_on")
          }
         
         vidIndex = this.dataset.num;
         showVideo(vidIndex);
+
         activeCont = this.getAttribute('href');
         document.querySelector(activeCont).style.display = 'block';
+         
+        activetab = this.classList.add("is_on");
         });
 
 
@@ -364,11 +495,10 @@
         const prevBtn = document.getElementById("prev-btn");
         const nextBtn = document.getElementById("next-btn");
         let current = 0;
-
         function showTab(n){
             for (let index = 0; index < slideTabCont.length; index++) {
                 slideTabCont[index].style.display = "none";
-
+                tabListA[current].classList.remove("is_on");
             }
             slideTabCont[n].style.display = "block";
         }
@@ -385,6 +515,7 @@
                     else current = 0;
                     showTab(current);
                     showVideo(current);
+
                 }
         prevBtn.addEventListener("click", function(){
             prevTab();
@@ -401,7 +532,18 @@
             }
             tabVideo[n].style.display = "block";
         }
+
+        // 재생 진행바
+        const video = document.querySelector('.bgvid');
+        const progress = document.querySelector('.progress');
+        const progressBar = document.querySelector('.progress__filled');
         showVideo(current);
+
+        function handleProgress() {
+        const percent = (video.currentTime / video.duration) * 100;
+        progressBar.style.flexBasis = `${percent}%`;
+        }
+        video.addEventListener('timeupdate', handleProgress); 
 }
     </script>
 </body>
