@@ -339,14 +339,61 @@
         object-fit: cover;
       }
 
-      /* Hot Daily  */
-    .swiper-button-next:after, .swiper-button-prev:after{
+        /* Hot Daily - swiper */
+        .swiper-button-next, .swiper-button-prev {
+            top: 1850px;
+        }
+        .swiper-button-next:after, .swiper-button-prev:after{
+            display: none;
+            }
+        
+        .swiper-pagination {
+            position: relative;
         }
         
-    .swiper-pagination {
-        position: relative;
-      }
-      
+
+      /* dont-give-up */
+        .offline-wrap {
+            display: flex;
+            height: 500px;
+        }
+
+        .offline-map-bg1 {
+            display: flex;
+            justify-content: left;
+            align-items: center;
+            width: 50%;
+            background-color: #ECCEA0;
+        }
+        .offline-map-bg2 {
+            display: flex;
+            height: 400px;
+            margin-left: -10%;
+            background: url("images/map-bg.jpg") no-repeat;
+        }
+        .offline-img {
+            width: 60%;
+
+            padding-right: 2em;
+            margin: auto;
+        }
+
+        .offline-content-wrap {
+            display: flex;
+            width: 50%;
+        }
+        .offline-content {
+            text-align: center;
+            margin: auto;
+            font-weight: bold;
+        }
+        .offline-content h1 {
+            border-bottom: 3px solid #333;
+        }
+        .offline-content p {
+            padding-top: 5em;
+        } 
+
     </style>
 </head>
 <body>
@@ -483,11 +530,42 @@
                             <img src="https://placeimg.com/640/480/tech" />
                         </div>
                     </div>
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <button class="swiper-button-prev"><i class="fas fa-chevron-circle-left"></i></button>
+                    <button class="swiper-button-next"><i class="fas fa-chevron-circle-right"></i></button>
                     <div class="swiper-pagination"></div>
+                    <div>
+                    </div>
                 </div>
+            </section>
+            <section id="rcm-recipe">
+                <div class="rem-recipe-wrap">
+                    <h1 class="rem-recipe-title">11월 4째주<br>
+                    BalanceDiary 추천 레서피</h1>
+                    <div>
 
+                    </div>
+                </div>
+            </section>
+            <section class="offline-wrap">
+                <div class="offline-content-wrap">
+                    <div class="offline-content">
+                        <h1>오프라인 상담 오픈</h1>
+                        <p>회원님들과 좀 더 친밀하게 다가가기 위해<br>
+                            전문 영양사 및 퍼스널 트레이너 출신<br>
+                            상담직원 분들 및 현직 종사자분들과 오프라인 상담을<br>
+                            받으실 수 있는 공간을 마련했습니다.<br>
+                            <br><br>
+                            언제든 열려있으니 마음 편히 찾아와주세요. <br>
+                            항상 여러분과 함께 하겠습니다.</p>
+
+                        <p><a href="">찾아오시는 길</a></p>
+                    </div>
+                </div>
+                <div class="offline-map-bg1">
+                <div class="offline-map-bg2">
+                   <img src="images/dont-give-up.webp" class="offline-img" alt="offline-img">
+                </div>
+                </div>
             </section>
         </main>
     </div>

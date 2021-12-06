@@ -1,4 +1,4 @@
-package kr.co.goodee39.MVC2Controller;
+package Controller;
 
 import java.io.IOException;
 
@@ -9,20 +9,20 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import kr.co.goodee39.MVCService.MVCService2;
+import Service.test1Service;
 
 
 /**
- * Servlet implementation class MVC2Controller
+ * Servlet implementation class 이영주test1Controller
  */
-@WebServlet("/MVC2Controller")
-public class MVC2Controller extends HttpServlet {
+@WebServlet("/이영주test1Controller")
+public class test1Controller extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MVC2Controller() {
+    public test1Controller() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,10 +31,11 @@ public class MVC2Controller extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		MVCService2 service = new MVCService2();
+		request.setCharacterEncoding("utf-8");
+		test1Service service = new test1Service();
 		service.getEmpList(request);
 		
-		RequestDispatcher rdp = request.getRequestDispatcher("/ch10/MVC2_result.jsp");
+		RequestDispatcher rdp = request.getRequestDispatcher("/test1/test1_2.jsp");
 		rdp.forward(request, response);
 	}
 

@@ -9,20 +9,17 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import kr.co.goodee39.MVCService.MVCService2;
-
-
 /**
- * Servlet implementation class MVC2Controller
+ * Servlet implementation class ministoreController
  */
-@WebServlet("/MVC2Controller")
-public class MVC2Controller extends HttpServlet {
+@WebServlet("/ministoreController")
+public class ministoreController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public MVC2Controller() {
+    public ministoreController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,10 +28,9 @@ public class MVC2Controller extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		MVCService2 service = new MVCService2();
-		service.getEmpList(request);
+		request.setCharacterEncoding("utf-8");
+		RequestDispatcher rdp = request.getRequestDispatcher("/ch10/ministore_order.jsp");
 		
-		RequestDispatcher rdp = request.getRequestDispatcher("/ch10/MVC2_result.jsp");
 		rdp.forward(request, response);
 	}
 
