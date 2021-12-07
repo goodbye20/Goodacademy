@@ -15,6 +15,7 @@
     <!-- https://fontawesome.com/start -->
     <script src="https://kit.fontawesome.com/f1def33959.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="format.css">
+
     <style>
         @import url('https://fonts.googleapis.com/css?family=Montserrat:300,400,500&display=swap');
         @import url('http://cdn.jsdelivr.net/npm/xeicon@2.3.3/xeicon.min.css');
@@ -25,6 +26,7 @@
         }
 
         body {
+            overflow-x: hidden;
             margin: 0;
             color: #333;
             font-size: 18px;
@@ -48,6 +50,7 @@
             height: 200px;
             position: fixed;
             top: 0;
+            z-index: 100;
         }
 
 
@@ -137,11 +140,11 @@
 
 
         /* header nav-menu */
-        nav {
+        #top-nav {
             display: flex;
             justify-content: center;
             width: 100%;
-            height: 100px;
+            height: 50px;
         }
 
         #nav-menu {
@@ -226,8 +229,21 @@
             width: 60%;
             margin: auto;
         }
-        .tab-content h1 {
+        
+        .tab-content h2 {
             margin-bottom: 3em;
+        }
+        
+        .tab-content h1 {
+            margin: auto;
+            line-height: 2em;
+            padding-bottom: 0.5em;
+            margin-bottom: 3em;
+            border-bottom: 4px solid white;
+        }
+
+        .tab-content p {
+            font-weight: bold;
         }
 
         .tab-menu .tab-menu-list{
@@ -317,8 +333,9 @@
         .d-giveup-content p {
             padding-top: 5em;
         }
-
-        /* swiper-slide */
+        
+        
+        /* Hot Daily - swiper */
         .swiper-container {
         width: 100%;
         height: 100%;
@@ -339,7 +356,6 @@
         object-fit: cover;
       }
 
-        /* Hot Daily - swiper */
         .swiper-button-next, .swiper-button-prev {
             top: 1850px;
         }
@@ -350,8 +366,29 @@
         .swiper-pagination {
             position: relative;
         }
-        
+      /* rcm-recipe */
+        .rem-recipe-wrap {
+            width: 100%;
+            height: 800px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            background: url(images/rcm-bg.jpg) no-repeat center;
+            background-size: cover;
+        }
 
+        .rem-recipe-wrap h1{
+            padding-top: 2em;
+            text-align: center;
+        }
+        .rem-img-box {
+            width: 80%;
+            border-radius: 30%;
+            margin: auto;
+        }
+        .rem-img-box img {
+            border-radius: 30px;
+        }
       /* dont-give-up */
         .offline-wrap {
             display: flex;
@@ -371,12 +408,12 @@
             margin-left: -10%;
             background: url("images/map-bg.jpg") no-repeat;
         }
-        .offline-img {
+        /* #offline-map {
             width: 60%;
 
             padding-right: 2em;
             margin: auto;
-        }
+        } */
 
         .offline-content-wrap {
             display: flex;
@@ -414,7 +451,7 @@
                         <div><a href="">로그인</a></div>
                     </div>
                 </section>
-                <nav>
+                <nav id="top-nav">
                     <ul id="nav-menu">
                         <li><a href="#">회사소개 <span>▼</span></a>
                             <ul>
@@ -450,33 +487,33 @@
                 <video autoplay loop muted class="bgvid">
                     <source src="video/bulk-up.mp4" type="video/mp4">
                 </video>
+                <div class="tab-content-box">
                     <div id="lean-mass-up" class="tab-content" style="display: block">
-                        <div class="tab-content-box">
-                            <h1>당신은 어떤 식단을 원하십니까?</h1>
+                            <h2>당신은 어떤 식단을 원하십니까?</h2>
                             <h1>탄탄하고 건강미 넘치는 몸을 가꾸고 싶나요?</h1>
                             <p>바쁜 생활 혹은 잘못된 습관으로 인해 나도 모르게 불어난 몸을 바꾸고 싶어 운동을 시작했으나, 맘처럼 변화가 없거나 작은 변화가 있었지만 그것도 잠시 다시 제자리걸음인 것만 같아 고민이시지 않은가요?</p><br>
                             <p>건강한 체중감량을 통해 날씬하고 탄탄한 몸을 만드는 식단을 함께 알아보러 가보실까요?</p>
                         </div>
-                    </div>
-                    
-                   <div id="diet" class="tab-content">
-                       <h1>당신은 어떤 식단을 원하십니까?</h1>
-                       <h1>늘어난 뱃살, 운동할 시간은 부족하고 식단을 통해 체중감량을 하고 싶으신가요?</h1>
-                       <p>오랜 기간 잘못된 식습관으로 인해 늘어난 체중 때문에 늘 고민하고 먹고싶은 것을 참아도 보고 
+                        
+                        <div id="diet" class="tab-content">
+                            <h2>당신은 어떤 식단을 원하십니까?</h2>
+                            <h1>늘어난 뱃살, 운동할 시간은 부족하고<br> 식단을 통해 체중감량을 하고 싶으신가요?</h1>
+                            <p>오랜 기간 잘못된 식습관으로 인해 늘어난 체중 때문에 늘 고민하고 먹고싶은 것을 참아도 보고 
                         굶어봐도 금방 제자리인 몸무게에 힘들어 하고 계신가요?</p><br>
                         <p>이대로는 건강조차 헤칠수 있습니다. 먹지않고 굶는 것은 결국 단기적일뿐, 건강한 식습관을 통해 이젠 굶지 않고 챙겨먹으면서
                             날씬한 몸을 만드는 식단을 함께 알아보러 가보실까요?</p>
                         </div>
                         
-                    <div id="bulk-up" class="tab-content">
-                        <h1>당신은 어떤 식단을 원하십니까?</h1>
-                        <h1>왜소한 체형에서 이제 그만 건장하고 큰 골격의 멋진 몸으로 바뀌고 싶나요?</h1>
-                        <p>어릴적부터 외소해서 아무리 열심히 운동을 하고, 뭐든지 잘챙겨먹는데도 불구하고 성장하지 않는 몸에 스트레스 받고, 남들이 항상
-                            너무 이렇게나 잘먹는데 어떻게 이렇게 말랐냐는 소리를 듣지는 않으신가요?</p><br>
-                            <p>지금부터 조금만 식습관을 바꾸고, 개선하면 건장하고 멋진 몸으로 거듭날 수 있습니다. 우리 함께 알아보러 가보실까요?</p>
-                    </div>
-                    <button id="prev-btn"><i class="fas fa-chevron-circle-left"></i></button>
-                    <button id="next-btn"><i class="fas fa-chevron-circle-right"></i></button>
+                        <div id="bulk-up" class="tab-content">
+                            <h2>당신은 어떤 식단을 원하십니까?</h2>
+                            <h1>왜소한 체형에서 이제 그만<br> 건장하고 큰 골격의 멋진 몸으로 바뀌고 싶나요?</h1>
+                            <p>어릴적부터 외소해서 아무리 열심히 운동을 하고, 뭐든지 잘챙겨먹는데도 불구하고 성장하지 않는 몸에 스트레스 받고, 남들이 항상
+                                너무 이렇게나 잘먹는데 어떻게 이렇게 말랐냐는 소리를 듣지는 않으신가요?</p><br>
+                                <p>지금부터 조금만 식습관을 바꾸고, 개선하면 건장하고 멋진 몸으로 거듭날 수 있습니다. 우리 함께 알아보러 가보실까요?</p>
+                            </div>
+                            <button id="prev-btn"><i class="fas fa-chevron-circle-left"></i></button>
+                            <button id="next-btn"><i class="fas fa-chevron-circle-right"></i></button>
+                        </div>
                 </div>
                 <div class="progress">
                     <div class="progress__filled"></div>
@@ -541,8 +578,8 @@
                 <div class="rem-recipe-wrap">
                     <h1 class="rem-recipe-title">11월 4째주<br>
                     BalanceDiary 추천 레서피</h1>
-                    <div>
-
+                    <div class="rem-img-box">
+                        <img src="images/rem-img.png" alt="rem-img">
                     </div>
                 </div>
             </section>
@@ -558,12 +595,12 @@
                             언제든 열려있으니 마음 편히 찾아와주세요. <br>
                             항상 여러분과 함께 하겠습니다.</p>
 
-                        <p><a href="">찾아오시는 길</a></p>
+                        <p><a href="#">찾아오시는 길</a></p>
                     </div>
                 </div>
                 <div class="offline-map-bg1">
                 <div class="offline-map-bg2">
-                   <img src="images/dont-give-up.webp" class="offline-img" alt="offline-img">
+                   <div id="offline-map" style="width:500px;height:400px;"></div>
                 </div>
                 </div>
             </section>
@@ -571,8 +608,16 @@
     </div>
 
     
-    
+    <!-- Kakao Map API Key -->
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=14cb9bc3a7b063f105adcc931afc5a9e"></script>
     <script>
+        // var mapContainer = document.getElementById('offline-map'),
+        //     mapOption = {
+        //     center: new kakao.maps.LatLng(37.4778429, 126.8784392),
+        //     level: 3
+        //     };
+        //     var map = new kakao.maps.Map(mapContainer, mapOption);
+
       let swiper = new Swiper(".mySwiper", {
         spaceBetween: 30,
         centeredSlides: true,
@@ -593,13 +638,23 @@
 
         // scroll top-menu
         window.onscroll = function(){ scrollFunction()};
+        const navText = document.querySelectorAll("#nav-menu>li>a");
 
         function scrollFunction() {
         if (document.body.scrollTop > 50 || document.documentElement.scrollTop > 50) {
 
             document.getElementById("top-menu").style.backgroundColor = "teal";
+            document.getElementById("top-nav").style.backgroundColor = "#F5F5F5";
+
+            for (const nText of navText) {
+                nText.style.color = "#464646";
+            };
         } else {
             document.getElementById("top-menu").style.backgroundColor = "";
+            document.getElementById("top-nav").style.backgroundColor = "";
+            for (const nText of navText) {
+                nText.style.color = "";
+            };
         }
     }
         // top-menu search

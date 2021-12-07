@@ -7,6 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<a href="<%=request.getContextPath()%>/이영주test1Controller">이동</a>
+	<h1>name : ${param.name}</h1>
+	<h1>pw : ${param.pw}</h1>
 </body>
 </html>

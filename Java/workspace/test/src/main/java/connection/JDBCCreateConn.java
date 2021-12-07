@@ -8,7 +8,7 @@ public class JDBCCreateConn {
 	
 	static {
 		try {
-		String connect = "jdbc:mariadb://localhost:3310/scott";
+		String connect = "jdbc:mariadb://localhost:3310/mydb2";
 		String user = "root";
 		String password = "7227";
 		
