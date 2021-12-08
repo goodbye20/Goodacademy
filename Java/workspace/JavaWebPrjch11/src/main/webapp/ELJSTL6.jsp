@@ -22,8 +22,8 @@
 	<%-->-- var="현재 아이템의 변수명" begin="시작 값" end="종료 값" step="증가 값"
 		 varStatus="반복 상태 값을 지닌 변수" --%>
 	<c:forEach var="i" begin="0" end="10" step="2" varStatus="x">
-		<p> i= ${i} , i*i=${i * i}<c:if test=
-		"${x.last}">, last=${i}</c:if></p>
+		<p> i= ${i} , i*i=${i * i}
+		<c:if test= "${x.last}">, last=${i}</c:if></p>
 	</c:forEach>
 	
 	<%-- <c:forEach var="현재 아이템의 변수명" item="반복할 데이터가 있는 아이템"
