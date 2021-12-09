@@ -366,6 +366,8 @@
         .swiper-pagination {
             position: relative;
         }
+
+
       /* rcm-recipe */
         .rem-recipe-wrap {
             width: 100%;
@@ -379,6 +381,7 @@
 
         .rem-recipe-wrap h1{
             padding-top: 2em;
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
             text-align: center;
         }
         .rem-img-box {
@@ -389,7 +392,16 @@
         .rem-img-box img {
             border-radius: 30px;
         }
-      /* dont-give-up */
+        
+      /* collabo-card  */
+      .collabo-cards {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap:20px;
+            margin-bottom: 40px;
+        }
+
+      /* offline-map */
         .offline-wrap {
             display: flex;
             height: 500px;
@@ -404,16 +416,18 @@
         }
         .offline-map-bg2 {
             display: flex;
+            width: 80%;
             height: 400px;
             margin-left: -10%;
+            padding-right: 10em;
             background: url("images/map-bg.jpg") no-repeat;
         }
-        /* #offline-map {
+        #offline-map {
             width: 60%;
-
-            padding-right: 2em;
+            border-radius: 30px;
+            height: 300px;
             margin: auto;
-        } */
+        }
 
         .offline-content-wrap {
             display: flex;
@@ -477,7 +491,7 @@
                     </ul>
                 </nav>
             </section>
-            <div class="content-area">
+            <section class="content-area">
                 <video autoplay loop muted class="bgvid">
                     <source src="video/lean-mass-up.mp4" type="video/mp4">
                 </video>
@@ -514,7 +528,7 @@
                             <button id="prev-btn"><i class="fas fa-chevron-circle-left"></i></button>
                             <button id="next-btn"><i class="fas fa-chevron-circle-right"></i></button>
                         </div>
-                </div>
+                </section>
                 <div class="progress">
                     <div class="progress__filled"></div>
                 </div>
@@ -537,7 +551,7 @@
                 <div class="d-giveup-imgbg">
                    <img src="images/dont-give-up.webp" class="d-giveup-img" alt="d-giveup-img">
                 </div>
-                <div class="d-giveup-content-wrap">
+                <article class="d-giveup-content-wrap">
                     <div class="d-giveup-content">
                         <h1>We Can Do It !</h1>
                         <p>여러분들이 포기하지 않는다면 <br>
@@ -546,7 +560,7 @@
                             
                             포기하지마세요.</p>
                     </div>
-                </div>
+                </article>
             </section>
             <section id="hot-daily-wrap">
                 <div class="swiper-container mySwiper">
@@ -575,13 +589,58 @@
                 </div>
             </section>
             <section id="rcm-recipe">
-                <div class="rem-recipe-wrap">
+                <article class="rem-recipe-wrap">
                     <h1 class="rem-recipe-title">11월 4째주<br>
                     BalanceDiary 추천 레서피</h1>
                     <div class="rem-img-box">
                         <img src="images/rem-img.png" alt="rem-img">
                     </div>
-                </div>
+                </article>
+            </section>
+            <section id="collabo-wrap">
+                <h1 class="collabo-title"> 제 2회 Balance Diary 콜라보</h1>
+                <p>믿을 수 있고 친근하게 유명 셀럽과 함께 식단 관리를 해보아요 ></p>
+                <article class="collabo-cards">
+                      <div>
+                        <img src="images/collabo-card1.png" alt="백종원">
+                        <h3>요식업의 선두주자 ‘백종원’</h3>
+                        <p>
+                            1994년부터 더본코리아를 세워서 경영 중인 그는 새마을 식당, 한신포자, 홍콩반점0410, 미정 국수 등 대중들에게도 친숙한 여러 프렌차이즈를 운영 중이며, 중식, 한식, 분식 등은 물론 카페 “빽다방”까지 거의 모든 범위를 아우르는 대한민국에서 가장 친숙하며 실력을 인정받은 CEO이자 요리 연구가이다.
+
+                            그와 함께 그의 음식에 대한 다향한 경험에서 나오는 건강에 대한 철학과 그가 즐겨 먹는 비밀 레서피를 함께 알아보자 
+                        </p>
+                        <a href="#">레서피 보러가기 <i class="fas fa-chevron-right"></i></a>
+                      </div>
+                      <div>
+                        <img src="images/collabo-card2.png" alt="승우아빠" />
+                        <h3> 유튜버 ‘승우아빠’</h3>
+                        <p>
+                            셰프 출신 요리 유튜버로 유명 호텔에서도 근무한 경험이 있을 정도로 실력자다. 초보자도 따라 하기 쉬운 요리를 소개하는 ‘남편세끼’, 한가지 재료로 N가지 요리법을 알려주는 ‘세상 간단한 시리즈’, 재료나 조리도구에 대한 다양한 이야기와 꿀팁을 소개하는 ‘궁금해 요리’ 등 요리에 관한 다양한 콘텐츠가 있다. 쉽고 간단한 레시피를 소개하고, 매번 ‘사드세요.. 제발!’이라는 결론과 함께 특유의 유머 감각으로 많은 이들의 호응을 얻고 있다.
+
+                            이번에는 그 만의 따라하기 쉬우면서도 건강한 레서피를 함께 알아보자.
+                        </p>
+                        <a href="#">레서피 보러가기 <i class="fas fa-chevron-right"></i></a>
+                      </div>
+                      <div>
+                        <img src="images/collabo-card3.png" alt="최현석" />
+                        <h3> 크레이지 셰프 ‘최현석’ </h3>
+                        <p>
+                            맛있는 음식을 먹고 나면 안 좋았던 기억도 잊혀질 정도로 행복해진다. 거기에 미감 있는 플레이팅이 더해지면 감탄이 절로 나온다. 셰프들이 출연하는 방송이 많아지고 있는 셰프전성시대. 그 중심에 최현석 셰프가 있다. 허세셰프, 크레이지 셰프 등 다양한 별명을 갖고 있는 그는 고졸출신이지만 학력이라는 벽을 뛰어넘을 정도의 열정과 창의력을 갖고 있다. 1,2년 일하다가 다른 곳으로 이직하는 요리사와 달리 첫 출근한 직장에서 10년 동안 일하면서 기본기를 다졌다. 그의 성실함 은 창의성 있는 창작요리로 이어졌고, 크레이지 셰프라는 별명까지 얻었다. 최현석 셰프의 고급스럽지만 누구나 할수 있는 건강 레서피를 배워보자.
+                        </p>
+                        <a href="#">레서피 보러가기 <i class="fas fa-chevron-right"></i></a>
+                      </div>
+                      <div>
+                        <img src="images/collabo-card4.png" alt="이연복" />
+                        <h3> 중화요리의 대가 ‘이연복’</h3>
+                        <p>
+                        이연복 셰프는 중식계의 스타 요리사로 꼽힌다. 열세 살 중국집 배달 일을 시작으로 43년간 중식 인생을 살아왔다. 중식이 가장 화려한 꽃을 피웠던 70년대, 화려함의 극치를 자랑하던 당대 최고의 중식당 사보이 호텔의 '호화대반점'에서 요리의 꽃을 피우기 시작했다. 이어 대만대사관 최연소 주방장에 오르며 명성을 날렸다.
+
+                        '목란'의 오너 셰프인 이연복의 탕수육와 동파육은 최고의 맛으로 미식가들의 칭송을 받고 있다. 후각을 잃고, 오직 미각과 손끝의 감각만으로 대한민국 미식가들을 사로잡은 이연복 셰프는 '황금비율의 신'으로 불린다. 
+                        그와 함께 이색적인 건강 레서피를 배워보자.
+                        </p>
+                        <a href="#">레서피 보러가기 <i class="fas fa-chevron-right"></i></a>
+                      </div>
+                </article>
             </section>
             <section class="offline-wrap">
                 <div class="offline-content-wrap">
@@ -600,7 +659,7 @@
                 </div>
                 <div class="offline-map-bg1">
                 <div class="offline-map-bg2">
-                   <div id="offline-map" style="width:500px;height:400px;"></div>
+                   <div id="offline-map"></div>
                 </div>
                 </div>
             </section>

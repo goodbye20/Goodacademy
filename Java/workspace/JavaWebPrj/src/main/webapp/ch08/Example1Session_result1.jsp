@@ -10,7 +10,7 @@
 	String data2 = (String)session.getAttribute("data2");
 	// 서블릿에서 set으로 설정해둔 값을 get으로 받아온 형식
 	// 중요한 부분 request는 생존영역이 재요청 전까지만 생존하기 때문에
-	// forward로는 생존해서 바로 전달이 되나, redirect로는 일반적으론 소멸해서 쿼리(getParam(스트링값)로)를 통해 보내줘야함
+	// forword로는 생존해서 바로 전달이 되나, redirect로는 일반적으론 소멸해서 쿼리(getParam(스트링값)로)를 통해 보내줘야함
 %>    
 <!DOCTYPE html>
 <html>

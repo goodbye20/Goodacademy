@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="JavaWebPrj" path="/JavaWebPrj" reloadable="true" source="org.eclipse.jst.jee.server:JavaWebPrj"/><Context docBase="JavaWebPrjCh10" path="/JavaWebPrjCh10" reloadable="true" source="org.eclipse.jst.jee.server:JavaWebPrjCh10"/><Context docBase="JavaWebPrjch09" path="/JavaWebPrjch09" reloadable="true" source="org.eclipse.jst.jee.server:JavaWebPrjch09"/><Context docBase="test" path="/test" reloadable="true" source="org.eclipse.jst.jee.server:test"/><Context docBase="JavaWebPrjch11" path="/JavaWebPrjch11" reloadable="true" source="org.eclipse.jst.jee.server:JavaWebPrjch11"/></Host>
+      <Context docBase="JavaWebPrj" path="/JavaWebPrj" reloadable="true" source="org.eclipse.jst.jee.server:JavaWebPrj"/><Context docBase="JavaWebPrjCh10" path="/JavaWebPrjCh10" reloadable="true" source="org.eclipse.jst.jee.server:JavaWebPrjCh10"/><Context docBase="JavaWebPrjch09" path="/JavaWebPrjch09" reloadable="true" source="org.eclipse.jst.jee.server:JavaWebPrjch09"/><Context docBase="test" path="/test" reloadable="true" source="org.eclipse.jst.jee.server:test"/><Context docBase="JavaWebPrjch11" path="/JavaWebPrjch11" reloadable="true" source="org.eclipse.jst.jee.server:JavaWebPrjch11"/><Context docBase="JavaWebPrjCh12" path="/JavaWebPrjCh12" reloadable="true" source="org.eclipse.jst.jee.server:JavaWebPrjCh12"/></Host>
     </Engine>
   </Service>
 </Server>
