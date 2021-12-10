@@ -5,6 +5,7 @@ import java.io.IOException;
 import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
+import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
@@ -30,14 +31,17 @@ public class QuizLoginController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		request.setCharacterEncoding("utf-8");
-		LoginVo vo = new LoginVo();
-		vo.setId(request.getParameter("id"));
-		vo.setPw(request.getParameter("pw"));
 		
-		request.setAttribute("vo", vo);
-		RequestDispatcher rdp = request.getRequestDispatcher("/quiz/QuizLogin1_2.jsp");
-		rdp.forward(request, response);
+		request.setCharacterEncoding("utf-8");
+		String id = request.getParameter("id");
+		String pw = request.getParameter("pw");
+		
+		Cookie userId = new Cookie("id", id);
+		Cookie userPw = new Cookie("pw", pw);
+		userId.setMaxAge(60);
+		response.addCookie(userId);
+		
+		response.sendRedirect(request.getContextPath()+"/example/SessionEx1_2.jsp");
 	}
 
 	/**

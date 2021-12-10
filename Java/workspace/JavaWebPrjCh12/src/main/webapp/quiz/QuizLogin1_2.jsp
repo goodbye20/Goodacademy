@@ -8,8 +8,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<p>${vo.id}</p>
-	<p>${vo.pw}</p>
+	<p>${userId.id}</p>
+	<p>${userPw.pw}</p>
 	<c:choose>
 		<c:when test="">
 			<h1>로그인 되셨습니다.</h1>

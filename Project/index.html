@@ -381,7 +381,8 @@
 
         .rem-recipe-wrap h1{
             padding-top: 2em;
-            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 4px 4px rgba(0, 0, 0, 0.25);
+            font-size: 2em;
+            text-shadow: 0 1px black;
             text-align: center;
         }
         .rem-img-box {
@@ -400,6 +401,25 @@
             gap:20px;
             margin-bottom: 40px;
         }
+
+
+
+      /* app-tester */
+        .app-tester-wrap {
+            width: 100%;
+            height: 1200px;
+            text-align: center;
+            background: url(https://cdn.dribbble.com/users/1345092/screenshots/9976485/media/9a6b5b4b54f25fe77fe9cb14a646aec4.png) no-repeat center;
+            background-size: cover;
+        }
+
+        .app-tester-wrap {
+            text-shadow: 0 2.5px whitesmoke;
+            padding-top: 4em;
+            line-height: 2.5em;
+            font-size: 1.5em;
+        }
+
 
       /* offline-map */
         .offline-wrap {
@@ -445,6 +465,63 @@
             padding-top: 5em;
         } 
 
+
+        /* footer */
+        footer {
+            width: 100%;
+            background-color: #377E7F;
+            color: #F5F5F5;
+            display: flex;
+            display: flex;
+        }
+        .footer-logo {
+            padding-top: 6em;
+            width: 15%;
+            text-align: center;
+        }
+        .footer-logo a{
+            color: white;
+            font-weight: bold;
+            font-size: 1.5em;
+        }
+        .footer-content-box {
+            width: 100%;
+        }
+        .footer-infor {
+            padding-top: 2em;
+            padding-left: 6em;
+            display: flex;
+        }
+        .footer-infor article {
+            padding-left: 2em;
+        }
+        .footer-nav {
+            display: flex;
+            font-weight: bold;
+            padding-top: 2em;
+            padding-right: 10em;
+            justify-content: center;
+        }
+        .footer-aBox {
+            display: grid;
+            padding: 2em 5em;
+            margin-right: 10em;
+            grid-template-columns: repeat(4, 1fr);
+        }
+        .footer-aBox a{
+            text-align: center;
+            font-size: 2.5em;
+            padding: 10px;
+            color: white;
+        }
+        .footer-aBox img {
+            width: 60%;
+            height: 50px;
+        }
+        .copyright {
+            padding-right: 10em;
+            text-align: center;
+        }
     </style>
 </head>
 <body>
@@ -641,6 +718,13 @@
                         <a href="#">레서피 보러가기 <i class="fas fa-chevron-right"></i></a>
                       </div>
                 </article>
+            <section id="app-tester">
+                <article class="app-tester-wrap">
+                    <h2>여러분들의 식단관리를 함께 할 BalanceDiary가 <br>
+                        모바일앱으로도 개발 중에 있습니다. 초기 버전부터 함께 해주실<br>
+                        베타 테스터분들을 모집 중 입니다. </h2>
+                </article>
+            </section>    
             </section>
             <section class="offline-wrap">
                 <div class="offline-content-wrap">
@@ -664,6 +748,45 @@
                 </div>
             </section>
         </main>
+        <footer>
+            <article class="footer-logo"><a href="#">BalanceDiary</a></article>
+            <section class="footer-content-box">
+                <nav>
+                    <ul class="footer-nav">
+                        <li>회사소개 ㅣ</li>
+                        <li>제휴문의 ㅣ</li>
+                        <li>광고문의 ㅣ</li>
+                        <li>이용약관 ㅣ</li>
+                        <li>개인정보처리방침 ㅣ</li>
+                        <li>공지사항</li>
+                    </ul>
+                </nav>
+                <div class="footer-infor">
+                    <address>
+                        <h6>(주)발란스다이어리</h6>
+                        <p>등록번호: 경기 이 00000 | 등록연월일: 2011. 11. 11</p>
+                        <p>발행인: 이영주 | 편집인: 이영주 | 발행소: 서울 금천구 가산디지털2로 115 대륭테크노타운 3차 1109호</p>
+                        <p>발행연월일: 2011 11. 11 | 전화번호: 02 - 0000 - 0000 </p>
+                    </address>
+                    <article>
+                        <h6>고객상담센터 080-777-7777</h6>
+                        <p>E-mail: BalanceDiary@naver.com</p>
+                        <p>평일 : 09:00 - 18:00</p>
+                    </article>
+                </div>
+                <div class="footer-aBox">
+                    <a href="https://www.youtube.com"><i class="fab fa-youtube"></i></a>
+                    <a href="https://www.twitter.com"><i class="fab fa-twitter"></i></a>
+                    <a href="https://www.facebook.com"><i class="fab fa-facebook"></i></a>
+                    <a href="https://www.instagram.com"><i class="fab fa-instagram"></i></a>
+                    <a href="https://www.ePrivacy.or.kr"><img src="images/ePrivacy.png" alt="ePrivacy"></a>
+                    <a href="https://www.kns.or.kr"><img src="images/kns.png" alt="kns"></a>
+                    <a href="https://www.mfds.go.kr"><img src="images/foodsafe.png" alt="foodsafe"></a>
+                    <a href="https://www.mohw.go.kr"><img src="images/bogun.png" alt="bogun"></a>
+                </div>
+                <div class="copyright"><h5>Copyright ⓒ balanceDiary co. Ltd All Rights Reserved.</h5></div>
+            </section>
+        </footer>
     </div>
 
     
