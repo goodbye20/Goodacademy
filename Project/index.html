@@ -793,6 +793,7 @@
     <!-- Kakao Map API Key -->
     <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=bb642196967940a216f068364435eabe&libraries=services"></script>
     <script>
+        // offline-map
         var mapContainer = document.getElementById('offline-map'),
             mapOption = {
             center: new kakao.maps.LatLng(37.4778429, 126.8784392),
@@ -800,6 +801,8 @@
             };
             var map = new kakao.maps.Map(mapContainer, mapOption);
 
+
+        // hot-daily-menu 
       let swiper = new Swiper(".mySwiper", {
         spaceBetween: 30,
         centeredSlides: true,
