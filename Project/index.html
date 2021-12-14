@@ -14,6 +14,7 @@
       
     <!-- https://fontawesome.com/start -->
     <script src="https://kit.fontawesome.com/f1def33959.js" crossorigin="anonymous"></script>
+    <!-- default css -->
     <link rel="stylesheet" href="format.css">
 
     <style>
@@ -32,7 +33,7 @@
             font-size: 18px;
             line-height: 1.6em;
         }
-
+        
         a {
             text-decoration: none;
             color: #333;
@@ -42,7 +43,9 @@
             width: 100%;
             height: 100%;
         }
-
+        p.blank {
+            height: 300px;
+        }
         /* header */
 
         #top-area {
@@ -357,7 +360,7 @@
       }
 
         .swiper-button-next, .swiper-button-prev {
-            top: 1850px;
+            top: 2450px;
         }
         .swiper-button-next:after, .swiper-button-prev:after{
             display: none;
@@ -395,13 +398,19 @@
         }
         
       /* collabo-card  */
+      .collabo-title {
+          text-align: center;
+      }
       .collabo-cards {
             display: grid;
             grid-template-columns: repeat(4, 1fr);
             gap:20px;
             margin-bottom: 40px;
         }
-
+        .collabo-card-img {
+            position: absolute;
+            padding: 12em 0 0 2em;
+        }
 
 
       /* app-tester */
@@ -624,6 +633,7 @@
                   </div>
         </header>
         <main>
+            <p class="blank"></p>
             <section class="dont-giveup-wrap">
                 <div class="d-giveup-imgbg">
                    <img src="images/dont-give-up.webp" class="d-giveup-img" alt="d-giveup-img">
@@ -639,6 +649,7 @@
                     </div>
                 </article>
             </section>
+            <p class="blank"></p>
             <section id="hot-daily-wrap">
                 <div class="swiper-container mySwiper">
                     <div class="swiper-wrapper">
@@ -665,6 +676,7 @@
                     </div>
                 </div>
             </section>
+            <p class="blank"></p>
             <section id="rcm-recipe">
                 <article class="rem-recipe-wrap">
                     <h1 class="rem-recipe-title">11월 4째주<br>
@@ -674,11 +686,15 @@
                     </div>
                 </article>
             </section>
+            <p class="blank"></p>
             <section id="collabo-wrap">
-                <h1 class="collabo-title"> 제 2회 Balance Diary 콜라보</h1>
-                <p>믿을 수 있고 친근하게 유명 셀럽과 함께 식단 관리를 해보아요 ></p>
+                <div class="collabo-title">
+                    <h1> 제 2회 Balance Diary 콜라보</h1>
+                    <p>믿을 수 있고 친근하게 유명 셀럽과 함께 식단 관리를 해보아요 ></p>
+                </div>
                 <article class="collabo-cards">
                       <div>
+                        <div><img src="images/beak.png" alt="백종원" class="collabo-card-img"></div>
                         <img src="images/collabo-card1.png" alt="백종원">
                         <h3>요식업의 선두주자 ‘백종원’</h3>
                         <p>
@@ -689,6 +705,7 @@
                         <a href="#">레서피 보러가기 <i class="fas fa-chevron-right"></i></a>
                       </div>
                       <div>
+                        <div><img src="images/SWFather.png" alt="승우아빠" class="collabo-card-img"></div>
                         <img src="images/collabo-card2.png" alt="승우아빠" />
                         <h3> 유튜버 ‘승우아빠’</h3>
                         <p>
@@ -699,6 +716,7 @@
                         <a href="#">레서피 보러가기 <i class="fas fa-chevron-right"></i></a>
                       </div>
                       <div>
+                        <div><img src="images/choi.png" alt="최현석" class="collabo-card-img"></div>
                         <img src="images/collabo-card3.png" alt="최현석" />
                         <h3> 크레이지 셰프 ‘최현석’ </h3>
                         <p>
@@ -707,6 +725,7 @@
                         <a href="#">레서피 보러가기 <i class="fas fa-chevron-right"></i></a>
                       </div>
                       <div>
+                        <div><img src="images/bok.png" alt="이연복" class="collabo-card-img"></div>
                         <img src="images/collabo-card4.png" alt="이연복" />
                         <h3> 중화요리의 대가 ‘이연복’</h3>
                         <p>
@@ -718,6 +737,7 @@
                         <a href="#">레서피 보러가기 <i class="fas fa-chevron-right"></i></a>
                       </div>
                 </article>
+                <p class="blank"></p>
             <section id="app-tester">
                 <article class="app-tester-wrap">
                     <h2>여러분들의 식단관리를 함께 할 BalanceDiary가 <br>
@@ -725,6 +745,7 @@
                         베타 테스터분들을 모집 중 입니다. </h2>
                 </article>
             </section>    
+            <p class="blank"></p>
             </section>
             <section class="offline-wrap">
                 <div class="offline-content-wrap">
@@ -748,6 +769,7 @@
                 </div>
             </section>
         </main>
+        <p class="blank"></p>
         <footer>
             <article class="footer-logo"><a href="#">BalanceDiary</a></article>
             <section class="footer-content-box">

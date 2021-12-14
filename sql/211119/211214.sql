@@ -1,0 +1,16 @@
+USE mydb2;
+
+CREATE TABLE jdbc_table(
+	int_data INT NOT NULL,
+	str_data VARCHAR(255) NOT NULL
+);
+
+USE mydb3;
+CREATE TABLE signupTable(
+	id VARCHAR(255) NOT NULL,
+	pw INT NOT NULL,
+	name VARCHAR(255) NOT NULL,
+	age VARCHAR(255) NOT NULL,
+	gender VARCHAR(50) NOT NULL,
+	email VARCHAR(255) NOT NULL
+);

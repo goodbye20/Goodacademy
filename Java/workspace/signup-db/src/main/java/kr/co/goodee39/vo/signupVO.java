@@ -1,27 +1,23 @@
 package kr.co.goodee39.vo;
 
-import org.apache.ibatis.type.Alias;
-
-@Alias("mvo")
-public class MemberVO {
-	int id;
-	String password;
-	String name;
-	int age;
-	String gender;
-	String email;
-	
-	public int getId() {
+public class signupVO {
+	private String id;
+	private String pw;
+	private String name;
+	private String age;
+	private String gender;
+	private String email;
+	public String getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(String id) {
 		this.id = id;
 	}
-	public String getPassword() {
-		return password;
+	public String getPw() {
+		return pw;
 	}
-	public void setPassword(String password) {
-		this.password = password;
+	public void setPw(String pw) {
+		this.pw = pw;
 	}
 	public String getName() {
 		return name;
@@ -29,10 +25,10 @@ public class MemberVO {
 	public void setName(String name) {
 		this.name = name;
 	}
-	public int getAge() {
+	public String getAge() {
 		return age;
 	}
-	public void setAge(int age) {
+	public void setAge(String age) {
 		this.age = age;
 	}
 	public String getGender() {
@@ -50,4 +46,3 @@ public class MemberVO {
 	
 	
 }
-

@@ -2,19 +2,11 @@
 <!DOCTYPE mapper
   PUBLIC "-//mybatis.org//DTD mapper 3.0//EN"
   "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
-  
-   <!-- parameterType 가져오는 형태 -->
-   <!-- resultType 내보내는 형태 -->
-  
+
+<!-- parameterType 가져오는 형태 -->
+<!-- resultType 내보내는 형태 -->
+
 <mapper namespace="member">
-	<resultMap type="kr.co.goodee39.vo.MemberMapper" id="memberMap">
-		<result property="userId" column="id"/>
-		<result property="userPassword" column="password"/>
-		<result property="userName" column="name"/>
-		<result property="userAge" column="age"/>
-		<result property="userGender" column="gender"/>
-		<result property="userEmail" column="email"/>
-	</resultMap>
 
 	<!-- 파라미터 타입 없이 한 row만 가져오는 형태 -->
 	<select id="getCount" resultType="int">
@@ -24,25 +16,49 @@
 		select 3
 	</select>
 	<select id="getFirstMember" resultType="map">
-		select * from member limit 1
+		select * from member
+		limit 1
 	</select>
 	<!-- <select id="getFirstMemberWithVO" resultType="kr.co.goodee39.vo.MemberVO"> -->
 	<select id="getFirstMemberWithVO" resultType="mvo">
-		select * from member limit 1
+		select * from
+		member limit 1
 	</select>
+
+	<!-- 불러오고자하는 값의 column의 이름과 설정한 이름이 일치 하지 않을 때 -->
+	<!-- ******* resultMap태그의 id와 select문의 resultMap속성 값의 일치 ******** -->
+	<resultMap type="kr.co.goodee39.vo.MemberMapper"
+		id="memberMap">
+		<result property="userId" column="id" />
+		<result property="userPassword" column="password" />
+		<result property="userName" column="name" />
+		<result property="userAge" column="age" />
+		<result property="userGender" column="gender" />
+		<result property="userEmail" column="email" />
+	</resultMap>
 	<select id="getFirstMemberWithMapper" resultMap="memberMap">
-		select * from member limit 1
+		select * from
+		member limit 1
 	</select>
+
+
 	<!-- 파라미터를 가지고 데이터를 들고오는 형태 -->
 	<select id="getName" parameterType="String" resultType="String">
-		select name from member where email = #{email}
+		select
+		name from member where email = #{email}
 	</select>
-	<select id="getNameFromMap" parameterType="map" resultType="String">
-		select name from member where email = #{email} and id = #{id}
+	<select id="getNameFromMap" parameterType="map"
+		resultType="String">
+		select name from member where email = #{email} and id =
+		#{id}
 	</select>
-	<select id="getNameFromVO" parameterType="mvo" resultType="String">
-		select name from member where email = #{email} and id = #{id}
+	<select id="getNameFromVO" parameterType="mvo"
+		resultType="String">
+		select name from member where email = #{email} and id =
+		#{id}
 	</select>
+
+
 	<!-- 다수의 row를 가져오는방법 -->
 	<select id="getList" resultType="map">
 		select * from member
@@ -50,28 +66,114 @@
 	<select id="getListByVO" resultType="mvo">
 		select * from member
 	</select>
-	
-	
+
+
 	<!-- cud 예제 -->
 	<insert id="insertMember" parameterType="mvo">
-		insert into member(id,password,name,age,gender,email)
+		insert into
+		member(id,password,name,age,gender,email)
 		values(#{id},#{password},#{name},#{age},#{gender},#{email})
 	</insert>
-	
+
 	<update id="updateMember" parameterType="mvo">
-		update member set name=#{name} where id=#{id}
+		update member set
+		name=#{name} where id=#{id}
 	</update>
-	
+
 	<delete id="deleteMember" parameterType="mvo">
-		delete from member where id = #{id}
+		delete from member where
+		id = #{id}
 	</delete>
-	
+
+	<!-- id값은 입력없이 자동으로 늘어나게 하고 나머지 값만 넣기 -->
 	<insert id="insertMember2" parameterType="mvo">
 		<selectKey keyProperty="id" resultType="int" order="BEFORE">
-		<!-- order을 통해 아래 쿼리가 실행되기 전 먼저 위 쿼리를 실행시킴 -->
-			select MAX(ID)+ from member
+			<!-- order을 통해 아래 쿼리가 실행되기 전 먼저 위 쿼리를 실행시킴 -->
+			<!-- id값 최대값에 +1 씩 더해주는 쿼리인 것 -->
+			select MAX(ID)+1 from member
 		</selectKey>
 		insert into member(id,password,name,age,gender,email)
 		values(#{id},#{password},#{name},#{age},#{gender},#{email})
 	</insert>
+
+
+	<!-- 동적 select -->
+	<select id="activeSelect1" parameterType="mvo" resultType="mvo">
+		select * from member
+		<!-- 그냥 where만 있으면 where and 가 되기 때문에 간단한 문장 1=1을 삽입해준 것 -->
+		<!-- where 1=1 -->
+		
+		<!-- 위와 같은 때를 대비해 where 태그를 제공해주는 것이 있음 -->
+		<where>
+		<if test="id !=0">
+			and id = #{id}
+		</if>
+		<if test="email !=null">
+			and email like #{email}
+		</if>
+		<if test="gender !=null">
+			and gender = #{gender}
+		</if>
+		<!-- and id = #{id} -->
+		<!-- and email like = #{email} -->
+		</where>
+	</select>
+	
+	<!-- 위의 다중 if는 각 if문이 만족만하면 중복 적용되지만 -->
+	<!-- 아래 when은 switch문과 같아서 하나가 만족되면 break되듯이 하나만 적용 -->
+	<select id="activeSelect2" parameterType="mvo" resultType="mvo">
+		select * from member
+		<where>
+			<choose>
+				<when test="id != 0">
+					and id = #{id}
+				</when>
+				<when test="email != null ">
+					and email like = #{email}
+				</when>
+				<when test="gender != null">
+					and gender = #{gender}
+				</when>
+				<otherwise>
+					and 1 = 1;
+				</otherwise>
+			</choose>
+		</where>
+	</select>
+	
+	<!-- 동적 update -->
+	<update id="activeUpdate1" parameterType="mvo">
+		update member
+		<!-- 가변적인 변수를 넣을 때 -->
+		<!-- *********************** ,(콤마) 필수 !!! ************************* -->
+		<!-- set에서 마지막에 ,(콤마)가 있다면 자동으로 삭제해줌 -->
+		<set>
+			<if test="name != null">
+				name = #{name},
+			</if>
+			<if test="password != null">
+				password = #{password},
+			</if>
+			<if test="age != 0">
+				age = #{age},
+			</if>
+			<if test="gender != null">
+				gender = #{gender},
+			</if>
+			<if test="email != null">
+				email = #{email}
+			</if>
+		</set>
+		where id = #{id}
+	</update>
+	
+	<!-- in을 통해 여러개의 조건을 넣고자 할때 -->
+	<!-- #{item} 성분은 collection형태로 받아와짐 -->
+	<select id="activeSelect3" parameterType="mvo" resultType="mvo" >
+		select * from member
+		where email in
+		<foreach collection="list" item="item" index="index" open="(" separator="," close=")" >
+			#{item}
+		</foreach>
+	</select>
 </mapper>

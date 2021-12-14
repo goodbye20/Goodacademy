@@ -20,10 +20,9 @@
 	vo2.setId(1115);
 	
 	MemberVO vo3 = new MemberVO();
-	vo3.setName("강감찬");
+	vo3.setId(1115);
 	
 	MemberVO vo4 = new MemberVO();
-	vo4.setId(1115);
 	vo4.setPassword("ffff");
 	vo4.setName("을지문덕");
 	vo4.setAge(40);
@@ -33,8 +32,8 @@
 	int i = 0;
 	try{
 		 //i = sqlSession.update("member.updateMember", vo2);
-		 //i = sqlSession.delete("member.deleteMember", vo3);
-		i = sqlSession.insert("member.insertMember2", vo4);
+		 //  i = sqlSession.delete("member.deleteMember", vo3);
+		 i = sqlSession.insert("member.insertMember2", vo4);
 		if(i>0){
 			sqlSession.commit();
 		}

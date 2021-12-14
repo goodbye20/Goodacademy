@@ -60,3 +60,26 @@ INSERT INTO mydb2.bbs(title, owner, createdate) VALUES('제목9999','곽사장',
 INSERT INTO mydb2.bbs(title, owner, createdate) VALUES('제목10','김사원','2021-12-01');
 INSERT INTO mydb2.bbs(title, owner, createdate) VALUES('제목11','최상무','2021-12-02');
 INSERT INTO mydb2.bbs(title, owner, createdate) VALUES('제목12','임대리','2021-12-02');
+
+
+mydb3CREATE DATABASE `mydb3` /*!40100 COLLATE 'utf8mb3_general_ci' */
+
+
+'utf8mb3_general_ci',
+	`EMAIL` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci'
+)
+COLLATE='utf8mb3_general_ci'
+ENGINE=InnoDB
+;
+
+CREATE TABLE `member` (
+	`ID` INT(10) UNSIGNED ZEROFILL NULL DEFAULT NULL,
+	`PASSWORD` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`NAME` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`AGE` INT(11) NULL DEFAULT NULL,
+	`GENDER` VARCHAR(50) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+	`EMAIL` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci'
+)
+COLLATE='utf8mb3_general_ci'
+ENGINE=InnoDB
+;
