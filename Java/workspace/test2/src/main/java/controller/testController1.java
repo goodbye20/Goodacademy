@@ -1,4 +1,4 @@
-package kr.co.goodee39.controller;
+package controller;
 
 import java.io.IOException;
 
@@ -9,19 +9,19 @@ import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-import kr.co.goodee39.service.signupService;
+import service.testService1;
 
 /**
- * Servlet implementation class signup_dbController
+ * Servlet implementation class testController1
  */
-@WebServlet("/signup_dbController")
-public class signup_dbController extends HttpServlet {
+@WebServlet("/testController1")
+public class testController1 extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public signup_dbController() {
+    public testController1() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -32,14 +32,13 @@ public class signup_dbController extends HttpServlet {
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
 		
-		signupService service = new signupService ();
-		service.signupMember(request);
+		testService1 service = new testService1();
+		service.getBBSVOList(request);
 		
-		System.out.println(request);
-		
-		RequestDispatcher rdp = request.getRequestDispatcher("signup_db1_2");
+		RequestDispatcher rdp = request.getRequestDispatcher("/test/test1_2.jsp");
 		rdp.forward(request, response);
 	}
+
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */

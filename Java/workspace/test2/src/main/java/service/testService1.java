@@ -1,19 +1,20 @@
-package kr.co.goodee39.service;
+package service;
 
 import javax.servlet.http.HttpServletRequest;
 
 import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 
-import kr.co.goodee39.conn.SqlSessionManager;
+import conn.SqlSessionManager;
 
-public class signupService {
+
+public class testService1 {
 	SqlSessionFactory sqlSessionFactory = SqlSessionManager.getSqlSession();
 	SqlSession sqlSession = sqlSessionFactory.openSession();
 	
-	public void signupMember(HttpServletRequest request) {
+	public void getBBSVOList(HttpServletRequest request) {
 		try {
-			request.setAttribute("list", sqlSession.insert("signup.signupMemberList"));
+			request.setAttribute("list", sqlSession.selectList("bbs.selectBBSList"));
 		} catch (Exception e) {
 			e.printStackTrace();
 		}

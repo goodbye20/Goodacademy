@@ -20,6 +20,8 @@
 		limit 1
 	</select>
 	<!-- <select id="getFirstMemberWithVO" resultType="kr.co.goodee39.vo.MemberVO"> -->
+	<!-- alias를 통해 resultType을 불러오면 매번 패키지명을 적지 않고 간단하게 불러올수 있다. -->
+	<!-- 단 그러기 위해선 config.xml파일에 typeAliases태그에 활용할 패키지를 넣어줘야함 -->
 	<select id="getFirstMemberWithVO" resultType="mvo">
 		select * from
 		member limit 1
@@ -100,8 +102,8 @@
 	<!-- 동적 select -->
 	<select id="activeSelect1" parameterType="mvo" resultType="mvo">
 		select * from member
-		<!-- 그냥 where만 있으면 where and 가 되기 때문에 간단한 문장 1=1을 삽입해준 것 -->
 		<!-- where 1=1 -->
+		<!-- 그냥 where만 있으면 where and 가 되기 때문에 간단한 문장 1=1을 삽입해준 것이었으나 -->
 		
 		<!-- 위와 같은 때를 대비해 where 태그를 제공해주는 것이 있음 -->
 		<where>
@@ -146,7 +148,7 @@
 		update member
 		<!-- 가변적인 변수를 넣을 때 -->
 		<!-- *********************** ,(콤마) 필수 !!! ************************* -->
-		<!-- set에서 마지막에 ,(콤마)가 있다면 자동으로 삭제해줌 -->
+		<!-- set에서 마지막 절은 ,(콤마)가 있다면 자동으로 삭제해줌 -->
 		<set>
 			<if test="name != null">
 				name = #{name},

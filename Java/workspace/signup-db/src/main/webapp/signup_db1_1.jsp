@@ -12,8 +12,8 @@
 		<ul>
 			<li><label for="">아이디 : </label><input type="text" id="id"
 				name="id" /></li>
-			<li><label for="">패스워드 : </label><input type="password" id="pw"
-				name="pw" /></li>
+			<li><label for="">패스워드 : </label><input type="password" id="password"
+				name="password" /></li>
 			<li><label for="">이름 : </label><input type="text" id="name"
 				name="name" /></li>
 			<li><label for="">나이 : </label><input type="text" id="age"

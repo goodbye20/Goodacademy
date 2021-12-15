@@ -21,7 +21,6 @@
   </environments>
   <mappers>
     <mapper resource="kr/co/goodee39/dao/member.xml" />
-	<mapper resource="kr/co/goodee39/dao/member1.xml" />
 	<mapper class="kr.co.goodee39.mapper.MemberQueryMapper"/>
   </mappers>
 </configuration>
