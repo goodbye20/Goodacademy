@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script type="text/javascript" src="js/jquery-3.6.0.min.js"></script>
+    <style>
+        * {
+  margin:0;
+  padding:0;
+}
+
+main {
+  position:relative;
+}
+
+#content {
+  height: 1500px;
+}
+
+footer {
+  background: #333;
+  height: 300px;
+  font-size: 30px;
+  color: #fff;
+}
+
+#banner {
+  position: fixed;
+  right: 20px;
+  bottom: 50px;
+  width: 50px;
+  height: 100px;
+  background: salmon;
+  box-shadow: 0 0 10px rgba(0, 0, 0, .6);
+}
+
+#banner.on {
+  position: absolute;
+  bottom: 350px;
+}
+    </style>
+</head>
+<body>
+    <main>
+        <div id="content"></div>
+        <footer>footer</footer>
+        <div id="banner">
+          banner
+        </div>
+      </main>
+      <script>
+          $(function() {
+
+var $w = $(window),
+  footerHei = $('footer').outerHeight(),
+  $banner = $('#banner');
+
+$w.on('scroll', function() {
+
+  var sT = $w.scrollTop();
+  var val = $(document).height() - $w.height() - footerHei;
+
+  if (sT >= val)
+      $banner.addClass('on')
+  else
+          $banner.removeClass('on')
+  
+
+
+});
+
+
+});
+      </script>
+</body>
+</html>

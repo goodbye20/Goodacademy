@@ -12,10 +12,6 @@ public class signupService {
 	SqlSession sqlSession = sqlSessionFactory.openSession();
 	
 	public void signupMember(HttpServletRequest request) {
-		try {
-			request.setAttribute("list", sqlSession.insert("signup.signupMemberList"));
-		} catch (Exception e) {
-			e.printStackTrace();
-		}
+		
 	}
 }

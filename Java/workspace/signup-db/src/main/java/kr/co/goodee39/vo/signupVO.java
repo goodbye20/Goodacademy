@@ -2,7 +2,7 @@ package kr.co.goodee39.vo;
 
 import org.apache.ibatis.type.Alias;
 
-@Alias("svo")
+@Alias("signupVO")
 public class signupVO {
 	private String id;
 	private String password;

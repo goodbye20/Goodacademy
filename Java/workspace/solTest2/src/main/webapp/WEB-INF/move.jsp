@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-회원가입 완료
+	<a href="${pageContext.request.contextPath}/GetListController">이동</a>
 </body>
 </html>

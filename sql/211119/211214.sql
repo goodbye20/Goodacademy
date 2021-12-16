@@ -6,7 +6,7 @@ CREATE TABLE jdbc_table(
 );
 
 USE mydb3;
-CREATE TABLE signupTable(
+CREATE TABLE signuptable1(
 	id VARCHAR(255) NOT NULL,
 	password INT NOT NULL,
 	name VARCHAR(255) NOT NULL,
