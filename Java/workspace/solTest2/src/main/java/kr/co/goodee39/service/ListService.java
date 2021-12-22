@@ -26,10 +26,6 @@ public class ListService {
 		}
 	}
 	
-	public void inserBBSVOList(HttpServletRequest request) {
-		request.setAttribute("list", sqlSession.selectList("bbs.selectBBSList"));
-		}
-
 		public void setList(HttpServletRequest request) {
 			try {
 				BBSVO vo = new BBSVO();

@@ -182,8 +182,8 @@ a {
 </head>
 <body>
 	<form action="${pageContext.request.contextPath}/Quiz1Controller">
-	<div class="main-form">
-		<i class="logo"></i> <input type="text" placeholder="ID" value="${idId?id:null}" name="id"> 
+	<div class="main-form"> 
+		<i class="logo"></i> <input type="text" placeholder="ID" value="${isId?id:null}" name="id">
 			<input type="password" placeholder="password" value="" name="pw">
 			 <c:choose>
 			 	<c:when test="${isId}">
