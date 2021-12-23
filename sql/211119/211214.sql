@@ -62,3 +62,27 @@ INSERT INTO `bbs` (`title`, `owner`, `createdate`, `content`) VALUES ('제목10'
 INSERT INTO `bbs` (`title`, `owner`, `createdate`, `content`) VALUES ('제목11', '최상무', '2021-12-02','안녕히가세요11');
 
 INSERT INTO `bbs` (`title`, `owner`, `createdate`, `content`) VALUES ('제목12', '임대리', '2021-12-02','또오세요12');
+
+
+
+CREATE DATABASE `examdb2` /*!40100 COLLATE 'utf8mb3_general_ci' */;
+
+CREATE TABLE `user` (
+
+           `PID` INT(11) NOT NULL AUTO_INCREMENT,
+
+           `USERID` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+
+           `PASSWORD` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+
+           `NAME` VARCHAR(255) NULL DEFAULT NULL COLLATE 'utf8mb3_general_ci',
+
+           PRIMARY KEY (`PID`) USING BTREE
+
+)
+
+COLLATE='utf8mb3_general_ci'
+
+ENGINE=InnoDB
+
+;
