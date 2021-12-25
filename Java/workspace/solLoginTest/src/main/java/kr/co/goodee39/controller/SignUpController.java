@@ -29,7 +29,7 @@ public class SignUpController extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("utf-8");
-		RequestDispatcher rdp = request.getRequestDispatcher("/WEB-INF/app/sign_up.jsp");
+		RequestDispatcher rdp = request.getRequestDispatcher("/app/sign_up.jsp");
 		rdp.forward(request, response);
 	}
 

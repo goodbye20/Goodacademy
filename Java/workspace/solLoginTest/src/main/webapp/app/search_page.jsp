@@ -12,7 +12,7 @@
 </style>
 </head>
 <body>
-	<form action="">
+		<form action="${pageContext.request.contextPath}/SearchResultController">
 		<ul>
 			<li>
 				<p>잃어버린 아이디를 입력해주세요</p>

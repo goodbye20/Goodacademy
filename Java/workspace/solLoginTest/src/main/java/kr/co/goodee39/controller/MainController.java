@@ -36,7 +36,7 @@ public class MainController extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		RequestDispatcher rdp = request.getRequestDispatcher("/WEB-INF/app/login.jsp");
+		RequestDispatcher rdp = request.getRequestDispatcher("/app/login.jsp");
 		rdp.forward(request, response);
 	}
 

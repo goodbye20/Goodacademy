@@ -33,7 +33,14 @@ public class LoginService {
 	
 	public UserVO getUser(UserVO vo) {
 		return sqlSession.selectOne("user.selectAccount", vo);
+		}
 		
-	}
+		public void setUser(UserVO vo) {
+			int i = sqlSession.insert("user.insertAccount", vo);
+			if(i>0) {
+				sqlSession.commit();
+			}
+		}
+	
 
 }

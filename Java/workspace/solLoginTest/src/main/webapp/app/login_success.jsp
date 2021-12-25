@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-	<h1>로그인에 성공하혔습니다.</h1>
+	<h1>로그인에 성공하였습니다.</h1>
 	<h3>${sessionScope.vo.name}님 어서오세요</h3>
 </body>
 </html>

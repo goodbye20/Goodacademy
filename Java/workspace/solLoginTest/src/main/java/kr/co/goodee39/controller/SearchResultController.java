@@ -1,8 +1,6 @@
 package kr.co.goodee39.controller;
 
 import java.io.IOException;
-
-import javax.servlet.RequestDispatcher;
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
@@ -13,16 +11,16 @@ import kr.co.goodee39.service.LoginService;
 import kr.co.goodee39.vo.UserVO;
 
 /**
- * Servlet implementation class SignUpResultController
+ * Servlet implementation class SearchResultController
  */
-@WebServlet("/SignUpResultController")
-public class SignUpResultController extends HttpServlet {
+@WebServlet("/SearchResultController")
+public class SearchResultController extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
     /**
      * @see HttpServlet#HttpServlet()
      */
-    public SignUpResultController() {
+    public SearchResultController() {
         super();
         // TODO Auto-generated constructor stub
     }
@@ -31,28 +29,23 @@ public class SignUpResultController extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-	request.setCharacterEncoding("utf-8");
-		
+		request.setCharacterEncoding("UTF-8");
 		UserVO vo = new UserVO();
+		vo.setUserid(request.getParameter("id"));
 		
 		LoginService service = new LoginService();
+		vo = service.getUser(vo);
+		String path = "";
 		
-		vo.setUserid(request.getParameter("id"));
-		String path ="";
-		
-		UserVO result = service.getUser(vo);
-		if(result!=null) {
-			path ="/app/sign_up.jsp";
+		if(vo != null) {
+			request.setAttribute("vo", vo);
+			path = "/app/success_find_account.jsp";
 		}else {
-			vo.setPassword(request.getParameter("pw"));
-			vo.setName(request.getParameter("name"));
-			service.setUser(vo);
-			path ="/WEB-INF/app/login.jsp";
+			path = "/app/search_page.jsp";
 		}
-		
-		RequestDispatcher rdp = request.getRequestDispatcher(path);
-		rdp.forward(request, response);
+		request.getRequestDispatcher(path).forward(request, response);
 	}
+	
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)

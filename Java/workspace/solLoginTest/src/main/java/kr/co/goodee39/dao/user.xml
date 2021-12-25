@@ -17,7 +17,7 @@
 		</where>
 	</select>  	
 	
-	<insert id="insertBBSList" parameterType="pvo">
+	<insert id="insertAccount" parameterType="pvo">
 		insert into user(userid, password, name)
 		values(#{userid}, #{password}, #{name})
 	</insert>

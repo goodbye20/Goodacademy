@@ -46,7 +46,7 @@ public class loginController extends HttpServlet {
 		// path는 조건에 맞게 페이지 태우기위한 값
 		
 		if(vo==null) {
-			path = "/WEB-INF/app/login.jsp";
+			path = "/app/login.jsp";
 		} else {
 			//request.setAttribute("vo", vo);
 			// 뷰페이지에서 값을 받아와서 출력하려면 set으로 담아주기
@@ -56,7 +56,7 @@ public class loginController extends HttpServlet {
 			session.setAttribute("vo", vo);
 			// 하지만 계정 관련이다보니 session을 통해 보내주는 것이 더 좋다.
 			
-			path = "/WEB-INF/app/login_success.jsp";
+			path = "/app/login_success.jsp";
 		}
 		
 		RequestDispatcher rdp = request.getRequestDispatcher(path);
