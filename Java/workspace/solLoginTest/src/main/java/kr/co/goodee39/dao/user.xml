@@ -8,7 +8,7 @@
 		select pid, userid, password, name
 		from user
 		<where>
-			<if test="user != null">
+			<if test="userid != null">
 				userid=#{userid}
 			</if>
 			<if test="password != null">
@@ -16,7 +16,6 @@
 			</if>
 		</where>
 	</select>  	
-	
 	<insert id="insertAccount" parameterType="pvo">
 		insert into user(userid, password, name)
 		values(#{userid}, #{password}, #{name})

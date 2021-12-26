@@ -38,7 +38,7 @@ public class loginController extends HttpServlet {
 		
 		UserVO vo = new UserVO();
 		vo.setUserid(request.getParameter("id"));
-		vo.setUserid(request.getParameter("pw"));
+		vo.setPassword(request.getParameter("pw"));
 		vo = service.getUser(vo);
 		
 //		UserVO vo = service.getUser(request);

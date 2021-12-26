@@ -47,7 +47,7 @@ public class SignUpResultController extends HttpServlet {
 			vo.setPassword(request.getParameter("pw"));
 			vo.setName(request.getParameter("name"));
 			service.setUser(vo);
-			path ="/WEB-INF/app/login.jsp";
+			path ="/app/login.jsp";
 		}
 		
 		RequestDispatcher rdp = request.getRequestDispatcher(path);
