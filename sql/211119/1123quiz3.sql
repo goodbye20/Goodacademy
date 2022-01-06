@@ -13,7 +13,7 @@ CREATE TABLE dept02(
 	DNAME VARCHAR(14) NOT NULL default 'unknown',
 	LOC VARCHAR(13)
 	PRIMARY KEY(deptno)
-);
+)
 
 
 

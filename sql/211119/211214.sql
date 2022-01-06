@@ -15,6 +15,7 @@ CREATE TABLE signuptable1(
 	email VARCHAR(255) NOT NULL
 );
 
+
 CREATE DATABASE `examdb1` /*!40100 COLLATE 'utf8mb3_general_ci' */
 
 CREATE TABLE `bbs` (
@@ -88,4 +89,4 @@ ENGINE=InnoDB
 ;
 
 
-
+CREATE DATABASE bbs;
